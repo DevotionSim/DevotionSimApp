@@ -1,4 +1,4 @@
-# flutter_devotion_sim_app
+# flutter_app_devotion_sim
 
 A new Flutter project.
 

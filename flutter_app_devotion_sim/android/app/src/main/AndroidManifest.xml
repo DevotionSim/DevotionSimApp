@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_devotion_sim_app">
+    package="com.example.flutter_app_devotion_sim">
    <application
-        android:label="flutter_devotion_sim_app"
+        android:label="flutter_app_devotion_sim"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

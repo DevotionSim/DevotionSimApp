@@ -1,6 +1,6 @@
 {
-    "name": "flutter_devotion_sim_app",
-    "short_name": "flutter_devotion_sim_app",
+    "name": "flutter_app_devotion_sim",
+    "short_name": "flutter_app_devotion_sim",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
