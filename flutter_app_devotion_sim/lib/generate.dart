@@ -1,9 +1,10 @@
-import 'package:path_provider/path_provider.dart';
-import 'dart:typed_data';
+import 'dart:io';
 import 'dart:ui' as ui;
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class Generate extends StatefulWidget {
@@ -13,6 +14,7 @@ class Generate extends StatefulWidget {
 
 class _GenerateState extends State<Generate> {
   GlobalKey _globalKey = new GlobalKey();
+  Uint8List pngBytes;
 
   // Controles EditText
   TextEditingController textEditTimer = TextEditingController();
@@ -503,6 +505,7 @@ class _GenerateState extends State<Generate> {
                     setState(() {
                       qrData = qrGen;
                       _capturePng();
+                      convertImageToFile(pngBytes);
                     });
                   }),
             )
@@ -512,14 +515,22 @@ class _GenerateState extends State<Generate> {
     );
   }
 
-  // Método para convertir QR en .png
   Future<void> _capturePng() async {
-    RenderRepaintBoundary boundary =
-        _globalKey.currentContext.findRenderObject();
-    ui.Image image = await boundary.toImage();
-    ByteData byteData = await image.toByteData(format: ui.ImageByteFormat.png);
-    Uint8List pngBytes = byteData.buffer.asUint8List();
-    String dir = (await getApplicationDocumentsDirectory()).path;
-    String fullPath = '$dir/abc.png';
+    try {
+      final RenderRepaintBoundary boundary =
+          _globalKey.currentContext.findRenderObject();
+      final image = await boundary.toImage(pixelRatio: 2.0); // image quality
+      final byteData = await image.toByteData(format: ui.ImageByteFormat.png);
+      pngBytes = byteData.buffer.asUint8List();
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  Future<File> convertImageToFile(Uint8List image) async {
+    final file = File(
+        '${(await getTemporaryDirectory()).path}/${DateTime.now().millisecondsSinceEpoch}.png');
+    await file.writeAsBytes(image);
+    return file;
   }
 }
