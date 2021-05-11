@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.4&#10;&#10;Changelog:&#10;- Flutter web support added.&#10;- QR widget as png image.&#10;- Generate QR button now is disabled until png is downloaded.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate.dart" afterDir="false" />
     </list>
@@ -55,7 +82,43 @@
       <option name="presentableId" value="Default" />
       <updated>1620288386054</updated>
     </task>
+    <task id="LOCAL-00001" summary="Version 1.4&#10;&#10;Changelog:&#10;- Flutter web support added.&#10;- QR widget as png image.&#10;- Generate QR button now is disabled until png is downloaded.">
+      <created>1620731194172</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620731194172</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Version 1.4&#10;&#10;Changelog:&#10;- Flutter web support added.&#10;- QR widget as png image.&#10;- Generate QR button now is disabled until png is downloaded." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.4&#10;&#10;Changelog:&#10;- Flutter web support added.&#10;- QR widget as png image.&#10;- Generate QR button now is disabled until png is downloaded." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620291641908">
@@ -74,37 +137,41 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="AVDManager/0.0.1536.824@0.0.1536.824" timestamp="1620689943131" />
-    <state x="580" y="159" key="AndroidProcessChooserDialog" timestamp="1620712112398">
+    <state x="580" y="159" key="AndroidProcessChooserDialog" timestamp="1620737331717">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="580" y="159" key="AndroidProcessChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1620712112398" />
+    <state x="580" y="159" key="AndroidProcessChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1620737331717" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620519642601">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620519642601" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1620730055715">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1620750689826">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620730055715" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1620730055715">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620750689826" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1620750689826">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620730055715" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1620730055715">
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620750689826" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1620750689826">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620730055715" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1620730055715">
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620750689826" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1620750689826">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620730055715" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620750689826" />
     <state x="325" y="26" key="SettingsEditor" timestamp="1620715426467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="325" y="26" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1620715426467" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620715007654">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1620731197220">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620715007654" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620731197220" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620739786693">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620739786693" />
   </component>
 </project>

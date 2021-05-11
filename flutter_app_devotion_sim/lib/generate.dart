@@ -14,30 +14,45 @@ class Generate extends StatefulWidget {
 }
 
 class _GenerateState extends State<Generate> {
-  GlobalKey _globalKey = new GlobalKey();
+  GlobalKey _globalKey;
   Uint8List pngBytes;
 
   // Controles EditText
-  TextEditingController textEditTimer = TextEditingController();
-  TextEditingController textEditFalls = TextEditingController();
-  TextEditingController textEditLaps = TextEditingController();
+  TextEditingController textEditTimer;
+  TextEditingController textEditFalls;
+  TextEditingController textEditLaps;
 
   // Booleanas CheckBox
-  bool checkBoxTimer = false;
-  bool checkBoxFalls = false;
-  bool checkBoxLaps = false;
-  bool checkBoxLegend = false;
+  var checkBoxArray;
 
   // Código QR
-  String qrData = "";
-  bool qrDataChanged = false;
+  String qrData;
+  bool qrDataChanged;
+  String qrDate;
 
   // Control TextButton
   bool _isButtonDisabled;
 
+  // Método inicio variables
   @override
   void initState() {
     super.initState();
+
+    _globalKey = new GlobalKey();
+
+    textEditTimer = TextEditingController();
+    textEditFalls = TextEditingController();
+    textEditLaps = TextEditingController();
+
+    textEditTimer.text = "0";
+    textEditFalls.text = "0";
+    textEditLaps.text = "0";
+
+    checkBoxArray = [false, false, false, false];
+
+    qrData = "";
+    qrDataChanged = false;
+
     _isButtonDisabled = false;
   }
 
@@ -51,25 +66,8 @@ class _GenerateState extends State<Generate> {
 
     if(qrDataChanged) {
       qrDataChanged = false;
-      wait(const Duration(milliseconds: 500)).whenComplete(() =>
+      wait(const Duration(milliseconds: 250)).whenComplete(() =>
           _capturePng().whenComplete(() => _downloadFile(pngBytes)));
-    }
-
-    // Valores por defecto para los textEdit
-    if (!checkBoxLegend) {
-      if (!checkBoxTimer) {
-        textEditTimer.text = "0";
-      }
-      if (!checkBoxFalls) {
-        textEditFalls.text = "0";
-      }
-      if (!checkBoxLaps) {
-        textEditLaps.text = "0";
-      }
-    } else {
-      textEditTimer.text = "60";
-      textEditFalls.text = "0";
-      textEditLaps.text = "0";
     }
 
     return Scaffold(
@@ -90,6 +88,7 @@ class _GenerateState extends State<Generate> {
               width: 560,
               height: 400,
               child: RepaintBoundary(
+                // Assigns the key to identify QR Widget
                 key: _globalKey,
                 child: Container(
                   alignment: Alignment.center,
@@ -121,12 +120,12 @@ class _GenerateState extends State<Generate> {
                             width: 160,
                             child: CheckboxListTile(
                               title: Text("Timer ON"),
-                              value: checkBoxTimer,
+                              value: checkBoxArray[0],
                               onChanged: (newValue) {
                                 setState(() {
-                                  if (!checkBoxLegend) {
-                                    checkBoxTimer = newValue;
-                                    textEditTimer.text = "5";
+                                  if (!checkBoxArray[3]) {
+                                    checkBoxArray[0] = newValue;
+                                    textEditTimer.text = newValue ? "5" : "0";
                                   }
                                 });
                               },
@@ -180,17 +179,7 @@ class _GenerateState extends State<Generate> {
                                     size: 18.0,
                                   ),
                                   onTap: () {
-                                    if (!checkBoxLegend) {
-                                      int currentValue =
-                                          int.parse(textEditTimer.text);
-                                      setState(() {
-                                        currentValue += 5;
-                                        textEditTimer.text = (currentValue < 60
-                                                ? currentValue
-                                                : 60)
-                                            .toString(); // incrementing value
-                                      });
-                                    }
+                                    incrementValue(textEditTimer, 0, !checkBoxArray[3], 5, 5, 60);
                                   },
                                 ),
                               ),
@@ -200,17 +189,7 @@ class _GenerateState extends State<Generate> {
                                   size: 18.0,
                                 ),
                                 onTap: () {
-                                  int currentValue =
-                                      int.parse(textEditTimer.text);
-                                  setState(() {
-                                    if (!checkBoxLegend) {
-                                      print("Setting state");
-                                      currentValue -= 5;
-                                      textEditTimer.text =
-                                          (currentValue > 5 ? currentValue : 5)
-                                              .toString(); // decrementing value
-                                    }
-                                  });
+                                  decrementValue(textEditTimer, 0, !checkBoxArray[3], 5, 5);
                                 },
                               ),
                             ],
@@ -225,12 +204,12 @@ class _GenerateState extends State<Generate> {
                             width: 160,
                             child: CheckboxListTile(
                               title: Text("Falls ON"),
-                              value: checkBoxFalls,
+                              value: checkBoxArray[1],
                               onChanged: (newValue) {
                                 setState(() {
-                                  if (!checkBoxLegend) {
-                                    checkBoxFalls = newValue;
-                                    textEditFalls.text = "3";
+                                  if (!checkBoxArray[3]) {
+                                    checkBoxArray[1] = newValue;
+                                    textEditFalls.text = newValue ? "3" : "0";
                                   }
                                 });
                               },
@@ -284,17 +263,7 @@ class _GenerateState extends State<Generate> {
                                     size: 18.0,
                                   ),
                                   onTap: () {
-                                    int currentValue =
-                                        int.parse(textEditFalls.text);
-                                    setState(() {
-                                      if (!checkBoxLegend) {
-                                        currentValue++;
-                                        textEditFalls.text = (currentValue < 15
-                                                ? currentValue
-                                                : 15)
-                                            .toString(); // incrementing value
-                                      }
-                                    });
+                                    incrementValue(textEditFalls, 1, !checkBoxArray[3], 1, 3, 15);
                                   },
                                 ),
                               ),
@@ -304,17 +273,7 @@ class _GenerateState extends State<Generate> {
                                   size: 18.0,
                                 ),
                                 onTap: () {
-                                  if (!checkBoxLegend) {
-                                    int currentValue =
-                                        int.parse(textEditFalls.text);
-                                    setState(() {
-                                      print("Setting state");
-                                      currentValue--;
-                                      textEditFalls.text =
-                                          (currentValue > 3 ? currentValue : 3)
-                                              .toString(); // decrementing value
-                                    });
-                                  }
+                                  decrementValue(textEditFalls, 1, !checkBoxArray[3], 1, 3);
                                 },
                               ),
                             ],
@@ -329,12 +288,12 @@ class _GenerateState extends State<Generate> {
                             width: 160,
                             child: CheckboxListTile(
                               title: Text("Laps ON"),
-                              value: checkBoxLaps,
+                              value: checkBoxArray[2],
                               onChanged: (newValue) {
                                 setState(() {
-                                  if (!checkBoxLegend) {
-                                    checkBoxLaps = newValue;
-                                    textEditLaps.text = "3";
+                                  if (!checkBoxArray[3]) {
+                                    checkBoxArray[2] = newValue;
+                                    textEditLaps.text = newValue ? "3" : "0";
                                   }
                                 });
                               },
@@ -388,17 +347,7 @@ class _GenerateState extends State<Generate> {
                                     size: 18.0,
                                   ),
                                   onTap: () {
-                                    if (!checkBoxLegend) {
-                                      int currentValue =
-                                          int.parse(textEditLaps.text);
-                                      setState(() {
-                                        currentValue++;
-                                        textEditLaps.text = (currentValue < 30
-                                                ? currentValue
-                                                : 30)
-                                            .toString(); // incrementing value
-                                      });
-                                    }
+                                    incrementValue(textEditLaps, 2, !checkBoxArray[3], 1, 3, 30);
                                   },
                                 ),
                               ),
@@ -408,17 +357,7 @@ class _GenerateState extends State<Generate> {
                                   size: 18.0,
                                 ),
                                 onTap: () {
-                                  int currentValue =
-                                      int.parse(textEditLaps.text);
-                                  setState(() {
-                                    if (!checkBoxLegend) {
-                                      print("Setting state");
-                                      currentValue--;
-                                      textEditLaps.text =
-                                          (currentValue > 3 ? currentValue : 3)
-                                              .toString(); // decrementing value
-                                    }
-                                  });
+                                  decrementValue(textEditLaps, 2,!checkBoxArray[3], 1, 3);
                                 },
                               ),
                             ],
@@ -434,14 +373,9 @@ class _GenerateState extends State<Generate> {
                             width: 160,
                             child: CheckboxListTile(
                               title: Text("Legend"),
-                              value: checkBoxLegend,
+                              value: checkBoxArray[3],
                               onChanged: (newValue) {
-                                setState(() {
-                                  checkBoxLegend = newValue;
-                                  checkBoxTimer = newValue;
-                                  checkBoxFalls = false;
-                                  checkBoxLaps = false;
-                                });
+                                setLegend(newValue);
                               },
                               controlAffinity: ListTileControlAffinity
                                   .leading, //  <-- leading Checkbox
@@ -460,6 +394,7 @@ class _GenerateState extends State<Generate> {
     );
   }
 
+  // Método asíncrono para convertir Widget en Uint8List
   Future<void> _capturePng() async {
     try {
       final RenderRepaintBoundary boundary =
@@ -472,6 +407,7 @@ class _GenerateState extends State<Generate> {
     }
   }
 
+  // Método asíncrono para guardar Uint8List como fichero .png en iOS y Android
   Future<File> convertImageToFile(Uint8List image) async {
     final file = File(
         '${(await getTemporaryDirectory()).path}/${DateTime.now().millisecondsSinceEpoch}.png');
@@ -480,16 +416,19 @@ class _GenerateState extends State<Generate> {
     print(file.uri);
     return file;
   }
-  
+
+  // Método asíncrono para guardar Uint8List como fichero .png en modo Web
   Future<void> _downloadFile(Uint8List image) async {
     // Prepare
+    print(qrDate);
     final bytes = image;
     final blob = html.Blob([bytes]);
     final url = html.Url.createObjectUrlFromBlob(blob);
     final anchor = html.document.createElement('a') as html.AnchorElement
       ..href = url
       ..style.display = 'none'
-      ..download = 'some_name.png';
+      ..download = 'QR_${qrDate.substring(0, 4)}${qrDate.substring(5, 7)}${qrDate.substring(8, 10)}_'
+          '${qrDate.substring(11, 13)}${qrDate.substring(14, 16)}${qrDate.substring(17, 19)}.png';
     html.document.body.children.add(anchor);
 
     // Download
@@ -498,7 +437,10 @@ class _GenerateState extends State<Generate> {
     // Cleanup
     html.document.body.children.remove(anchor);
     html.Url.revokeObjectUrl(url);
-    _isButtonDisabled = false;
+
+    setState(() {
+      _isButtonDisabled = false;
+    });
   }
 
   // Método Sleep
@@ -515,6 +457,7 @@ class _GenerateState extends State<Generate> {
   void _generateQR() {
     // Define la fecha actual y los valores necesarios
     var dateNow = DateTime.now();
+    qrDate = dateNow.toIso8601String();
     String timer,
         falls,
         laps,
@@ -568,9 +511,9 @@ class _GenerateState extends State<Generate> {
 
     // Construye la cadena QR
     String qrGen = "q";
-    qrGen += checkBoxTimer == true ? "1" : "0";
-    qrGen += checkBoxFalls == true ? "1" : "0";
-    qrGen += checkBoxLaps == true ? "1" : "0";
+    qrGen += checkBoxArray[0] == true ? "1" : "0";
+    qrGen += checkBoxArray[1] == true ? "1" : "0";
+    qrGen += checkBoxArray[2] == true ? "1" : "0";
     qrGen += timer;
     qrGen += falls;
     qrGen += laps;
@@ -587,7 +530,56 @@ class _GenerateState extends State<Generate> {
       _isButtonDisabled = true;
       qrData = qrGen;
       qrDataChanged = true;
-      //_capturePng().whenComplete(() => convertImageToFile(pngBytes));
+      //_capturePng().whenComplete(() => convertImageToFile(pngBytes)); //Para Android e iOS
+    });
+  }
+
+  void incrementValue(TextEditingController textEdit, int checkBoxIndex, bool isEditable, int value, int enablingValue, int maxValue) {
+    int currentValue =
+    int.parse(textEdit.text);
+    setState(() {
+      if (isEditable) {
+        if(currentValue < enablingValue) {
+          currentValue = enablingValue;
+          checkBoxArray[checkBoxIndex] = true;
+        } else {
+          currentValue += value;
+        }
+
+        textEdit.text =
+            (currentValue < maxValue ? currentValue : maxValue)
+                .toString(); // incrementing value
+      }
+    });
+  }
+
+  void decrementValue(TextEditingController textEdit, int checkBoxIndex, bool isEditable, int value, int minValue) {
+    int currentValue =
+    int.parse(textEdit.text);
+    setState(() {
+      if (isEditable) {
+        if(currentValue == minValue) {
+          currentValue = 0;
+          checkBoxArray[checkBoxIndex] = false;
+        } else if(currentValue != 0){
+          currentValue -= value;
+        }
+
+        textEdit.text = currentValue.toString(); // decrementing value
+      }
+    });
+  }
+
+  void setLegend(bool newValue) {
+    setState(() {
+      checkBoxArray[3] = newValue;
+      checkBoxArray[0] = newValue;
+      checkBoxArray[1] = false;
+      checkBoxArray[2] = false;
+
+      textEditTimer.text = newValue ? "60" : "0";
+      textEditFalls.text = "0";
+      textEditLaps.text = "0";
     });
   }
 }
