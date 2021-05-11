@@ -6,6 +6,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'dart:html' as html;
 
 class Generate extends StatefulWidget {
   @override
@@ -29,6 +30,16 @@ class _GenerateState extends State<Generate> {
 
   // Código QR
   String qrData = "";
+  bool qrDataChanged = false;
+
+  // Control TextButton
+  bool _isButtonDisabled;
+
+  @override
+  void initState() {
+    super.initState();
+    _isButtonDisabled = false;
+  }
 
   // Método constructor
   @override
@@ -37,6 +48,12 @@ class _GenerateState extends State<Generate> {
     var screenSize = MediaQuery.of(context).size;
     var width = screenSize.width;
     var height = screenSize.height;
+
+    if(qrDataChanged) {
+      qrDataChanged = false;
+      wait(const Duration(milliseconds: 500)).whenComplete(() =>
+          _capturePng().whenComplete(() => _downloadFile(pngBytes)));
+    }
 
     // Valores por defecto para los textEdit
     if (!checkBoxLegend) {
@@ -435,79 +452,7 @@ class _GenerateState extends State<Generate> {
                 )),
             Positioned(
               top: 430,
-              child: TextButton(
-                  child: Text("GENERATE QR"),
-                  onPressed: () {
-                    var dateNow = DateTime.now();
-                    String timer,
-                        falls,
-                        laps,
-                        day,
-                        month,
-                        year,
-                        hour,
-                        minute,
-                        second;
-
-                    day = dateNow.day.toRadixString(2);
-                    month = dateNow.month.toRadixString(2);
-                    year = dateNow.year.toRadixString(2);
-                    hour = dateNow.hour.toRadixString(2);
-                    minute = dateNow.minute.toRadixString(2);
-                    second = dateNow.second.toRadixString(2);
-
-                    timer = int.parse(textEditTimer.text).toRadixString(2);
-                    while (timer.length < 8) {
-                      timer = "0" + timer;
-                    }
-                    falls = int.parse(textEditFalls.text).toRadixString(2);
-                    while (falls.length < 4) {
-                      falls = "0" + falls;
-                    }
-                    laps = int.parse(textEditLaps.text).toRadixString(2);
-                    while (laps.length < 8) {
-                      laps = "0" + laps;
-                    }
-                    while (day.length < 8) {
-                      day = "0" + day;
-                    }
-                    while (month.length < 4) {
-                      month = "0" + month;
-                    }
-                    while (year.length < 12) {
-                      year = "0" + year;
-                    }
-                    while (hour.length < 8) {
-                      hour = "0" + hour;
-                    }
-                    while (minute.length < 8) {
-                      minute = "0" + minute;
-                    }
-                    while (second.length < 8) {
-                      second = "0" + second;
-                    }
-
-                    String qrGen = "q";
-                    qrGen += checkBoxTimer == true ? "1" : "0";
-                    qrGen += checkBoxFalls == true ? "1" : "0";
-                    qrGen += checkBoxLaps == true ? "1" : "0";
-                    qrGen += timer;
-                    qrGen += falls;
-                    qrGen += laps;
-                    qrGen += day;
-                    qrGen += month;
-                    qrGen += year;
-                    qrGen += hour;
-                    qrGen += minute;
-                    qrGen += second;
-                    qrGen += "q";
-
-                    setState(() {
-                      qrData = qrGen;
-                      _capturePng();
-                      convertImageToFile(pngBytes);
-                    });
-                  }),
+              child: _buildTextButton(),
             )
           ],
         ),
@@ -531,6 +476,118 @@ class _GenerateState extends State<Generate> {
     final file = File(
         '${(await getTemporaryDirectory()).path}/${DateTime.now().millisecondsSinceEpoch}.png');
     await file.writeAsBytes(image);
+    print(file.absolute);
+    print(file.uri);
     return file;
+  }
+  
+  Future<void> _downloadFile(Uint8List image) async {
+    // Prepare
+    final bytes = image;
+    final blob = html.Blob([bytes]);
+    final url = html.Url.createObjectUrlFromBlob(blob);
+    final anchor = html.document.createElement('a') as html.AnchorElement
+      ..href = url
+      ..style.display = 'none'
+      ..download = 'some_name.png';
+    html.document.body.children.add(anchor);
+
+    // Download
+    anchor.click();
+
+    // Cleanup
+    html.document.body.children.remove(anchor);
+    html.Url.revokeObjectUrl(url);
+    _isButtonDisabled = false;
+  }
+
+  // Método Sleep
+  Future wait(Duration d) => new Future.delayed(d);
+
+  // Constructor TextButton
+  Widget _buildTextButton() {
+    return new TextButton(
+        child: Text("GENERATE QR"),
+        onPressed: _isButtonDisabled ? null : _generateQR);
+  }
+
+  // Método generador de QR's
+  void _generateQR() {
+    // Define la fecha actual y los valores necesarios
+    var dateNow = DateTime.now();
+    String timer,
+        falls,
+        laps,
+        day,
+        month,
+        year,
+        hour,
+        minute,
+        second;
+
+    day = dateNow.day.toRadixString(2);
+    month = dateNow.month.toRadixString(2);
+    year = dateNow.year.toRadixString(2);
+    hour = dateNow.hour.toRadixString(2);
+    minute = dateNow.minute.toRadixString(2);
+    second = dateNow.second.toRadixString(2);
+
+    /* Convierte los valores a binarios y agrega ceros a la izquierda
+     * para completar la longitud necesaria para cada sección del QR
+     */
+    timer = int.parse(textEditTimer.text).toRadixString(2);
+    while (timer.length < 8) {
+      timer = "0" + timer;
+    }
+    falls = int.parse(textEditFalls.text).toRadixString(2);
+    while (falls.length < 4) {
+      falls = "0" + falls;
+    }
+    laps = int.parse(textEditLaps.text).toRadixString(2);
+    while (laps.length < 8) {
+      laps = "0" + laps;
+    }
+    while (day.length < 8) {
+      day = "0" + day;
+    }
+    while (month.length < 4) {
+      month = "0" + month;
+    }
+    while (year.length < 12) {
+      year = "0" + year;
+    }
+    while (hour.length < 8) {
+      hour = "0" + hour;
+    }
+    while (minute.length < 8) {
+      minute = "0" + minute;
+    }
+    while (second.length < 8) {
+      second = "0" + second;
+    }
+
+    // Construye la cadena QR
+    String qrGen = "q";
+    qrGen += checkBoxTimer == true ? "1" : "0";
+    qrGen += checkBoxFalls == true ? "1" : "0";
+    qrGen += checkBoxLaps == true ? "1" : "0";
+    qrGen += timer;
+    qrGen += falls;
+    qrGen += laps;
+    qrGen += day;
+    qrGen += month;
+    qrGen += year;
+    qrGen += hour;
+    qrGen += minute;
+    qrGen += second;
+    qrGen += "q";
+
+    // Envía los cambios al sistema
+    setState(() {
+      _isButtonDisabled = true;
+      qrData = qrGen;
+      qrDataChanged = true;
+      //_capturePng().whenComplete(() => convertImageToFile(pngBytes));
+    });
   }
 }

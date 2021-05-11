@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\matut\.android\avd\Nexus_5X_API_27.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\matut\.android\avd\Pixel_2_API_30.avd]" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -24,8 +24,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="Pixel_2_API_30 [emulator-5554]" />
+    <property name="DEBUGGABLE_PROCESS" value="com.example.flutter_app_devotion_sim" />
+    <property name="DEBUGGER_ID" value="Java" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -66,29 +70,41 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1620519426948" />
+    <state x="93" y="93" width="1350" height="638" key="AVDManager" timestamp="1620689943131">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="AVDManager/0.0.1536.824@0.0.1536.824" timestamp="1620689943131" />
+    <state x="580" y="159" key="AndroidProcessChooserDialog" timestamp="1620712112398">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="580" y="159" key="AndroidProcessChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1620712112398" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620519642601">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620519642601" />
-    <state width="1491" height="139" key="GridCell.Tab.0.bottom" timestamp="1620291823456">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1620730055715">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="139" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620291823456" />
-    <state width="1491" height="139" key="GridCell.Tab.0.center" timestamp="1620291823456">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620730055715" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1620730055715">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="139" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620291823456" />
-    <state width="1491" height="139" key="GridCell.Tab.0.left" timestamp="1620291823456">
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620730055715" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1620730055715">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="139" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620291823456" />
-    <state width="1491" height="139" key="GridCell.Tab.0.right" timestamp="1620291823456">
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620730055715" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1620730055715">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="139" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620291823456" />
-    <state x="325" y="26" key="SettingsEditor" timestamp="1620291515750">
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620730055715" />
+    <state x="325" y="26" key="SettingsEditor" timestamp="1620715426467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="325" y="26" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1620291515750" />
+    <state x="325" y="26" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1620715426467" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620715007654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620715007654" />
   </component>
 </project>
