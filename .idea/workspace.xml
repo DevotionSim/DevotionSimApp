@@ -32,9 +32,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.4&#10;&#10;Changelog:&#10;- Flutter web support added.&#10;- QR widget as png image.&#10;- Generate QR button now is disabled until png is downloaded.">
+    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.5&#10;&#10;Changelog:&#10;- Code splitted into different classes:&#10;  * generate as &lt;Interface&gt;&#10;  * generate_stub&#10;  * generate_for_android&#10;  * generate_for_web&#10;- Problem building apk on Android device solved.&#10;- Now we can choose the platform we will work with.">
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_for_android.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_for_web.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_stub.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/homepage.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +48,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\matut\.android\avd\Pixel_2_API_30.avd]" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1s9ckE29YQf6ZbqJHQ9RI6IUmpo" />
   <component name="ProjectViewState">
@@ -63,6 +68,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../flutter/bin/cache" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
@@ -118,7 +128,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 1.4&#10;&#10;Changelog:&#10;- Flutter web support added.&#10;- QR widget as png image.&#10;- Generate QR button now is disabled until png is downloaded." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.4&#10;&#10;Changelog:&#10;- Flutter web support added.&#10;- QR widget as png image.&#10;- Generate QR button now is disabled until png is downloaded." />
+    <MESSAGE value="Version 1.5&#10;&#10;Changelog:&#10;- Code splitted into different classes:&#10;  * generate as &lt;Interface&gt;&#10;  * generate_stub&#10;  * generate_for_android&#10;  * generate_for_web&#10;- Problem building apk on Android device solved.&#10;- Now we can choose the platform we will work with." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.5&#10;&#10;Changelog:&#10;- Code splitted into different classes:&#10;  * generate as &lt;Interface&gt;&#10;  * generate_stub&#10;  * generate_for_android&#10;  * generate_for_web&#10;- Problem building apk on Android device solved.&#10;- Now we can choose the platform we will work with." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620291641908">
@@ -145,22 +156,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620519642601" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1620750689826">
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom" timestamp="1620820222048">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620750689826" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1620750689826">
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620820222048" />
+    <state width="1493" height="234" key="GridCell.Tab.0.center" timestamp="1620820222048">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620750689826" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1620750689826">
+    <state width="1493" height="234" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620820222048" />
+    <state width="1493" height="234" key="GridCell.Tab.0.left" timestamp="1620820222048">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620750689826" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1620750689826">
+    <state width="1493" height="234" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620820222048" />
+    <state width="1493" height="234" key="GridCell.Tab.0.right" timestamp="1620820222048">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620750689826" />
+    <state width="1493" height="234" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620820222048" />
+    <state x="405" y="115" key="RollbackChangesDialog" timestamp="1620816361355">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="405" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1620816361355" />
     <state x="325" y="26" key="SettingsEditor" timestamp="1620715426467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -169,6 +184,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620731197220" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1620816950446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1620816950446" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620816391888">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1620816391888" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620739786693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

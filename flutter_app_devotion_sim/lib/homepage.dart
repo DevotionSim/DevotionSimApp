@@ -26,7 +26,7 @@ class _HomepageState extends State<Homepage> {
                 child: Image.network(
                     "https://upload.wikimedia.org/wikipedia/commons/5/5b/Qr-1.png")),
             textButton("Scan QR Code", Scan()),
-            textButton("Generate QR Code", Generate())
+            textButton("Generate QR Code", Generate.instance)
           ],
         ),
       ),
