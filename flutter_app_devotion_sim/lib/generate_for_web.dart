@@ -116,7 +116,7 @@ class _GenerateState extends State<Generate> {
                     width: 260,
                     height: height,
                     child: Column(
-                      children: <Row>[
+                      children: [
                         Row(
                           children: [
                             // CheckBox Timer

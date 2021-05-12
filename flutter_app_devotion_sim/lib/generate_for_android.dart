@@ -88,9 +88,9 @@ class _GenerateState extends State<Generate> {
               children: [
                 Positioned(
                   top: 0,
-                  left: 0,
-                  width: 560,
-                  height: 400,
+                  left: (width - 340) / 2,
+                  width: 340,
+                  height: 320,
                   child: RepaintBoundary(
                     // Assigns the key to identify QR Widget
                     key: _globalKey,
@@ -99,24 +99,24 @@ class _GenerateState extends State<Generate> {
                       child: QrImage(
                         data: qrData,
                         version: QrVersions.auto,
-                        size: 420,
+                        size: width * 0.8,
                         gapless: false,
                         semanticsLabel: "DevotionSim QR",
                         embeddedImage: new AssetImage('assets/devlogo.png'),
                         embeddedImageStyle: QrEmbeddedImageStyle(
-                          size: Size(250, 250),
+                          size: Size(200, 200),
                         ),
                       ),
                     ),
                   ),
                 ),
                 Positioned(
-                    top: 0,
-                    right: 0,
+                    top: 326,
+                    left: width * 0.15,
                     width: 260,
-                    height: height,
+                    height: height - 340,
                     child: Column(
-                      children: <Row>[
+                      children: [
                         Row(
                           children: [
                             // CheckBox Timer
@@ -164,7 +164,7 @@ class _GenerateState extends State<Generate> {
                             ),
                             // UpDownButtons Timer
                             Container(
-                              height: 38.0,
+                              height: 38,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -370,7 +370,6 @@ class _GenerateState extends State<Generate> {
                           ],
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             // CheckBox Legend
                             SizedBox(
@@ -389,7 +388,7 @@ class _GenerateState extends State<Generate> {
                       ],
                     )),
                 Positioned(
-                  top: 430,
+                  bottom: 12,
                   child: _buildTextButton(),
                 )
               ],
