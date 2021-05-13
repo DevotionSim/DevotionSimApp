@@ -112,262 +112,249 @@ class _GenerateState extends State<Generate> {
                 ),
                 Positioned(
                     top: 326,
-                    left: width * 0.15,
-                    width: 260,
-                    height: height - 340,
+                    left: (width - 290) / 2 - 16,
+                    width: 310,
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            // CheckBox Timer
-                            SizedBox(
-                                width: 160,
-                                child: CheckboxListTile(
-                                  title: Text("Timer ON"),
-                                  value: checkBoxArray[0],
-                                  onChanged: (newValue) {
-                                    setState(() {
-                                      if (!checkBoxArray[3]) {
-                                        checkBoxArray[0] = newValue;
-                                        textEditTimer.text = newValue ? "5" : "0";
-                                      }
-                                    });
-                                  },
-                                  controlAffinity: ListTileControlAffinity
-                                      .leading, //  <-- leading Checkbox
-                                )),
-                            // EditText Timer
-                            Container(
-                              width: 50,
-                              height: 24,
-                              child: TextFormField(
-                                enabled: false,
-                                textAlign: TextAlign.center,
-                                decoration: InputDecoration(
-                                  contentPadding: EdgeInsets.all(8.0),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5.0),
-                                  ),
-                                ),
-                                controller: textEditTimer,
-                                keyboardType: TextInputType.numberWithOptions(
-                                  decimal: false,
-                                  signed: true,
-                                ),
-                                inputFormatters: <TextInputFormatter>[
-                                  FilteringTextInputFormatter.digitsOnly
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              width: 18,
-                            ),
-                            // UpDownButtons Timer
-                            Container(
-                              height: 38,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          width: 0.5,
-                                        ),
-                                      ),
+                        IntrinsicHeight(
+                          child: Row(
+                            children: [
+                              // CheckBox Timer
+                              Container(
+                                  width: 160,
+                                  child: CheckboxListTile(
+                                    title: Text("Timer ON"),
+                                    value: checkBoxArray[0],
+                                    onChanged: (newValue) {
+                                      setState(() {
+                                        if (!checkBoxArray[3]) {
+                                          checkBoxArray[0] = newValue;
+                                          textEditTimer.text = newValue ? "5" : "0";
+                                        }
+                                      });
+                                    },
+                                    controlAffinity: ListTileControlAffinity
+                                        .leading, //  <-- leading Checkbox
+                                  )),
+                              // EditText Timer
+                              Container(
+                                width: 50,
+                                height: 24,
+                                child: TextFormField(
+                                  enabled: false,
+                                  textAlign: TextAlign.center,
+                                  decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.all(8.0),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5.0),
                                     ),
-                                    child: InkWell(
+                                  ),
+                                  controller: textEditTimer,
+                                  keyboardType: TextInputType.numberWithOptions(
+                                    decimal: false,
+                                    signed: true,
+                                  ),
+                                  inputFormatters: <TextInputFormatter>[
+                                    FilteringTextInputFormatter.digitsOnly
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 18,
+                              ),
+                              // UpDownButtons Timer
+                              Container(
+                                height: 30,
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    InkWell(
                                       child: Icon(
-                                        Icons.arrow_drop_up,
-                                        size: 18.0,
+                                        Icons.do_disturb_on_outlined,
+                                        size: 28.0,
+                                      ),
+                                      onTap: () {
+                                        decrementValue(textEditTimer, 0, !checkBoxArray[3], 5, 5);
+                                      },
+                                    ),
+                                    SizedBox(
+                                      width: 16,
+                                    ),
+                                    InkWell(
+                                      child: Icon(
+                                        Icons.add_circle_outline,
+                                        size: 28.0,
                                       ),
                                       onTap: () {
                                         incrementValue(textEditTimer, 0, !checkBoxArray[3], 5, 5, 60);
                                       },
                                     ),
-                                  ),
-                                  InkWell(
-                                    child: Icon(
-                                      Icons.arrow_drop_down,
-                                      size: 18.0,
-                                    ),
-                                    onTap: () {
-                                      decrementValue(textEditTimer, 0, !checkBoxArray[3], 5, 5);
-                                    },
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                        Row(
-                          children: [
-                            // CheckBox Falls
-                            SizedBox(
-                                width: 160,
-                                child: CheckboxListTile(
-                                  title: Text("Falls ON"),
-                                  value: checkBoxArray[1],
-                                  onChanged: (newValue) {
-                                    setState(() {
-                                      if (!checkBoxArray[3]) {
-                                        checkBoxArray[1] = newValue;
-                                        textEditFalls.text = newValue ? "3" : "0";
-                                      }
-                                    });
-                                  },
-                                  controlAffinity: ListTileControlAffinity
-                                      .leading, //  <-- leading Checkbox
-                                )),
-                            // EditText Falls
-                            Container(
-                              width: 50,
-                              height: 24,
-                              child: TextFormField(
-                                enabled: false,
-                                textAlign: TextAlign.center,
-                                decoration: InputDecoration(
-                                  contentPadding: EdgeInsets.all(8.0),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5.0),
-                                  ),
-                                ),
-                                controller: textEditFalls,
-                                keyboardType: TextInputType.numberWithOptions(
-                                  decimal: false,
-                                  signed: true,
-                                ),
-                                inputFormatters: <TextInputFormatter>[
-                                  FilteringTextInputFormatter.digitsOnly
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              width: 18,
-                            ),
-                            // UpDownButtons Falls
-                            Container(
-                              height: 38.0,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          width: 0.5,
-                                        ),
-                                      ),
+                        IntrinsicHeight(
+                          child: Row(
+                            children: [
+                              // CheckBox Falls
+                              SizedBox(
+                                  width: 160,
+                                  child: CheckboxListTile(
+                                    title: Text("Falls ON"),
+                                    value: checkBoxArray[1],
+                                    onChanged: (newValue) {
+                                      setState(() {
+                                        if (!checkBoxArray[3]) {
+                                          checkBoxArray[1] = newValue;
+                                          textEditFalls.text = newValue ? "3" : "0";
+                                        }
+                                      });
+                                    },
+                                    controlAffinity: ListTileControlAffinity
+                                        .leading, //  <-- leading Checkbox
+                                  )),
+                              // EditText Falls
+                              Container(
+                                width: 50,
+                                height: 24,
+                                child: TextFormField(
+                                  enabled: false,
+                                  textAlign: TextAlign.center,
+                                  decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.all(8.0),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5.0),
                                     ),
-                                    child: InkWell(
+                                  ),
+                                  controller: textEditFalls,
+                                  keyboardType: TextInputType.numberWithOptions(
+                                    decimal: false,
+                                    signed: true,
+                                  ),
+                                  inputFormatters: <TextInputFormatter>[
+                                    FilteringTextInputFormatter.digitsOnly
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 18,
+                              ),
+                              // UpDownButtons Falls
+                              Container(
+                                height: 30,
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    InkWell(
                                       child: Icon(
-                                        Icons.arrow_drop_up,
-                                        size: 18.0,
+                                        Icons.do_disturb_on_outlined,
+                                        size: 28.0,
+                                      ),
+                                      onTap: () {
+                                        decrementValue(textEditFalls, 1, !checkBoxArray[3], 1, 3);
+                                      },
+                                    ),
+                                    SizedBox(
+                                      width: 16,
+                                    ),
+                                    InkWell(
+                                      child: Icon(
+                                        Icons.add_circle_outline,
+                                        size: 28.0,
                                       ),
                                       onTap: () {
                                         incrementValue(textEditFalls, 1, !checkBoxArray[3], 1, 3, 15);
                                       },
                                     ),
-                                  ),
-                                  InkWell(
-                                    child: Icon(
-                                      Icons.arrow_drop_down,
-                                      size: 18.0,
-                                    ),
-                                    onTap: () {
-                                      decrementValue(textEditFalls, 1, !checkBoxArray[3], 1, 3);
-                                    },
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                        Row(
-                          children: [
-                            // CheckBox Laps
-                            SizedBox(
-                                width: 160,
-                                child: CheckboxListTile(
-                                  title: Text("Laps ON"),
-                                  value: checkBoxArray[2],
-                                  onChanged: (newValue) {
-                                    setState(() {
-                                      if (!checkBoxArray[3]) {
-                                        checkBoxArray[2] = newValue;
-                                        textEditLaps.text = newValue ? "3" : "0";
-                                      }
-                                    });
-                                  },
-                                  controlAffinity: ListTileControlAffinity
-                                      .leading, //  <-- leading Checkbox
-                                )),
-                            // EditText Laps
-                            Container(
-                              width: 50,
-                              height: 24,
-                              child: TextFormField(
-                                enabled: false,
-                                textAlign: TextAlign.center,
-                                decoration: InputDecoration(
-                                  contentPadding: EdgeInsets.all(8.0),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5.0),
-                                  ),
-                                ),
-                                controller: textEditLaps,
-                                keyboardType: TextInputType.numberWithOptions(
-                                  decimal: false,
-                                  signed: true,
-                                ),
-                                inputFormatters: <TextInputFormatter>[
-                                  FilteringTextInputFormatter.digitsOnly
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              width: 18,
-                            ),
-                            // UpDownButtons Laps
-                            Container(
-                              height: 38.0,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          width: 0.5,
-                                        ),
-                                      ),
+                        IntrinsicHeight(
+                          child: Row(
+                            children: [
+                              // CheckBox Laps
+                              SizedBox(
+                                  width: 160,
+                                  child: CheckboxListTile(
+                                    title: Text("Laps ON"),
+                                    value: checkBoxArray[2],
+                                    onChanged: (newValue) {
+                                      setState(() {
+                                        if (!checkBoxArray[3]) {
+                                          checkBoxArray[2] = newValue;
+                                          textEditLaps.text = newValue ? "3" : "0";
+                                        }
+                                      });
+                                    },
+                                    controlAffinity: ListTileControlAffinity
+                                        .leading, //  <-- leading Checkbox
+                                  )),
+                              // EditText Laps
+                              Container(
+                                width: 50,
+                                height: 24,
+                                child: TextFormField(
+                                  enabled: false,
+                                  textAlign: TextAlign.center,
+                                  decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.all(8.0),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5.0),
                                     ),
-                                    child: InkWell(
+                                  ),
+                                  controller: textEditLaps,
+                                  keyboardType: TextInputType.numberWithOptions(
+                                    decimal: false,
+                                    signed: true,
+                                  ),
+                                  inputFormatters: <TextInputFormatter>[
+                                    FilteringTextInputFormatter.digitsOnly
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 18,
+                              ),
+                              // UpDownButtons Laps
+                              Container(
+                                height: 30,
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    InkWell(
                                       child: Icon(
-                                        Icons.arrow_drop_up,
-                                        size: 18.0,
+                                        Icons.do_disturb_on_outlined,
+                                        size: 28.0,
+                                      ),
+                                      onTap: () {
+                                        decrementValue(textEditLaps, 2,!checkBoxArray[3], 1, 3);
+                                      },
+                                    ),
+                                    SizedBox(
+                                      width: 16,
+                                    ),
+                                    InkWell(
+                                      child: Icon(
+                                        Icons.add_circle_outline,
+                                        size: 28.0,
                                       ),
                                       onTap: () {
                                         incrementValue(textEditLaps, 2, !checkBoxArray[3], 1, 3, 30);
                                       },
                                     ),
-                                  ),
-                                  InkWell(
-                                    child: Icon(
-                                      Icons.arrow_drop_down,
-                                      size: 18.0,
-                                    ),
-                                    onTap: () {
-                                      decrementValue(textEditLaps, 2,!checkBoxArray[3], 1, 3);
-                                    },
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Row(
                           children: [
@@ -437,6 +424,21 @@ class _GenerateState extends State<Generate> {
 
   // Método generador de QR's
   void _generateQR() {
+    bool checks = false;
+
+    // Comprueba que los checkBox estén activados
+    for(int i = 0; i < 3; i++) {
+      if(checkBoxArray[i] == true) {
+        checks = true;
+        break;
+      }
+    }
+
+    // No genera QR si los checkBox están desactivados
+    if(!checks) {
+      return;
+    }
+
     // Define la fecha actual y los valores necesarios
     var dateNow = DateTime.now();
     qrDate = dateNow.toIso8601String();
@@ -551,7 +553,6 @@ class _GenerateState extends State<Generate> {
     });
   }
 
-  @override
   void setLegend(bool newValue) {
     setState(() {
       checkBoxArray[3] = newValue;

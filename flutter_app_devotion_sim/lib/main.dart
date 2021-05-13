@@ -3,6 +3,7 @@ import 'package:flutter_app_devotion_sim/homepage.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: MyApp(),
   ));
 }
