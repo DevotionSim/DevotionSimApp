@@ -35,10 +35,6 @@ class _ScanState extends State<Scan> {
     height = screenSize.height;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Scan"),
-        centerTitle: true,
-      ),
       body: Stack(
           alignment: Alignment.center,
           children: [

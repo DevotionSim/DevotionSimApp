@@ -12,10 +12,6 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(""),
-        centerTitle: true,
-      ),
       body: Container(
         padding: EdgeInsets.all(50.0),
         child: Column(
@@ -23,8 +19,7 @@ class _HomepageState extends State<Homepage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Expanded(
-                child: Image.network(
-                    "https://upload.wikimedia.org/wikipedia/commons/5/5b/Qr-1.png")),
+                child: Image.asset('assets/devlogo_original.png')),
             textButton("Scan QR Code", Scan()),
             textButton("Generate QR Code", Generate.instance)
           ],

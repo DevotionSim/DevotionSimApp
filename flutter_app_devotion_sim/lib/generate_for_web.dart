@@ -75,10 +75,6 @@ class _GenerateState extends State<Generate> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Generate"),
-        centerTitle: true,
-      ),
       body: Center(
           child: Container(
             width: width,
@@ -87,7 +83,7 @@ class _GenerateState extends State<Generate> {
               alignment: Alignment.center,
               children: [
                 Positioned(
-                  top: 0,
+                  top: 20,
                   left: (width - 340) / 2,
                   width: 340,
                   height: 320,
@@ -111,7 +107,7 @@ class _GenerateState extends State<Generate> {
                   ),
                 ),
                 Positioned(
-                    top: 326,
+                    top: 346,
                     left: (width - 290) / 2 - 16,
                     width: 310,
                     child: Column(
