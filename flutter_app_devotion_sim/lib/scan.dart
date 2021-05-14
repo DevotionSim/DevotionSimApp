@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:image_picker/image_picker.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 
@@ -12,35 +13,164 @@ class Scan extends StatefulWidget {
 }
 
 class _ScanState extends State<Scan> {
-  Uint8List bytes = Uint8List(0);
+  Uint8List bytes;
+  var screenSize;
+  var width;
+  var height;
+
+  String qrData;
+
+  @override
+  void initState() {
+    super.initState();
+    //_requestPermission();
+    qrData = "";
+  }
 
   @override
   Widget build(BuildContext context) {
+    // Variables para controlar el tamaño de la pantalla
+    screenSize = MediaQuery.of(context).size;
+    width = screenSize.width;
+    height = screenSize.height;
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Scan"),
         centerTitle: true,
       ),
-      body: Container(
-
+      body: Stack(
+          alignment: Alignment.center,
+          children: [
+            Positioned(
+              top: 60,
+              child: Container(
+                alignment: Alignment.center,
+                child: _buildQRStructure(),
+              ),
+            ),
+            Positioned(
+              top: height / 2,
+              child: Container(
+                width: 200,
+                height: 70,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: SizedBox(
+                        child: InkWell(
+                          onTap: _scan,
+                          child: Card(
+                            color: Colors.cyan[300],
+                            child: Container(
+                                alignment: Alignment.center,
+                                child: Text("Scan")),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: SizedBox(
+                        child: InkWell(
+                          onTap: _scanFile,
+                          child: Card(
+                            color: Colors.cyan[300],
+                            child: Container(
+                              alignment: Alignment.center,
+                              child: Text("Open File"),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ]
       ),
     );
   }
 
-  Future _scan() async {
-    await Permission.camera.request();
-    String barcode = await scanner.scan();
-    if (barcode == null) {
-      print('nothing return.');
-    } else {
+  Future<bool> _requestPermission() async {
+    Map<Permission, PermissionStatus> statuses = await [
+      Permission.storage,
+    ].request();
+    return statuses[Permission.storage].isGranted;
+  }
 
+  Future _scan() async {
+    var status = await Permission.camera.request();
+    if (status.isGranted) {
+      String codeQR = await scanner.scan();
+      if (codeQR == null) {
+        print('nothing return.');
+      } else {
+        setState(() {
+          qrData = codeQR;
+        });
+      }
+    }
+    else if (status.isDenied) {
+      return;
+    }
+    else {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) => AlertDialog(
+            title: Text('Camera Permission'),
+            content: Text(
+                'This app needs camera access to take pictures for upload QR codes to your profile.'),
+            actions: <Widget>[
+              TextButton(
+                child: Text('Deny'),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+              TextButton(
+                child: Text('Settings'),
+                onPressed: () => openAppSettings(),
+              ),
+            ],
+          ));
     }
   }
 
-  Future _scanPhoto() async {
-    await Permission.storage.request();
-    String barcode = await scanner.scanPhoto();
-
+  Future _scanFile() async {
+    var status = await Permission.storage.request();
+    if (status.isGranted) {
+      String codeQR = await scanner.scanPhoto();
+      if (codeQR == null) {
+        print('nothing return.');
+      } else {
+        setState(() {
+          qrData = codeQR;
+        });
+      }
+    }
+    else if (status.isDenied) {
+      return;
+    }
+    else {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) => AlertDialog(
+            title: Text('Storage Permission'),
+            content: Text(
+                'This app needs storage access to take pictures for upload QR codes to your profile.'),
+            actions: <Widget>[
+              TextButton(
+                child: Text('Deny'),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+              TextButton(
+                child: Text('Settings'),
+                onPressed: () => openAppSettings(),
+              ),
+            ],
+          ));
+    }
   }
 
   Future _scanPath(String path) async {
@@ -71,16 +201,7 @@ class _ScanState extends State<Scan> {
         onTap: () async {
           final success =
           await ImageGallerySaver.saveImage(this.bytes);
-          SnackBar snackBar;
-          if (success) {
-            snackBar = new SnackBar(
-                content:
-                new Text('Successful Preservation!'));
-            Scaffold.of(context).showSnackBar(snackBar);
-          } else {
-            snackBar = new SnackBar(
-                content: new Text('Save failed!'));
-          }
+
         },
         child: Text(
           'save',
@@ -90,5 +211,23 @@ class _ScanState extends State<Scan> {
         ),
       ),
     );
+  }
+
+  Widget _buildQRStructure() {
+    if(qrData == "") {
+      return null;
+    } else {
+      return QrImage(
+        data: qrData,
+        version: QrVersions.auto,
+        size: width * 0.8,
+        gapless: false,
+        semanticsLabel: "DevotionSim QR",
+        embeddedImage: new AssetImage('assets/devlogo.png'),
+        embeddedImageStyle: QrEmbeddedImageStyle(
+          size: Size(200, 200),
+        ),
+      );
+    }
   }
 }

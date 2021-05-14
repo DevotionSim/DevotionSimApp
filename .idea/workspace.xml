@@ -37,13 +37,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.5&#10;&#10;Changelog:&#10;- Code splitted into different classes:&#10;  * generate as &lt;Interface&gt;&#10;  * generate_stub&#10;  * generate_for_android&#10;  * generate_for_web&#10;- Problem building apk on Android device solved.&#10;- Now we can choose the platform we will work with.">
+    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.5.4&#10;&#10;Changelog:&#10;- Scan class methods added.&#10;- Testing image_gallery_saver.">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_for_android.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_for_android.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_for_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_for_web.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/scan.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/scan.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" afterDir="false" />
@@ -73,7 +71,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/StudioProjects/2dam_m8_ac4-4_uf1-matutezam" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test/testing" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -114,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620821162141</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Version 1.5.4&#10;&#10;Changelog:&#10;- Scan class methods added.&#10;- Testing image_gallery_saver.">
+      <created>1620924384172</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620924384172</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,7 +149,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 1.4&#10;&#10;Changelog:&#10;- Flutter web support added.&#10;- QR widget as png image.&#10;- Generate QR button now is disabled until png is downloaded." />
     <MESSAGE value="Version 1.5&#10;&#10;Changelog:&#10;- Code splitted into different classes:&#10;  * generate as &lt;Interface&gt;&#10;  * generate_stub&#10;  * generate_for_android&#10;  * generate_for_web&#10;- Problem building apk on Android device solved.&#10;- Now we can choose the platform we will work with." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.5&#10;&#10;Changelog:&#10;- Code splitted into different classes:&#10;  * generate as &lt;Interface&gt;&#10;  * generate_stub&#10;  * generate_for_android&#10;  * generate_for_web&#10;- Problem building apk on Android device solved.&#10;- Now we can choose the platform we will work with." />
+    <MESSAGE value="Version 1.5.4&#10;&#10;Changelog:&#10;- Scan class methods added.&#10;- Testing image_gallery_saver." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.5.4&#10;&#10;Changelog:&#10;- Scan class methods added.&#10;- Testing image_gallery_saver." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620291641908">
@@ -167,38 +173,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="580" y="159" key="AndroidProcessChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1620737331717" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620922106618">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620989423778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620922106618" />
-    <state width="1493" height="234" key="GridCell.Tab.0.bottom" timestamp="1620923235535">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620989423778" />
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom" timestamp="1620994415581">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620923235535" />
-    <state width="1493" height="234" key="GridCell.Tab.0.center" timestamp="1620923235535">
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620994415581" />
+    <state width="1493" height="234" key="GridCell.Tab.0.center" timestamp="1620994415581">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620923235535" />
-    <state width="1493" height="234" key="GridCell.Tab.0.left" timestamp="1620923235535">
+    <state width="1493" height="234" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620994415581" />
+    <state width="1493" height="234" key="GridCell.Tab.0.left" timestamp="1620994415581">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620923235535" />
-    <state width="1493" height="234" key="GridCell.Tab.0.right" timestamp="1620923235535">
+    <state width="1493" height="234" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620994415581" />
+    <state width="1493" height="234" key="GridCell.Tab.0.right" timestamp="1620994415581">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="234" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620923235535" />
-    <state x="405" y="115" key="RollbackChangesDialog" timestamp="1620816361355">
+    <state width="1493" height="234" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620994415581" />
+    <state x="405" y="115" key="RollbackChangesDialog" timestamp="1620924204188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="405" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1620816361355" />
+    <state x="405" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1620924204188" />
     <state x="325" y="26" key="SettingsEditor" timestamp="1620715426467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="325" y="26" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1620715426467" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1620821168090">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1620924387586">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620821168090" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620924387586" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1620816950446">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -207,9 +213,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1620816391888" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620739786693">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620990440031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620739786693" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620990440031" />
   </component>
 </project>

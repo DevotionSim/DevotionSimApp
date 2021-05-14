@@ -400,7 +400,6 @@ class _GenerateState extends State<Generate> {
   // Método asíncrono para guardar Uint8List como fichero .png en modo Web
   Future<void> _downloadFile(Uint8List image) async {
     // Prepare
-    print(qrDate);
     final bytes = image;
     final blob = html.Blob([bytes]);
     final url = html.Url.createObjectUrlFromBlob(blob);

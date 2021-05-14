@@ -70,8 +70,9 @@ class _GenerateState extends State<Generate> {
     var height = screenSize.height;
 
     if(qrDataChanged) {
-      qrDataChanged = false;
-      _capturePng().whenComplete(() => convertImageToFile(pngBytes));
+        qrDataChanged = false;
+        wait(const Duration(milliseconds: 250)).whenComplete(() =>
+            _capturePng().whenComplete(() => convertImageToFile(pngBytes)));
     }
 
     return Scaffold(
@@ -400,7 +401,11 @@ class _GenerateState extends State<Generate> {
   // Método asíncrono para guardar Uint8List como fichero .png en iOS y Android
   Future<File> convertImageToFile(Uint8List image) async {
     final file = File(
-        '${(await getTemporaryDirectory()).path}/${DateTime.now().millisecondsSinceEpoch}.png');
+        '${(await getExternalStorageDirectory()).path}/'
+            'QR_${qrDate.substring(0, 4)}${qrDate.substring(5, 7)}'
+            '${qrDate.substring(8, 10)}_${qrDate.substring(11, 13)}'
+            '${qrDate.substring(14, 16)}${qrDate.substring(17, 19)}.png');
+
     await file.writeAsBytes(image);
     print(file.absolute);
     print(file.uri);
