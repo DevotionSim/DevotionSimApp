@@ -35,11 +35,19 @@ dependencies:
   permission_handler: ^7.1.0
   image_picker: ^0.7.5
   image_gallery_saver: ^1.6.9
-  fluttertoast: ^8.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  flutter_launcher_icons: "^0.9.0"
+
+# Use this to change icons --> flutter pub run flutter_launcher_icons:main
+flutter_icons:
+
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/icon/icon_black.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -60,6 +68,7 @@ flutter:
 
   assets:
   - assets/
+  - assets/icon/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

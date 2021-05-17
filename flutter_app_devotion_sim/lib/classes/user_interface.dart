@@ -1,4 +1,4 @@
-import 'package:flutter_app_devotion_sim/classes/QRList.dart';
+import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
 
 abstract class UserInterface {
   bool createAccount();

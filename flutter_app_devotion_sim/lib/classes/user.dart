@@ -1,5 +1,5 @@
-import 'package:flutter_app_devotion_sim/classes/QRList.dart';
-import 'package:flutter_app_devotion_sim/classes/UserInterface.dart';
+import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
+import 'package:flutter_app_devotion_sim/classes/user_interface.dart';
 
 enum UserLevel {
   SELLER,

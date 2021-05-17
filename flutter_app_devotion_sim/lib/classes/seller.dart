@@ -1,6 +1,6 @@
-import 'package:flutter_app_devotion_sim/classes/QRList.dart';
-import 'package:flutter_app_devotion_sim/classes/SellerInterface.dart';
-import 'package:flutter_app_devotion_sim/classes/User.dart';
+import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
+import 'package:flutter_app_devotion_sim/classes/seller_interface.dart';
+import 'package:flutter_app_devotion_sim/classes/user.dart';
 
 class Seller extends User implements SellerInterface {
   Seller(int id, String nickname, String email, QRList list) : super(id, nickname, email, list);

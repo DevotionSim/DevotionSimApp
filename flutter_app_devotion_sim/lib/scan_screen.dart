@@ -5,7 +5,6 @@ import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:image_picker/image_picker.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:image_gallery_saver/image_gallery_saver.dart';
 
 class Scan extends StatefulWidget {
   @override
@@ -23,7 +22,6 @@ class _ScanState extends State<Scan> {
   @override
   void initState() {
     super.initState();
-    //_requestPermission();
     qrData = "";
   }
 
@@ -70,7 +68,7 @@ class _ScanState extends State<Scan> {
                       flex: 1,
                       child: SizedBox(
                         child: InkWell(
-                          onTap: _scanFile,
+                          onTap: _scanPath,
                           child: Card(
                             color: Colors.cyan[300],
                             child: Container(
@@ -88,13 +86,6 @@ class _ScanState extends State<Scan> {
           ]
       ),
     );
-  }
-
-  Future<bool> _requestPermission() async {
-    Map<Permission, PermissionStatus> statuses = await [
-      Permission.storage,
-    ].request();
-    return statuses[Permission.storage].isGranted;
   }
 
   Future _scan() async {
@@ -169,10 +160,14 @@ class _ScanState extends State<Scan> {
     }
   }
 
-  Future _scanPath(String path) async {
+  Future _scanPath() async {
     await Permission.storage.request();
-    String barcode = await scanner.scanPath(path);
-
+    var image = await ImagePicker().getImage(source: ImageSource.gallery);
+    if(image==null) return;
+    final codeQR = await scanner.scanPath(image.path);
+    setState(() {
+      qrData = codeQR;
+    });
   }
 
   Future _scanBytes() async {
@@ -188,25 +183,6 @@ class _ScanState extends State<Scan> {
   Future _generateBarCode(String inputCode) async {
     Uint8List result = await scanner.generateBarCode(inputCode);
     this.setState(() => this.bytes = result);
-  }
-
-  void expanded() {
-    Expanded(
-      flex: 5,
-      child: GestureDetector(
-        onTap: () async {
-          final success =
-          await ImageGallerySaver.saveImage(this.bytes);
-
-        },
-        child: Text(
-          'save',
-          style:
-          TextStyle(fontSize: 15, color: Colors.blue),
-          textAlign: TextAlign.right,
-        ),
-      ),
-    );
   }
 
   Widget _buildQRStructure() {

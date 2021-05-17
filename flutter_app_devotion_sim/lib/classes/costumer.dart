@@ -1,8 +1,9 @@
-import 'package:flutter_app_devotion_sim/classes/CostumerInterface.dart';
-import 'package:flutter_app_devotion_sim/classes/QRList.dart';
-import 'package:flutter_app_devotion_sim/classes/User.dart';
+import 'package:flutter_app_devotion_sim/classes/costumer_interface.dart';
+import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
+import 'package:flutter_app_devotion_sim/classes/user.dart';
 
 class Costumer extends User implements CostumerInterface{
+
   Costumer(int id, String nickname, String email, QRList qrList) : super(id, nickname, email, qrList);
 
   @override
@@ -71,3 +72,4 @@ class Costumer extends User implements CostumerInterface{
     throw UnimplementedError();
   }
 }
+
