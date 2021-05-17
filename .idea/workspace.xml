@@ -37,60 +37,55 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.6.2&#10;&#10;Changelog:&#10;- Classes added:&#10;  * QRCode&#10;  * QRList&#10;  * User&#10;  * UserInterface&#10;  * Seller&#10;  * SellerInterface&#10;  * Costumer&#10;  * CostumerInterface&#10;- Homepage image changed.&#10;- AppBar removed.">
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/kotlin/com/devotionsim/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-hdpi/launcher_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-mdpi/launcher_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-xhdpi/launcher_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-xxhdpi/launcher_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-xxxhdpi/launcher_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icon/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icon/icon_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/costumer_stats.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/statistics_screen.dart" afterDir="false" />
+    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.7&#10;&#10;Changelog:&#10;- Versions merged.">
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/chat.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/dsblack.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/dswhite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/google-plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/login.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/motogp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/signup.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/twitter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/login_bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/main_bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/main_top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/scroll-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/signup_top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/components/background.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/components/body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/dashboard_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/components/background.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/components/body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/login_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/background.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/or_divider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/social_icon.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/signup_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Welcome/components/background.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Welcome/components/body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Welcome/scroll_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Welcome/welcome_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/already_have_an_account_acheck.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/rounded_button.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/rounded_input_field.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/rounded_password_field.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/text_field_container.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/constants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/kotlin/com/example/flutter_app_devotion_sim/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icon/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icon/icon_black.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/icon_black.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/Costumer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/costumer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/CostumerInterface.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/costumer_interface.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/QRCode.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/qr_code.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/QRList.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/qr_list.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/Seller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/seller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/SellerInterface.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/seller_interface.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/User.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/UserInterface.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/user_interface.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_for_android.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_screen_for_android.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_for_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_screen_for_web.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/homepage_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/generate.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_screen_for_android.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/generate_screen_for_android.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_screen_for_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/generate_screen_for_web.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/generate_stub.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/generate_stub.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/homepage_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/homepage_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/scan.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/scan_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/scan_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Scan/scan_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/statistics_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/statistics_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" afterDir="false" />
     </list>
@@ -130,26 +125,28 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icon" />
+    <property name="last_opened_file_path" value="$USER_HOME$/DevotionTest/2020-21-DAM2-M13-Devotion-SIM" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="debugger.stepping" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\icon" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\icon" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\build\flutter_assets\assets" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\icons" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Generate" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Scan" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Statistics" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\icon" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/flutter_app_devotion_sim/lib/main.dart" />
       <method v="2" />
     </configuration>
@@ -235,7 +232,8 @@
     <MESSAGE value="Version 1.5.4&#10;&#10;Changelog:&#10;- Scan class methods added.&#10;- Testing image_gallery_saver." />
     <MESSAGE value="Version 1.6&#10;&#10;Changelog:&#10;- Method _scan working fine on Scan class.&#10;- Permissions request fixed, now app ask twice for permission, and if denied, open app settings.&#10;- Now Generate class for Android saves QR images in ''.png' on the device app folder." />
     <MESSAGE value="Version 1.6.2&#10;&#10;Changelog:&#10;- Classes added:&#10;  * QRCode&#10;  * QRList&#10;  * User&#10;  * UserInterface&#10;  * Seller&#10;  * SellerInterface&#10;  * Costumer&#10;  * CostumerInterface&#10;- Homepage image changed.&#10;- AppBar removed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.6.2&#10;&#10;Changelog:&#10;- Classes added:&#10;  * QRCode&#10;  * QRList&#10;  * User&#10;  * UserInterface&#10;  * Seller&#10;  * SellerInterface&#10;  * Costumer&#10;  * CostumerInterface&#10;- Homepage image changed.&#10;- AppBar removed." />
+    <MESSAGE value="Version 1.7&#10;&#10;Changelog:&#10;- Versions merged." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.7&#10;&#10;Changelog:&#10;- Versions merged." />
   </component>
   <component name="WindowStateProjectService">
     <state x="566" y="314" key="#Dart" timestamp="1621281019048">
@@ -250,18 +248,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="582" y="308" key="#com.intellij.debugger.ui.breakpoints.BreakpointsConfigurationDialogFactory.BreakpointsConfigurationDialog.AddFieldBreakpointDialog/0.0.1536.824@0.0.1536.824" timestamp="1621280290558" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620291641908">
+    <state x="223" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621288721926">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1620291641908" />
+    <state x="223" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1621288721926" />
     <state x="546" y="171" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1621280176047">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="546" y="171" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1621280176047" />
-    <state x="498" y="202" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1620291625099">
+    <state x="498" y="202" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1621288720883">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="202" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1620291625099" />
+    <state x="498" y="202" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1621288720883" />
     <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1620519426948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -274,34 +272,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="580" y="159" key="AndroidProcessChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1620737331717" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620989423778">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1621289323305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620989423778" />
-    <state width="1493" height="390" key="GridCell.Tab.0.bottom" timestamp="1621287128266">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1621289323305" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1621291855844">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="390" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621287128266" />
-    <state width="1493" height="390" key="GridCell.Tab.0.center" timestamp="1621287128266">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1621291855844" />
+    <state width="1493" height="239" key="GridCell.Tab.0.bottom" timestamp="1621294981721">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="390" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1621287128266" />
-    <state width="1493" height="390" key="GridCell.Tab.0.left" timestamp="1621287128266">
+    <state width="1493" height="239" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621294981721" />
+    <state width="1493" height="239" key="GridCell.Tab.0.center" timestamp="1621294981721">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="390" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1621287128266" />
-    <state width="1493" height="390" key="GridCell.Tab.0.right" timestamp="1621287128266">
+    <state width="1493" height="239" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1621294981721" />
+    <state width="1493" height="239" key="GridCell.Tab.0.left" timestamp="1621294981721">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="390" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1621287128266" />
+    <state width="1493" height="239" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1621294981721" />
+    <state width="1493" height="239" key="GridCell.Tab.0.right" timestamp="1621294981721">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="239" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1621294981721" />
     <state x="405" y="115" key="RollbackChangesDialog" timestamp="1620924204188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="405" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1620924204188" />
-    <state x="325" y="26" key="SettingsEditor" timestamp="1621281180905">
+    <state x="325" y="26" key="SettingsEditor" timestamp="1621288651989">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="325" y="26" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1621281180905" />
+    <state x="325" y="26" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1621288651989" />
+    <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog" timestamp="1621289323305">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog/0.0.1536.824@0.0.1536.824" timestamp="1621289323305" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1621030856307">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

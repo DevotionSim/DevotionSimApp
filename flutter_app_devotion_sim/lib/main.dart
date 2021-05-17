@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_devotion_sim/homepage_screen.dart';
+import 'Screens/Welcome/scroll_page.dart';
+import 'Screens/Welcome/welcome_screen.dart';
+import 'constants.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyApp(),
-  ));
-}
+void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => _MyAppState();
-}
+class MyApp extends StatelessWidget {
 
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Homepage();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Auth',
+      theme: ThemeData(
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: Color(0xFF212121),
+      ),
+      home: WelcomeScreen(),
+    );
   }
 }

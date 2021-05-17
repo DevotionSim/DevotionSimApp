@@ -76,6 +76,7 @@ class _GenerateState extends State<Generate> {
     }
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
           child: Container(
             width: width,

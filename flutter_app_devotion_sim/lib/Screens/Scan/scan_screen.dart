@@ -33,6 +33,7 @@ class _ScanState extends State<Scan> {
     height = screenSize.height;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
           alignment: Alignment.center,
           children: [
@@ -180,7 +181,7 @@ class _ScanState extends State<Scan> {
 
   }
 
-  Future _generateBarCode(String inputCode) async {
+  Future _generateQRCode(String inputCode) async {
     Uint8List result = await scanner.generateBarCode(inputCode);
     this.setState(() => this.bytes = result);
   }

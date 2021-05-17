@@ -32,7 +32,7 @@ class _StatisticsScreenState extends State<StatisticScreen> {
     height = screenSize.height;
 
     return Scaffold(
-      backgroundColor: Colors.cyanAccent,
+      backgroundColor: Colors.white,
       body: Column(children:[
         Container(
           height: 100,

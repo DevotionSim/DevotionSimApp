@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_app_devotion_sim/generate.dart';
-import 'package:flutter_app_devotion_sim/scan_screen.dart';
-import 'package:flutter_app_devotion_sim/statistics_screen.dart';
+import 'package:flutter_app_devotion_sim/Screens/Dashboard/dashboard_screen.dart';
+import 'package:flutter_app_devotion_sim/Screens/Generate/generate.dart';
+import 'package:flutter_app_devotion_sim/Screens/Scan/scan_screen.dart';
+import 'package:flutter_app_devotion_sim/Screens/Statistics/statistics_screen.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -13,6 +14,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         padding: EdgeInsets.all(50.0),
         child: Column(
@@ -23,7 +25,8 @@ class _HomepageState extends State<Homepage> {
                 child: Image.asset('assets/devlogo_original.png')),
             textButton("Scan QR Code", Scan()),
             textButton("Generate QR Code", Generate.instance),
-            textButton("Statistics", StatisticScreen())
+            textButton("Statistics", StatisticScreen()),
+            textButton("Dashboard", DashboardScreen())
           ],
         ),
       ),
