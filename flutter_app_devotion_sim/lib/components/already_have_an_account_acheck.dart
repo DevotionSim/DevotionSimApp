@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_devotion_sim/constants.dart';
 
-
 class AlreadyHaveAnAccountCheck extends StatelessWidget {
   final bool login;
   final Function press;

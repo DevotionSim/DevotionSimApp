@@ -9,7 +9,6 @@ import 'package:flutter_app_devotion_sim/constants.dart';
 import 'package:flutter_app_devotion_sim/homepage_screen.dart';
 import 'package:flutter_svg/svg.dart';
 
-
 class Body extends StatelessWidget {
   const Body({
     Key key,

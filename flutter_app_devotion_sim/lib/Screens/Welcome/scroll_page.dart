@@ -25,7 +25,6 @@ class ScrollPage extends StatelessWidget {
     );
   }
 
-
   Widget _colorFondo() {
 
     return Container(
@@ -46,7 +45,6 @@ class ScrollPage extends StatelessWidget {
         fit: BoxFit.cover,
       ),
     );
-
   }
 
   Widget _textos() {
@@ -64,7 +62,6 @@ class ScrollPage extends StatelessWidget {
         ],
       ),
     );
-
   }
 
   Widget _pagina2(BuildContext context) {
@@ -86,6 +83,4 @@ class ScrollPage extends StatelessWidget {
       ),
     );
   }
-
-
 }

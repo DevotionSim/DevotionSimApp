@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_devotion_sim/Screens/Dashboard/components/background.dart';
-
 import 'dart:math';
 import 'dart:ui';
-
 
 class Body extends StatelessWidget {
   @override

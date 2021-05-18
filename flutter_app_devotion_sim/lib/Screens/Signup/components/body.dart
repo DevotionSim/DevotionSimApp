@@ -9,10 +9,6 @@ import 'package:flutter_app_devotion_sim/components/rounded_input_field.dart';
 import 'package:flutter_app_devotion_sim/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
 
-
-
-
-
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

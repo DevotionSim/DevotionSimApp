@@ -6,7 +6,6 @@ import 'package:flutter_app_devotion_sim/components/rounded_button.dart';
 import 'package:flutter_app_devotion_sim/constants.dart';
 import 'package:flutter_svg/svg.dart';
 
-
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

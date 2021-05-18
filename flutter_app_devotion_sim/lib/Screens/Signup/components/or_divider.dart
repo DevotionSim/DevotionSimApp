@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_devotion_sim/constants.dart';
 
-
 class OrDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
