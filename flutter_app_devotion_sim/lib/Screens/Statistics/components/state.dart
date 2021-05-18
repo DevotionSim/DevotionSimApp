@@ -5,13 +5,14 @@ import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import '../statistics_screen.dart';
 
-class StatisticsScreenState extends State<StatisticScreen> {
+class StatisticsScreenState extends State<StatisticsScreen> {
+
   QRList qrList = QRList();
 
   @override
   void initState() {
     super.initState();
-    for(int i = 0; i < 21; i++) {
+    for(int i = 0; i < 15; i++) {
       qrList.addQR(QRCode("q10000111100000000000000000100010101011111100101000101000010011000001111q"));
     }
   }
@@ -43,12 +44,17 @@ class StatisticsScreenState extends State<StatisticScreen> {
         itemBuilder: (context, index) => Container(
           child: Card(
             child:
-            QrImage(
-              data: qrList.getQR(index).getQRCode(),
-              version: QrVersions.auto,
-              size: 110,
-              gapless: false,
-              semanticsLabel: "DevotionSim QR",
+            GestureDetector(
+              onTap: () {
+
+              },
+              child: QrImage(
+                data: qrList.getQR(index).getQRCode(),
+                version: QrVersions.auto,
+                size: 110,
+                gapless: false,
+                semanticsLabel: "DevotionSim QR",
+              ),
             ),
           ),
         )

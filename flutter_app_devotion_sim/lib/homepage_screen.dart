@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_app_devotion_sim/Screens/Circuits/circuits_screen.dart';
 import 'package:flutter_app_devotion_sim/Screens/Dashboard/dashboard_screen.dart';
 import 'package:flutter_app_devotion_sim/Screens/Generate/components/generate.dart';
 import 'package:flutter_app_devotion_sim/Screens/Scan/scan_screen.dart';
-import 'package:flutter_app_devotion_sim/Screens/Statistics/statistics_screen.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -25,7 +25,7 @@ class _HomepageState extends State<Homepage> {
                 child: Image.asset('assets/devlogo_original.png')),
             textButton("Scan QR Code", Scan()),
             textButton("Generate QR Code", Generate.instance),
-            textButton("Statistics", StatisticScreen()),
+            textButton("Statistics", CircuitsScreen()),
             textButton("Dashboard", DashboardScreen())
           ],
         ),
