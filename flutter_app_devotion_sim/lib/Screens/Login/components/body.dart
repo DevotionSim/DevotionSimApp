@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_devotion_sim/Screens/Dashboard/dashboard_screen.dart';
 import 'package:flutter_app_devotion_sim/Screens/Login/components/background.dart';
 import 'package:flutter_app_devotion_sim/Screens/Signup/signup_screen.dart';
 import 'package:flutter_app_devotion_sim/components/already_have_an_account_acheck.dart';
@@ -6,7 +7,6 @@ import 'package:flutter_app_devotion_sim/components/rounded_button.dart';
 import 'package:flutter_app_devotion_sim/components/rounded_input_field.dart';
 import 'package:flutter_app_devotion_sim/components/rounded_password_field.dart';
 import 'package:flutter_app_devotion_sim/constants.dart';
-import 'package:flutter_app_devotion_sim/homepage_screen.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
@@ -24,7 +24,12 @@ class Body extends StatelessWidget {
           children: <Widget>[
             Text(
               "LOGIN",
-              style: TextStyle(fontWeight: FontWeight.bold, color: kPrimaryColor, fontSize: 30.0),
+              style: TextStyle(
+                fontFamily: 'MotoGP',
+                fontWeight: FontWeight.bold,
+                color: kPrimaryColor,
+                fontSize: 30.0
+              ),
             ),
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
@@ -46,7 +51,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return Homepage();
+                      return DashboardScreen();
                     },
                   ),
                 );

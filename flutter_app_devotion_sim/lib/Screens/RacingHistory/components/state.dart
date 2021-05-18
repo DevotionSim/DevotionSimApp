@@ -3,9 +3,9 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_app_devotion_sim/classes/qr_code.dart';
 import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import '../statistics_screen.dart';
+import '../racing_history_screen.dart';
 
-class StatisticsScreenState extends State<StatisticsScreen> {
+class RacingHistoryScreenState extends State<RacingHistoryScreen> {
 
   QRList qrList = QRList();
 
@@ -20,12 +20,17 @@ class StatisticsScreenState extends State<StatisticsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
         body: Column(children:[
           Container(
             height: 100,
             child: Center(
-              child: Text("Racing History"),
+              child: Text(
+                'Racing History',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'MotoGP',
+                    fontSize: 20),
+              )
             ),
           ),
           Expanded(

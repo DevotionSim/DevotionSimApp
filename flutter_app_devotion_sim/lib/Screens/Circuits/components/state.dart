@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_app_devotion_sim/Screens/Statistics/statistics_screen.dart';
+import 'package:flutter_app_devotion_sim/Screens/RacingHistory/racing_history_screen.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 import '../circuits_screen.dart';
 
@@ -101,7 +101,10 @@ class CircuitScreenState extends State<CircuitsScreen> {
               child: Container(
                 child: VerticalCardPager(
                   textStyle: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                    fontFamily:'MotoGP',
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
                   titles: titles,
                   images: images,
                   onPageChanged: (page) {},
@@ -110,7 +113,7 @@ class CircuitScreenState extends State<CircuitsScreen> {
                     Navigator.push(
                         context, MaterialPageRoute(
                         builder: (context) {
-                          return StatisticsScreen();
+                          return RacingHistoryScreen();
                         })
                     );
                   },

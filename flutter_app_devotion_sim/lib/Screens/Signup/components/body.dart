@@ -9,6 +9,8 @@ import 'package:flutter_app_devotion_sim/components/rounded_input_field.dart';
 import 'package:flutter_app_devotion_sim/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../constants.dart';
+
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,11 @@ class Body extends StatelessWidget {
           children: <Widget>[
             Text(
               "SIGNUP",
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'MotoGP',
+                  color: kPrimaryColor,
+                  fontSize: 30.0),
             ),
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(

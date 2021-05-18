@@ -7,7 +7,7 @@ import 'package:qr_flutter/qr_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import '../scan_screen.dart';
 
-class ScanState extends State<Scan> {
+class ScanScreenState extends State<ScanScreen> {
   Uint8List bytes;
   var screenSize;
   var width;
