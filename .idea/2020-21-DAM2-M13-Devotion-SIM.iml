@@ -20,6 +20,12 @@
       <excludeFolder url="file://$MODULE_DIR$/flutter_app_devotion_sim/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/flutter_app_devotion_sim/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/flutter_app_devotion_sim/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_app_devotion_sim/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_app_devotion_sim/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_app_devotion_sim/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_app_devotion_sim/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_app_devotion_sim/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_app_devotion_sim/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/build" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

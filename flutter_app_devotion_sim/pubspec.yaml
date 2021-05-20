@@ -41,6 +41,7 @@ dependencies:
   flutter_multi_carousel: ^1.0.0
   getwidget: ^1.0.7
   flutter_swiper: ^1.1.6
+  flutter_echarts: ^2.1.0
 
 dev_dependencies:
   flutter_test:

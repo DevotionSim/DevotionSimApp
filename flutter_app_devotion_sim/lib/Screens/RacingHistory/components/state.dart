@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_app_devotion_sim/classes/qr_code.dart';
 import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
+import 'package:flutter_app_devotion_sim/Screens/Statistics/statistics_screen.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import '../racing_history_screen.dart';
 
@@ -51,7 +52,12 @@ class RacingHistoryScreenState extends State<RacingHistoryScreen> {
             child:
             GestureDetector(
               onTap: () {
-
+                Navigator.push(
+                    context, MaterialPageRoute(
+                    builder: (context) {
+                      return StatisticsScreen();
+                    })
+                );
               },
               child: QrImage(
                 data: qrList.getQR(index).getQRCode(),
