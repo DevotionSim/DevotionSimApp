@@ -1,0 +1,92 @@
+[
+  {
+    "Time": "0:01",
+    "Gas": 0,
+    "Speed": 0,
+    "Gear": 100,
+    "Lean": 500,
+    "Front Brake": 0,
+    "Rear Brake": 0
+  },
+  {
+    "Time": "0:02",
+    "Gas": 400,
+    "Speed": 30,
+    "Gear": 200,
+    "Lean": 520,
+    "Front Brake": 0,
+    "Rear Brake": 0
+  },
+  {
+    "Time": "0:03",
+    "Gas": 800,
+    "Speed": 50,
+    "Gear": 300,
+    "Lean": 490,
+    "Front Brake": 0,
+    "Rear Brake": 0
+  },
+  {
+    "Time": "0:04",
+    "Gas": 800,
+    "Speed": 120,
+    "Gear": 400,
+    "Lean": 550,
+    "Front Brake": 300,
+    "Rear Brake": 200
+  },
+  {
+    "Time": "0:05",
+    "Gas": 800,
+    "Speed": 90,
+    "Gear": 400,
+    "Lean": 600,
+    "Front Brake": 400,
+    "Rear Brake": 200
+  },
+  {
+    "Time": "0:06",
+    "Gas": 720,
+    "Speed": 80,
+    "Gear": 400,
+    "Lean": 630,
+    "Front Brake": 200,
+    "Rear Brake": 100
+  },
+  {
+    "Time": "0:07",
+    "Gas": 905,
+    "Speed": 130,
+    "Gear": 400,
+    "Lean": 580,
+    "Front Brake": 50,
+    "Rear Brake": 73
+  },
+  {
+    "Time": "0:08",
+    "Gas": 500,
+    "Speed": 75,
+    "Gear": 300,
+    "Lean": 400,
+    "Front Brake": 500,
+    "Rear Brake": 540
+  },
+  {
+    "Time": "0:09",
+    "Gas": 109,
+    "Speed": 34,
+    "Gear": 200,
+    "Lean": 300,
+    "Front Brake": 609,
+    "Rear Brake": 790
+  },
+  {
+    "Time": "0:10",
+    "Gas": 50,
+    "Speed": 15,
+    "Gear": 100,
+    "Lean": 390,
+    "Front Brake": 530,
+    "Rear Brake": 302
+  }
+]

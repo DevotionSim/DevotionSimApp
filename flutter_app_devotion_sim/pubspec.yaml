@@ -79,12 +79,12 @@ flutter:
           style: italic
 
   assets:
-  - assets/
-  - assets/icons/
-  - assets/images/
-  - assets/images/circuits/
-  - assets/gallery/
-  - assets/dashboard/
+    - assets/
+    - assets/icons/
+    - assets/images/
+    - assets/images/circuits/
+    - assets/gallery/
+    - assets/dashboard/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
