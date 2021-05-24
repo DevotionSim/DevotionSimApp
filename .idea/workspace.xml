@@ -40,10 +40,10 @@
     <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.7.6&#10;&#10;Changelog:&#10;- Added classes:&#10;  * Stats&#10;  * StatsList&#10;  * Utils&#10;- Assets indentation fixed.&#10;- Testing graphical load of statistics through JSON files.">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/components/state_android.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/components/state_android.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/components/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/utils/utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/utils/utils.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Gallery/Eventos.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Gallery/Eventos.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Gallery/GalleryChooser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Gallery/GalleryChooser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Gallery/Gallery_1_simuladores.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Gallery/Gallery_1_simuladores.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Gallery/carrusel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Gallery/carrusel.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" afterDir="false" />
     </list>
@@ -91,18 +91,18 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\web" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Dashboard" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\images\circuits" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Generate\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\icon" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\web" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Dashboard" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\images\circuits" />
     </key>
   </component>
   <component name="RunManager">
