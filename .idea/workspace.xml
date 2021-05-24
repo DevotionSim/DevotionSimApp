@@ -37,18 +37,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.7.5&#10;&#10;Changelog:&#10;- App rotation locked to portrait mode.&#10;- Windows Desktop application support added.&#10;- Statistics screen added.&#10;- Tested Syncfusion charts:&#10;    # trial version for 30 days, commercial package. &#10;- Tested charts_flutter: &#10;    # issue found when all legends are hidden.&#10;- Tested flutter_echarts:&#10;    # implemented for Android and iOS devices, not working     for Web and Windows Desktop. TODO">
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/stats.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats_list.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/utils/utils.dart" afterDir="false" />
+    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.7.6&#10;&#10;Changelog:&#10;- Added classes:&#10;  * Stats&#10;  * StatsList&#10;  * Utils&#10;- Assets indentation fixed.&#10;- Testing graphical load of statistics through JSON files.">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/components/state_android.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/components/state_android.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/components/state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/utils/utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/utils/utils.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/web/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/web/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,18 +91,18 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\icon" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\web" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Dashboard" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\images\circuits" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Generate\components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\icon" />
     </key>
   </component>
   <component name="RunManager">
@@ -196,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621514596503</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Version 1.7.6&#10;&#10;Changelog:&#10;- Added classes:&#10;  * Stats&#10;  * StatsList&#10;  * Utils&#10;- Assets indentation fixed.&#10;- Testing graphical load of statistics through JSON files.">
+      <created>1621613642749</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621613642749</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,7 +239,8 @@
     <MESSAGE value="Version 1.7.3&#10;&#10;Changelog:&#10;- Circuits screen added.&#10;- Image circuits added.&#10;- Updated app navigation dynamics." />
     <MESSAGE value="Version 1.7.4&#10;&#10;Changelog:&#10;- Font MotoGP added.&#10;- Image assets added.&#10;- Updated app navigation dynamics." />
     <MESSAGE value="Version 1.7.5&#10;&#10;Changelog:&#10;- App rotation locked to portrait mode.&#10;- Windows Desktop application support added.&#10;- Statistics screen added.&#10;- Tested Syncfusion charts:&#10;    # trial version for 30 days, commercial package. &#10;- Tested charts_flutter: &#10;    # issue found when all legends are hidden.&#10;- Tested flutter_echarts:&#10;    # implemented for Android and iOS devices, not working     for Web and Windows Desktop. TODO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.7.5&#10;&#10;Changelog:&#10;- App rotation locked to portrait mode.&#10;- Windows Desktop application support added.&#10;- Statistics screen added.&#10;- Tested Syncfusion charts:&#10;    # trial version for 30 days, commercial package. &#10;- Tested charts_flutter: &#10;    # issue found when all legends are hidden.&#10;- Tested flutter_echarts:&#10;    # implemented for Android and iOS devices, not working     for Web and Windows Desktop. TODO" />
+    <MESSAGE value="Version 1.7.6&#10;&#10;Changelog:&#10;- Added classes:&#10;  * Stats&#10;  * StatsList&#10;  * Utils&#10;- Assets indentation fixed.&#10;- Testing graphical load of statistics through JSON files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.7.6&#10;&#10;Changelog:&#10;- Added classes:&#10;  * Stats&#10;  * StatsList&#10;  * Utils&#10;- Assets indentation fixed.&#10;- Testing graphical load of statistics through JSON files." />
   </component>
   <component name="WindowStateProjectService">
     <state x="566" y="314" key="#Dart" timestamp="1621281019048">
@@ -286,22 +291,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1621455754568" />
-    <state width="1493" height="328" key="GridCell.Tab.0.bottom" timestamp="1621611712711">
+    <state width="1493" height="228" key="GridCell.Tab.0.bottom" timestamp="1621848712505">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="328" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621611712711" />
-    <state width="1493" height="328" key="GridCell.Tab.0.center" timestamp="1621611712711">
+    <state width="1493" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621848712505" />
+    <state width="1493" height="228" key="GridCell.Tab.0.center" timestamp="1621848712505">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="328" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1621611712711" />
-    <state width="1493" height="328" key="GridCell.Tab.0.left" timestamp="1621611712711">
+    <state width="1493" height="228" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1621848712505" />
+    <state width="1493" height="228" key="GridCell.Tab.0.left" timestamp="1621848712505">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="328" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1621611712711" />
-    <state width="1493" height="328" key="GridCell.Tab.0.right" timestamp="1621611712711">
+    <state width="1493" height="228" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1621848712505" />
+    <state width="1493" height="228" key="GridCell.Tab.0.right" timestamp="1621848712505">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="328" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1621611712711" />
+    <state width="1493" height="228" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1621848712505" />
     <state x="349" y="155" key="IDE.errors.dialog" timestamp="1621609716993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -318,14 +323,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog/0.0.1536.824@0.0.1536.824" timestamp="1621289323305" />
-    <state width="498" height="508" key="SwitcherDM" timestamp="1621328513100">
+    <state width="498" height="537" key="SwitcherDM" timestamp="1621843125319">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="498" height="508" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1621328513100" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1621514608835">
+    <state width="498" height="537" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1621843125319" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1621613645602">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621514608835" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621613645602" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1621464138931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

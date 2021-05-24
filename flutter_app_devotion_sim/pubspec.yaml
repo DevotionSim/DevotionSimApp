@@ -42,6 +42,7 @@ dependencies:
   getwidget: ^1.0.7
   flutter_swiper: ^1.1.6
   flutter_echarts: ^2.1.0
+  universal_echarts: ^1.0.0+4
 
 dev_dependencies:
   flutter_test:

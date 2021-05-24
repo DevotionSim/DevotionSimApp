@@ -32,6 +32,10 @@ List<Stats> parseStats(String responseBody) {
   return parsed.map<Stats>((json) => Stats.fromJson(json)).toList();
 }
 
+// Method to sleep
+Future<void> wait(Duration d) => new Future.delayed(d);
+
+// Method to work with JSON when is loaded from network
 Widget builder () {
   return FutureBuilder<List<Stats>>(
       future: fetchStats(http.Client()),

@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_app_devotion_sim/utils/utils.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'generate.dart';
@@ -403,9 +404,6 @@ class GenerateState extends State<Generate> {
 
     return file;
   }
-
-  // Método Sleep
-  Future wait(Duration d) => new Future.delayed(d);
 
   // Constructor TextButton
   Widget _buildTextButton() {
