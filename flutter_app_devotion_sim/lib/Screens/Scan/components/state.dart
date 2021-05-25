@@ -8,12 +8,12 @@ import 'package:permission_handler/permission_handler.dart';
 import '../scan_screen.dart';
 
 class ScanScreenState extends State<ScanScreen> {
-  Uint8List bytes;
-  var screenSize;
+  Uint8List? bytes;
+  late var screenSize;
   var width;
   var height;
 
-  String qrData;
+  String? qrData;
 
   @override
   void initState() {
@@ -57,21 +57,6 @@ class ScanScreenState extends State<ScanScreen> {
                             child: Container(
                                 alignment: Alignment.center,
                                 child: Text("Scan")),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: SizedBox(
-                        child: InkWell(
-                          onTap: _scanPath,
-                          child: Card(
-                            color: Colors.cyan[300],
-                            child: Container(
-                              alignment: Alignment.center,
-                              child: Text("Open File"),
-                            ),
                           ),
                         ),
                       ),
@@ -169,7 +154,7 @@ class ScanScreenState extends State<ScanScreen> {
 
   Future _scanBytes() async {
     final _picker = ImagePicker();
-    PickedFile filePicker = await _picker.getImage(source: ImageSource.camera);
+    PickedFile? filePicker = await _picker.getImage(source: ImageSource.camera);
     if (filePicker == null) return;
     final File file = File(filePicker.path);
     Uint8List bytes = file.readAsBytesSync();
@@ -182,12 +167,12 @@ class ScanScreenState extends State<ScanScreen> {
     this.setState(() => this.bytes = result);
   }
 
-  Widget _buildQRStructure() {
+  Widget? _buildQRStructure() {
     if(qrData == "") {
       return null;
     } else {
       return QrImage(
-        data: qrData,
+        data: qrData!,
         version: QrVersions.auto,
         size: width * 0.8,
         gapless: false,

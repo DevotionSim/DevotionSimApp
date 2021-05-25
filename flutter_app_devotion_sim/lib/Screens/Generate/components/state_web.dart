@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -8,24 +9,24 @@ import 'dart:html' as html;
 import 'dart:ui' as ui;
 
 class GenerateState extends State<Generate> {
-  GlobalKey _globalKey;
-  Uint8List pngBytes;
+  GlobalKey? _globalKey;
+  Uint8List? pngBytes;
 
   // Controles EditText
-  TextEditingController textEditTimer;
-  TextEditingController textEditFalls;
-  TextEditingController textEditLaps;
+  TextEditingController? textEditTimer;
+  TextEditingController? textEditFalls;
+  TextEditingController? textEditLaps;
 
   // Booleanas CheckBox
-  var checkBoxArray;
+  late var checkBoxArray;
 
   // Código QR
-  String qrData;
-  bool qrDataChanged;
-  String qrDate;
+  late String qrData;
+  late bool qrDataChanged;
+  late String qrDate;
 
   // Control TextButton
-  bool _isButtonDisabled;
+  late bool _isButtonDisabled;
 
   // Método inicio variables
   @override
@@ -38,9 +39,9 @@ class GenerateState extends State<Generate> {
     textEditFalls = TextEditingController();
     textEditLaps = TextEditingController();
 
-    textEditTimer.text = "0";
-    textEditFalls.text = "0";
-    textEditLaps.text = "0";
+    textEditTimer!.text = "0";
+    textEditFalls!.text = "0";
+    textEditLaps!.text = "0";
 
     checkBoxArray = [false, false, false, false];
 
@@ -116,7 +117,7 @@ class GenerateState extends State<Generate> {
                                       setState(() {
                                         if (!checkBoxArray[3]) {
                                           checkBoxArray[0] = newValue;
-                                          textEditTimer.text = newValue ? "5" : "0";
+                                          textEditTimer!.text = newValue! ? "5" : "0";
                                         }
                                       });
                                     },
@@ -162,7 +163,7 @@ class GenerateState extends State<Generate> {
                                         size: 28.0,
                                       ),
                                       onTap: () {
-                                        decrementValue(textEditTimer, 0, !checkBoxArray[3], 5, 5);
+                                        decrementValue(textEditTimer!, 0, !checkBoxArray[3], 5, 5);
                                       },
                                     ),
                                     SizedBox(
@@ -174,7 +175,7 @@ class GenerateState extends State<Generate> {
                                         size: 28.0,
                                       ),
                                       onTap: () {
-                                        incrementValue(textEditTimer, 0, !checkBoxArray[3], 5, 5, 60);
+                                        incrementValue(textEditTimer!, 0, !checkBoxArray[3], 5, 5, 60);
                                       },
                                     ),
                                   ],
@@ -196,7 +197,7 @@ class GenerateState extends State<Generate> {
                                       setState(() {
                                         if (!checkBoxArray[3]) {
                                           checkBoxArray[1] = newValue;
-                                          textEditFalls.text = newValue ? "3" : "0";
+                                          textEditFalls!.text = newValue! ? "3" : "0";
                                         }
                                       });
                                     },
@@ -242,7 +243,7 @@ class GenerateState extends State<Generate> {
                                         size: 28.0,
                                       ),
                                       onTap: () {
-                                        decrementValue(textEditFalls, 1, !checkBoxArray[3], 1, 3);
+                                        decrementValue(textEditFalls!, 1, !checkBoxArray[3], 1, 3);
                                       },
                                     ),
                                     SizedBox(
@@ -254,7 +255,7 @@ class GenerateState extends State<Generate> {
                                         size: 28.0,
                                       ),
                                       onTap: () {
-                                        incrementValue(textEditFalls, 1, !checkBoxArray[3], 1, 3, 15);
+                                        incrementValue(textEditFalls!, 1, !checkBoxArray[3], 1, 3, 15);
                                       },
                                     ),
                                   ],
@@ -276,7 +277,7 @@ class GenerateState extends State<Generate> {
                                       setState(() {
                                         if (!checkBoxArray[3]) {
                                           checkBoxArray[2] = newValue;
-                                          textEditLaps.text = newValue ? "3" : "0";
+                                          textEditLaps!.text = newValue! ? "3" : "0";
                                         }
                                       });
                                     },
@@ -322,7 +323,7 @@ class GenerateState extends State<Generate> {
                                         size: 28.0,
                                       ),
                                       onTap: () {
-                                        decrementValue(textEditLaps, 2,!checkBoxArray[3], 1, 3);
+                                        decrementValue(textEditLaps!, 2,!checkBoxArray[3], 1, 3);
                                       },
                                     ),
                                     SizedBox(
@@ -334,7 +335,7 @@ class GenerateState extends State<Generate> {
                                         size: 28.0,
                                       ),
                                       onTap: () {
-                                        incrementValue(textEditLaps, 2, !checkBoxArray[3], 1, 3, 30);
+                                        incrementValue(textEditLaps!, 2, !checkBoxArray[3], 1, 3, 30);
                                       },
                                     ),
                                   ],
@@ -375,9 +376,9 @@ class GenerateState extends State<Generate> {
   Future<void> _capturePng() async {
     try {
       final RenderRepaintBoundary boundary =
-      _globalKey.currentContext.findRenderObject();
+      _globalKey!.currentContext!.findRenderObject() as RenderRepaintBoundary;
       final image = await boundary.toImage(pixelRatio: 2.0); // image quality
-      final byteData = await image.toByteData(format: ui.ImageByteFormat.png);
+      final byteData = await (image.toByteData(format: ui.ImageByteFormat.png) as FutureOr<ByteData>);
       pngBytes = byteData.buffer.asUint8List();
     } catch (e) {
       print(e);
@@ -385,7 +386,7 @@ class GenerateState extends State<Generate> {
   }
 
   // Método asíncrono para guardar Uint8List como fichero .png en modo Web
-  Future<void> _downloadFile(Uint8List image) async {
+  Future<void> _downloadFile(Uint8List? image) async {
     // Prepare
     final bytes = image;
     final blob = html.Blob([bytes]);
@@ -395,13 +396,13 @@ class GenerateState extends State<Generate> {
       ..style.display = 'none'
       ..download = 'QR_${qrDate.substring(0, 4)}${qrDate.substring(5, 7)}${qrDate.substring(8, 10)}_'
           '${qrDate.substring(11, 13)}${qrDate.substring(14, 16)}${qrDate.substring(17, 19)}.png';
-    html.document.body.children.add(anchor);
+    html.document.body!.children.add(anchor);
 
     // Download
     anchor.click();
 
     // Cleanup
-    html.document.body.children.remove(anchor);
+    html.document.body!.children.remove(anchor);
     html.Url.revokeObjectUrl(url);
 
     setState(() {
@@ -459,15 +460,15 @@ class GenerateState extends State<Generate> {
     /* Convierte los valores a binarios y agrega ceros a la izquierda
      * para completar la longitud necesaria para cada sección del QR
      */
-    timer = int.parse(textEditTimer.text).toRadixString(2);
+    timer = int.parse(textEditTimer!.text).toRadixString(2);
     while (timer.length < 8) {
       timer = "0" + timer;
     }
-    falls = int.parse(textEditFalls.text).toRadixString(2);
+    falls = int.parse(textEditFalls!.text).toRadixString(2);
     while (falls.length < 4) {
       falls = "0" + falls;
     }
-    laps = int.parse(textEditLaps.text).toRadixString(2);
+    laps = int.parse(textEditLaps!.text).toRadixString(2);
     while (laps.length < 8) {
       laps = "0" + laps;
     }
@@ -550,16 +551,16 @@ class GenerateState extends State<Generate> {
     });
   }
 
-  void setLegend(bool newValue) {
+  void setLegend(bool? newValue) {
     setState(() {
       checkBoxArray[3] = newValue;
       checkBoxArray[0] = newValue;
       checkBoxArray[1] = false;
       checkBoxArray[2] = false;
 
-      textEditTimer.text = newValue ? "60" : "0";
-      textEditFalls.text = "0";
-      textEditLaps.text = "0";
+      textEditTimer!.text = newValue! ? "60" : "0";
+      textEditFalls!.text = "0";
+      textEditLaps!.text = "0";
     });
   }
 }

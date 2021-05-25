@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart' show IterableExtension;
 import 'package:flutter_app_devotion_sim/classes/qr_code.dart';
 
 class QRList {
@@ -15,9 +16,9 @@ class QRList {
     return this._qrList.values.elementAt(index);
   }
 
-  int getIndexOf(QRCode code) {
-    return this._qrList.keys.firstWhere((key) => _qrList[key].getQRCode() ==
-        code.getQRCode(), orElse: () => null);
+  int? getIndexOf(QRCode code) {
+    return this._qrList.keys.firstWhereOrNull((key) => _qrList[key]!.getQRCode() ==
+        code.getQRCode());
   }
 
   addQR(QRCode code) {

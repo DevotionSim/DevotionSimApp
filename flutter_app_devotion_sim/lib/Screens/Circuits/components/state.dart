@@ -6,8 +6,8 @@ import '../circuits_screen.dart';
 
 class CircuitScreenState extends State<CircuitsScreen> {
 
-  List<String> titles;
-  List<Widget> images;
+  late List<String> titles;
+  late List<Widget> images;
 
   @override
   void initState() {

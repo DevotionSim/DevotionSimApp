@@ -8,7 +8,7 @@ import 'constants.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget with PortraitModeMixin {
-  const MyApp();
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

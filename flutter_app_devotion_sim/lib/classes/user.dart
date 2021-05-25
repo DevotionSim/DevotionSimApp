@@ -7,16 +7,16 @@ enum UserLevel {
 }
 
 class User implements UserInterface{
-  int _userID;
-  String _nickname;
-  String _email;
-  QRList _qrList;
+  int? _userID;
+  String? _nickname;
+  String? _email;
+  QRList? _qrList;
 
   setUserId(int id) {
     this._userID = id;
   }
 
-  int getUserId() {
+  int? getUserId() {
     return this._userID;
   }
 
@@ -24,7 +24,7 @@ class User implements UserInterface{
     this._nickname = nickname;
   }
 
-  String getNickname() {
+  String? getNickname() {
     return this._nickname;
   }
 
@@ -32,7 +32,7 @@ class User implements UserInterface{
     this._email = email;
   }
 
-  String getEmail() {
+  String? getEmail() {
     return this._email;
   }
 
@@ -40,7 +40,7 @@ class User implements UserInterface{
     this._qrList = list;
   }
 
-  QRList getQRList() {
+  QRList? getQRList() {
     return this._qrList;
   }
 

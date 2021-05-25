@@ -40,10 +40,31 @@
     <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.7.6&#10;&#10;Changelog:&#10;- Added classes:&#10;  * Stats&#10;  * StatsList&#10;  * Utils&#10;- Assets indentation fixed.&#10;- Testing graphical load of statistics through JSON files.">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Gallery/Eventos.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Gallery/Eventos.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Gallery/GalleryChooser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Gallery/GalleryChooser.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Gallery/Gallery_1_simuladores.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Gallery/Gallery_1_simuladores.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Gallery/carrusel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Gallery/carrusel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Circuits/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Circuits/components/state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/components/body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/components/generate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/components/generate.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/components/state_android.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/components/state_android.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/components/state_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Generate/components/state_web.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/components/background.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/components/background.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/components/body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Scan/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Scan/components/state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/background.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/background.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/social_icon.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/social_icon.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/components/state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/statistics_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/statistics_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Welcome/components/background.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Welcome/components/background.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/qr_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/qr_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/user.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/already_have_an_account_acheck.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/already_have_an_account_acheck.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/device_rotation_locker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/device_rotation_locker.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/rounded_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/rounded_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/rounded_input_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/rounded_input_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/rounded_password_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/rounded_password_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/text_field_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/components/text_field_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/utils/utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/utils/utils.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" afterDir="false" />
     </list>
@@ -255,10 +276,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="582" y="308" key="#com.intellij.debugger.ui.breakpoints.BreakpointsConfigurationDialogFactory.BreakpointsConfigurationDialog.AddFieldBreakpointDialog/0.0.1536.824@0.0.1536.824" timestamp="1621280290558" />
-    <state x="223" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621613221252">
+    <state x="223" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621934874801">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1621613221252" />
+    <state x="223" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1621934874801" />
     <state x="546" y="171" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1621280176047">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -291,22 +312,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1621455754568" />
-    <state width="1493" height="228" key="GridCell.Tab.0.bottom" timestamp="1621848712505">
+    <state width="1493" height="200" key="GridCell.Tab.0.bottom" timestamp="1621953948993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621848712505" />
-    <state width="1493" height="228" key="GridCell.Tab.0.center" timestamp="1621848712505">
+    <state width="1493" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621953948993" />
+    <state width="1493" height="200" key="GridCell.Tab.0.center" timestamp="1621953948993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="228" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1621848712505" />
-    <state width="1493" height="228" key="GridCell.Tab.0.left" timestamp="1621848712505">
+    <state width="1493" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1621953948993" />
+    <state width="1493" height="200" key="GridCell.Tab.0.left" timestamp="1621953948993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="228" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1621848712505" />
-    <state width="1493" height="228" key="GridCell.Tab.0.right" timestamp="1621848712505">
+    <state width="1493" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1621953948993" />
+    <state width="1493" height="200" key="GridCell.Tab.0.right" timestamp="1621953948993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="228" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1621848712505" />
+    <state width="1493" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1621953948993" />
     <state x="349" y="155" key="IDE.errors.dialog" timestamp="1621609716993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -335,10 +356,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1621464138931" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1620816950446">
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1621927550648">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1620816950446" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1621927550648" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620816391888">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -351,6 +372,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="11" y="60" width="1075" height="739" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1621594039666" />
+    <state x="70" y="133" width="640" height="534" key="find.popup" timestamp="1621952300472">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="70" y="133" width="640" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1621952300472" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1621503510509">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
