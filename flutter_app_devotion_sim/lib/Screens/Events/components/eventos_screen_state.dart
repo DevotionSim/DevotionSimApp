@@ -70,7 +70,7 @@ class EventosScreenState extends State<EventosScreen> {
                 decoration: BoxDecoration(
                   color: Colors.white,
                 ),
-                child: Image.network(imgList[index], fit: BoxFit.fill),
+                child: Image.asset(imgList[index], fit: BoxFit.fill),
               );
             },
           ),

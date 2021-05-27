@@ -1,8 +1,6 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_app_devotion_sim/Screens/Gallery/components/gallery_chooser_screen_state.dart';
 import 'dart:ui' as ui;
 import '../gallery_simuladores_screen.dart';
 
@@ -73,7 +71,7 @@ class GallerySimuladoresState extends State<GallerySimuladoresScreen> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                   ),
-                  child: Image.network(imgList[index], fit: BoxFit.cover),
+                  child: Image.asset(imgList[index], fit: BoxFit.cover),
                 );
               },
             ),

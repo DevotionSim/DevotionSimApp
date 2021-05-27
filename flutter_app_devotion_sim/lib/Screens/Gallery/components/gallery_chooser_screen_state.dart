@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_app_devotion_sim/Screens/Gallery/gallery_eventos_screen.dart';
@@ -54,7 +53,7 @@ class GalleryChooserScreenState extends State<GalleryChooserScreen> {
         width: 700,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/gallery/4.png"),
+              image: AssetImage("assets/gallery/images/4.png"),
               fit: BoxFit.cover),
           color: Colors.black,
           borderRadius: BorderRadius.all(Radius.circular(7)),
@@ -64,7 +63,7 @@ class GalleryChooserScreenState extends State<GalleryChooserScreen> {
         width: 700,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/gallery/5.png"),
+              image: AssetImage("assets/gallery/images/5.png"),
               fit: BoxFit.cover),
           color: Colors.black,
           borderRadius: BorderRadius.all(Radius.circular(7)),
