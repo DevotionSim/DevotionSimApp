@@ -1,10 +1,32 @@
 import 'package:flutter_app_devotion_sim/classes/costumer_interface.dart';
 import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
+import 'package:flutter_app_devotion_sim/classes/stats_list.dart';
 import 'package:flutter_app_devotion_sim/classes/user.dart';
 
 class Costumer extends User implements CostumerInterface{
+  QRList? _qrList;
+  StatsList? _statsList;
 
-  Costumer(int id, String nickname, String email, QRList qrList) : super(id, nickname, email, qrList);
+  Costumer(int id, String nickname, String email, QRList qrList, StatsList statsList) : super(id, nickname, email) {
+    this._statsList = statsList;
+    this._qrList = qrList;
+  }
+
+  setQRList(QRList list) {
+    this._qrList = list;
+  }
+
+  QRList? getQRList() {
+    return this._qrList;
+  }
+
+  setStatsList(StatsList list) {
+    this._statsList = list;
+  }
+
+  StatsList? getStatsList() {
+    return this._statsList;
+  }
 
   @override
   bool changeEmail(String email) {
@@ -27,48 +49,6 @@ class Costumer extends User implements CostumerInterface{
   @override
   bool changeProfileImage() {
     // TODO: implement changeProfileImage
-    throw UnimplementedError();
-  }
-
-  @override
-  checkEvents() {
-    // TODO: implement checkEvents
-    throw UnimplementedError();
-  }
-
-  @override
-  checkLocations() {
-    // TODO: implement checkLocations
-    throw UnimplementedError();
-  }
-
-  @override
-  checkQRList() {
-    // TODO: implement checkQRList
-    throw UnimplementedError();
-  }
-
-  @override
-  checkStatistics() {
-    // TODO: implement checkStatistics
-    throw UnimplementedError();
-  }
-
-  @override
-  contactUs() {
-    // TODO: implement contactUs
-    throw UnimplementedError();
-  }
-
-  @override
-  goWeb() {
-    // TODO: implement goWeb
-    throw UnimplementedError();
-  }
-
-  @override
-  scanQR() {
-    // TODO: implement scanQR
     throw UnimplementedError();
   }
 }

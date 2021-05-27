@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_devotion_sim/components/device_rotation_locker.dart';
-import 'Screens/Welcome/scroll_page.dart';
 import 'Screens/Welcome/welcome_screen.dart';
 import 'constants.dart';
 //import 'dart:js' as js;

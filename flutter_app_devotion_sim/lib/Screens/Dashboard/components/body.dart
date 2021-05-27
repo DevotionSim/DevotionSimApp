@@ -1,33 +1,45 @@
+import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_devotion_sim/Screens/Circuits/circuits_screen.dart';
+import 'package:flutter_app_devotion_sim/Screens/Configuration/configuration_screen.dart';
+import 'package:flutter_app_devotion_sim/Screens/Events/eventos_screen.dart';
+import 'package:flutter_app_devotion_sim/Screens/Gallery/gallery_chooser_screen.dart';
 import 'package:flutter_app_devotion_sim/Screens/Generate/components/generate.dart';
 import 'dart:ui';
 import 'package:flutter_app_devotion_sim/Screens/Scan/scan_screen.dart';
+import '../dashboard_screen.dart';
 
-class Body extends StatelessWidget {
-
+class Body extends State<DashboardScreen> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Scaffold(
+        body: Container(
+            child: Stack(
       children: <Widget>[
         Column(
           children: <Widget>[
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(15.0),
+                        bottomRight: Radius.circular(15.0)),
                     image: DecorationImage(
                         image: AssetImage("assets/dashboard/cabecera.png"),
-                        fit: BoxFit.cover
-                    )
-                ),
+                        fit: BoxFit.cover)),
               ),
-            flex: 2,
+              flex: 2,
             ),
             Expanded(
-              child: Container(color: Color.fromARGB(255, 64, 64, 64)),
+              child: Container(color: Color.fromARGB(255, 61, 61, 61)),
               flex: 5,
             ),
           ],
+        ),
+        AnimatedBackground(
+          behaviour: RandomParticleBehaviour(options: particleOptions),
+          vsync: this,
+          child: Text(''),
         ),
         Container(
           child: Column(
@@ -37,7 +49,16 @@ class Body extends StatelessWidget {
                 title: Text(
                   'DASHBOARD',
                   style: TextStyle(
-                      color: Colors.white, fontFamily: 'MotoGP', fontSize: 40),
+                    color: Colors.white,
+                    fontFamily: 'MotoGP',
+                    fontSize: 50,
+                    shadows: [
+                      Shadow(
+                          // bottomLeft
+                          offset: Offset(-2, -2),
+                          color: Colors.black),
+                    ],
+                  ),
                 ),
                 subtitle: Text(
                   'Nombre Usuario',
@@ -56,14 +77,13 @@ class Body extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                                context, MaterialPageRoute(
-                                builder: (context) {
-                                  return ScanScreen();
-                                })
-                            );
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return ScanScreen();
+                            }));
                           },
                           child: Card(
+                            color: Color.fromARGB(220, 255, 255, 255),
                             elevation: 2,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
@@ -75,9 +95,16 @@ class Body extends StatelessWidget {
                                   Text(
                                     'QR',
                                     style: TextStyle(
-                                        color: Colors.black,
-                                        fontFamily: 'MotoGP',
-                                        fontSize: 20),
+                                      color: Colors.black,
+                                      fontFamily: 'MotoGP',
+                                      fontSize: 20,
+                                      shadows: [
+                                        Shadow(
+                                            // bottomLeft
+                                            offset: Offset(-1, -1),
+                                            color: Colors.grey),
+                                      ],
+                                    ),
                                   )
                                 ],
                               ),
@@ -86,9 +113,13 @@ class Body extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            // Unimplemented
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return GalleryChooserScreen();
+                            }));
                           },
                           child: Card(
+                            color: Color.fromARGB(220, 255, 255, 255),
                             elevation: 2,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
@@ -96,13 +127,21 @@ class Body extends StatelessWidget {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
-                                  Image.asset('assets/dashboard/iconMultimedia.png'),
+                                  Image.asset(
+                                      'assets/dashboard/iconMultimedia.png'),
                                   Text(
                                     'Multimedia',
                                     style: TextStyle(
-                                        color: Colors.black,
-                                        fontFamily: 'MotoGP',
-                                        fontSize: 20),
+                                      color: Colors.black,
+                                      fontFamily: 'MotoGP',
+                                      fontSize: 20,
+                                      shadows: [
+                                        Shadow(
+                                            // bottomLeft
+                                            offset: Offset(-1, -1),
+                                            color: Colors.grey),
+                                      ],
+                                    ),
                                   )
                                 ],
                               ),
@@ -111,14 +150,13 @@ class Body extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                                context, MaterialPageRoute(
-                                builder: (context) {
-                                  return CircuitsScreen();
-                                })
-                            );
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return CircuitsScreen();
+                            }));
                           },
                           child: Card(
+                            color: Color.fromARGB(220, 255, 255, 255),
                             elevation: 2,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
@@ -126,13 +164,21 @@ class Body extends StatelessWidget {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
-                                  Image.asset('assets/dashboard/iconoStadistics.png'),
+                                  Image.asset(
+                                      'assets/dashboard/iconoStadistics.png'),
                                   Text(
                                     'Stadistics',
                                     style: TextStyle(
-                                        color: Colors.black,
-                                        fontFamily: 'MotoGP',
-                                        fontSize: 20),
+                                      color: Colors.black,
+                                      fontFamily: 'MotoGP',
+                                      fontSize: 20,
+                                      shadows: [
+                                        Shadow(
+                                            // bottomLeft
+                                            offset: Offset(-1, -1),
+                                            color: Colors.grey),
+                                      ],
+                                    ),
                                   )
                                 ],
                               ),
@@ -141,9 +187,13 @@ class Body extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            // Unimplemented
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return EventosScreen();
+                            }));
                           },
                           child: Card(
+                            color: Color.fromARGB(220, 255, 255, 255),
                             elevation: 2,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
@@ -151,13 +201,21 @@ class Body extends StatelessWidget {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
-                                  Image.asset('assets/dashboard/iconEvents.png'),
+                                  Image.asset(
+                                      'assets/dashboard/iconEvents.png'),
                                   Text(
                                     'Events',
                                     style: TextStyle(
-                                        color: Colors.black,
-                                        fontFamily: 'MotoGP',
-                                        fontSize: 20),
+                                      color: Colors.black,
+                                      fontFamily: 'MotoGP',
+                                      fontSize: 20,
+                                      shadows: [
+                                        Shadow(
+                                            // bottomLeft
+                                            offset: Offset(-1, -1),
+                                            color: Colors.grey),
+                                      ],
+                                    ),
                                   )
                                 ],
                               ),
@@ -166,9 +224,13 @@ class Body extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            // Unimplemented
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                                  return Generate.instance!;
+                                }));
                           },
                           child: Card(
+                            color: Color.fromARGB(220, 255, 255, 255),
                             elevation: 2,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
@@ -180,9 +242,16 @@ class Body extends StatelessWidget {
                                   Text(
                                     'My Races',
                                     style: TextStyle(
-                                        color: Colors.black,
-                                        fontFamily: 'MotoGP',
-                                        fontSize: 20),
+                                      color: Colors.black,
+                                      fontFamily: 'MotoGP',
+                                      fontSize: 20,
+                                      shadows: [
+                                        Shadow(
+                                            // bottomLeft
+                                            offset: Offset(-1, -1),
+                                            color: Colors.grey),
+                                      ],
+                                    ),
                                   )
                                 ],
                               ),
@@ -191,14 +260,13 @@ class Body extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                                context, MaterialPageRoute(
-                                builder: (context) {
-                                  return Generate.instance!;
-                                })
-                            );
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return ConfigurationScreen();
+                            }));
                           },
                           child: Card(
+                            color: Color.fromARGB(220, 255, 255, 255),
                             elevation: 2,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
@@ -206,27 +274,47 @@ class Body extends StatelessWidget {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
-                                  Image.asset('assets/dashboard/iconSettings.png'),
+                                  Image.asset(
+                                      'assets/dashboard/iconSettings.png'),
                                   Text(
                                     'Settings',
                                     style: TextStyle(
-                                        color: Colors.black,
-                                        fontFamily: 'MotoGP',
-                                        fontSize: 20),
+                                      color: Colors.black,
+                                      fontFamily: 'MotoGP',
+                                      fontSize: 20,
+                                      shadows: [
+                                        Shadow(
+                                            // bottomLeft
+                                            offset: Offset(-1, -1),
+                                            color: Colors.grey),
+                                      ],
+                                    ),
                                   )
                                 ],
                               ),
                             ),
                           ),
                         ),
-                      ]
-                  ),
+                      ]),
                 ),
               ),
             ],
           ),
-        )
+        ),
       ],
-    );
+    )));
   }
 }
+
+ParticleOptions particleOptions = ParticleOptions(
+  baseColor: Colors.redAccent,
+  spawnOpacity: 0.0,
+  opacityChangeRate: 0.25,
+  minOpacity: 0.1,
+  maxOpacity: 0.4,
+  spawnMinSpeed: 60.0,
+  spawnMaxSpeed: 110.0,
+  spawnMinRadius: 7.0,
+  spawnMaxRadius: 25.0,
+  particleCount: 50,
+);

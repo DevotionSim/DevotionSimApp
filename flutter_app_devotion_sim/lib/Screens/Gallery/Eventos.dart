@@ -46,7 +46,6 @@ class Gallery extends StatelessWidget {
         ],
       ),
     );
-    const _PictureGrid();
   }
 
   Card miCardImage() {
@@ -110,8 +109,8 @@ class Gallery extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              FlatButton(onPressed: () => {}, child: Text('Aceptar')),
-              FlatButton(onPressed: () => {}, child: Text('Cancelar'))
+              TextButton(onPressed: () => {}, child: Text('Aceptar')),
+              TextButton(onPressed: () => {}, child: Text('Cancelar'))
             ],
           )
         ],

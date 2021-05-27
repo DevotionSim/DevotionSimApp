@@ -1,4 +1,3 @@
-import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
 import 'package:flutter_app_devotion_sim/classes/user_interface.dart';
 
 enum UserLevel {
@@ -10,7 +9,6 @@ class User implements UserInterface{
   int? _userID;
   String? _nickname;
   String? _email;
-  QRList? _qrList;
 
   setUserId(int id) {
     this._userID = id;
@@ -36,19 +34,10 @@ class User implements UserInterface{
     return this._email;
   }
 
-  setQRList(QRList list) {
-    this._qrList = list;
-  }
-
-  QRList? getQRList() {
-    return this._qrList;
-  }
-
-  User(int id, String nickname, String email, QRList list) {
+  User(int id, String nickname, String email) {
     this._userID = id;
     this._nickname = nickname;
     this._email = email;
-    this._qrList = list;
   }
 
   @override
@@ -66,12 +55,6 @@ class User implements UserInterface{
   @override
   bool logout() {
     // TODO: implement logout
-    throw UnimplementedError();
-  }
-
-  @override
-  bool uploadQRList(QRList list) {
-    // TODO: implement uploadQRList
     throw UnimplementedError();
   }
 }

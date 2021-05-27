@@ -3,7 +3,19 @@ import 'package:flutter_app_devotion_sim/classes/seller_interface.dart';
 import 'package:flutter_app_devotion_sim/classes/user.dart';
 
 class Seller extends User implements SellerInterface {
-  Seller(int id, String nickname, String email, QRList list) : super(id, nickname, email, list);
+  QRList? _qrList;
+
+  Seller(int id, String nickname, String email, QRList list) : super(id, nickname, email) {
+    this._qrList = list;
+  }
+
+  setQRList(QRList list) {
+    this._qrList = list;
+  }
+
+  QRList? getQRList() {
+    return this._qrList;
+  }
 
   @override
   int checkSales() {

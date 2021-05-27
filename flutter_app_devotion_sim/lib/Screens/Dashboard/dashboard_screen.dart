@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_devotion_sim/Screens/Dashboard/components/body.dart';
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Body(),
-    );
-  }
+  Body createState() => Body();
 }

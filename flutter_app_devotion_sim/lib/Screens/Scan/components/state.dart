@@ -74,13 +74,9 @@ class ScanScreenState extends State<ScanScreen> {
     var status = await Permission.camera.request();
     if (status.isGranted) {
       String codeQR = await scanner.scan();
-      if (codeQR == null) {
-        print('nothing return.');
-      } else {
-        setState(() {
-          qrData = codeQR;
-        });
-      }
+      setState(() {
+        qrData = codeQR;
+      });
     }
     else if (status.isDenied) {
       return;
@@ -110,13 +106,9 @@ class ScanScreenState extends State<ScanScreen> {
     var status = await Permission.storage.request();
     if (status.isGranted) {
       String codeQR = await scanner.scanPhoto();
-      if (codeQR == null) {
-        print('nothing return.');
-      } else {
-        setState(() {
-          qrData = codeQR;
-        });
-      }
+      setState(() {
+        qrData = codeQR;
+      });
     }
     else if (status.isDenied) {
       return;

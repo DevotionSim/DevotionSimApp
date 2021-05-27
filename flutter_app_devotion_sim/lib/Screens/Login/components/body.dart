@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_devotion_sim/Screens/Dashboard/dashboard_screen.dart';
 import 'package:flutter_app_devotion_sim/Screens/Login/components/background.dart';
-import 'package:flutter_app_devotion_sim/Screens/Signup/signup_screen.dart';
 import 'package:flutter_app_devotion_sim/components/already_have_an_account_acheck.dart';
 import 'package:flutter_app_devotion_sim/components/rounded_button.dart';
 import 'package:flutter_app_devotion_sim/components/rounded_input_field.dart';

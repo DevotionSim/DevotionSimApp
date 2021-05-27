@@ -6,14 +6,14 @@ import 'package:flutter_echarts/flutter_echarts.dart';
 import '../statistics_screen.dart';
 
 class StatisticsScreenState extends State<StatisticsScreen> {
-  late Future<Widget> _charts;
+  late Future<void> _jsonCall;
   late StatsList _statsList;
   late List<String?> _time;
   late List<int?> _gas, _speed, _gear, _lean, _fBrake, _rBrake;
 
   Future<void> loadList() async {
 
-    _statsList = StatsList(await jsonStats('assets/stats.json'));
+    _statsList = StatsList(await jsonStats('assets/stats.json'), "idQRCode");
     _time = [];
     _gas = [];
     _speed = [];
@@ -21,7 +21,7 @@ class StatisticsScreenState extends State<StatisticsScreen> {
     _lean = [];
     _fBrake = [];
     _rBrake = [];
-    
+
     for(int i = 0; i < _statsList.statsList!.length; i++) {
       _time.add(_statsList.statsList![i].time);
       _gas.add(_statsList.statsList![i].gas);
@@ -35,88 +35,52 @@ class StatisticsScreenState extends State<StatisticsScreen> {
 
   @override
   void initState() {
+    _jsonCall = _callJsonStats();
     super.initState();
-    loadList().whenComplete(() => _charts = echarts()).whenComplete(() =>
-    setState(() {}));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Column(
-          children: [
-            Container(
-              alignment: Alignment.center,
-              height: 160,
-              child: Text(
-                'Racing History',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: 'MotoGP',
-                    fontSize: 40),
-              ),
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            height: 160,
+            child: Text(
+              'Racing History',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'MotoGP',
+                  fontSize: 40),
             ),
-            FutureBuilder<Widget>(
-              future: _charts,
-              builder: (BuildContext context, AsyncSnapshot<Widget> snapshot) {
-                List<Widget> children;
-                if(snapshot.connectionState == ConnectionState.waiting) {
-                  children = [
-                    SizedBox(
-                      child: CircularProgressIndicator(),
-                      width: 60,
-                      height: 60,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 16),
-                      child: Text('Loading statistics...'),
-                    )
-                  ];
-                }
-                else if (snapshot.hasError) {
-                  children = [
-                    SizedBox(
-                      child: CircularProgressIndicator(),
-                      width: 60,
-                      height: 60,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 16),
-                      child: Text('Error loading statistics.'),
-                    )
-                  ];
-                } else {
-                  children = [
-                    Container(
-                      alignment: Alignment.center,
-                      height: 500,
-                      width: 420,
-                      child: snapshot.data,
-                    )
-                  ];
-                }
-                return Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: children,
-                  ),
-                );
-              }
-            )
-          ],
-        ),
+          ),
+          FutureBuilder(
+            future: _jsonCall,
+            builder: (context, snapshot) {
+              print(snapshot);
+              if (snapshot.connectionState == ConnectionState.waiting)
+                return _buildProgressIndicator();
+              else if (snapshot.hasError)
+                return _buildError();
+              else
+                return _buildBody();
+            },
+          ),
+        ],
+      ),
     );
   }
 
-  Future<Widget> echarts() async {
-    if(_rBrake.isEmpty) {
-      return CircularProgressIndicator();
-    }
-    else {
-      return Echarts(
-        option: '''
+  Future<bool> _callJsonStats() async {
+    await Future.wait([loadList()]);
+    return true;
+  }
+
+  Widget echarts() {
+    return Echarts(
+      option: '''
       {
         tooltip: {
             trigger: 'axis',
@@ -217,8 +181,43 @@ class StatisticsScreenState extends State<StatisticsScreen> {
         ]
       }
     '''
-        ,
-      );
-    }
+      ,
+    );
+  }
+
+  Widget _buildProgressIndicator() {
+    return Center(
+      child: Container(
+        width: 300,
+        height: 300,
+        child: CircularProgressIndicator()
+      ),
+    );
+  }
+
+  Widget _buildBody() {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            alignment: Alignment.center,
+            height: 500,
+            width: 420,
+            child: echarts(),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget _buildError() {
+    return Center(
+      child: Container(
+        width: 300,
+        height: 100,
+        child: Text("Error while loading Web Services")
+      ),
+    );
   }
 }

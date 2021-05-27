@@ -40,8 +40,9 @@ dependencies:
   carousel_slider: ^4.0.0-nullsafety.0
   flutter_echarts: ^2.1.0
   universal_echarts: ^1.0.0+4
-  flutter_swiper_null_safety: ^1.0.2
-  collection: ^1.15.0-nullsafety.4
+  visibility_detector: ^0.2.0
+  flick_video_player: ^0.3.1
+  animated_background: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -84,7 +85,11 @@ flutter:
     - assets/images/
     - assets/images/circuits/
     - assets/gallery/
+    - assets/gallery/images/
     - assets/dashboard/
+    - assets/events/
+    - assets/configuration/
+    - assets/login2/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
