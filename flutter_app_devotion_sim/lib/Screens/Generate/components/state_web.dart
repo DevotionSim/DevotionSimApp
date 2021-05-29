@@ -75,10 +75,28 @@ class GenerateState extends State<Generate> {
               alignment: Alignment.center,
               children: [
                 Positioned(
-                  top: 20,
-                  left: (width - 340) / 2,
-                  width: 340,
-                  height: 320,
+                    top: 0,
+                    child: Container(
+                        child: Text('QR GENERATOR',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.redAccent,
+                              fontFamily: 'MotoGP',
+                              fontSize: 55,
+                              shadows: [
+                                Shadow(
+                                  // bottomLeft
+                                    offset: Offset(-2, -2),
+                                    color: Colors.black),
+                              ],
+                            )
+                        )
+                    )
+                ),
+                Positioned(
+                  top: height * 0.11,
+                  width: 380,
+                  height: 380,
                   child: RepaintBoundary(
                     // Assigns the key to identify QR Widget
                     key: _globalKey,
@@ -99,7 +117,7 @@ class GenerateState extends State<Generate> {
                   ),
                 ),
                 Positioned(
-                    top: 346,
+                    top: height * 0.65,
                     left: (width - 290) / 2 - 16,
                     width: 310,
                     child: Column(
@@ -363,7 +381,7 @@ class GenerateState extends State<Generate> {
                       ],
                     )),
                 Positioned(
-                  bottom: 12,
+                  top: height * 0.92,
                   child: _buildTextButton(),
                 )
               ],
@@ -416,7 +434,21 @@ class GenerateState extends State<Generate> {
   // Constructor TextButton
   Widget _buildTextButton() {
     return new TextButton(
-        child: Text("GENERATE QR"),
+        style: TextButton.styleFrom(
+            primary: Colors.white,
+            backgroundColor: Colors.redAccent,
+            onSurface: Colors.black
+        ),
+        child: Container(
+          width: 120,
+          child: Text("GENERATE QR",
+            style: TextStyle(
+              fontFamily: 'MotoGP',
+              fontSize: 20,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
         onPressed: _isButtonDisabled ? null : _generateQR);
   }
 

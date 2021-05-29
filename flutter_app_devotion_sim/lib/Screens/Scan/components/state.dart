@@ -34,14 +34,34 @@ class ScanScreenState extends State<ScanScreen> {
           alignment: Alignment.center,
           children: [
             Positioned(
-              top: 60,
+              top: 30,
+              child: Container(
+                margin: const EdgeInsets.only(top: 30),
+                child: Text('QR SCANNER',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.redAccent,
+                    fontFamily: 'MotoGP',
+                    fontSize: 55,
+                    shadows: [
+                      Shadow(
+                        // bottomLeft
+                          offset: Offset(-2, -2),
+                          color: Colors.black),
+                    ],
+                  )
+                )
+              )
+            ),
+            Positioned(
+              top: height * 0.24,
               child: Container(
                 alignment: Alignment.center,
                 child: _buildQRStructure(),
               ),
             ),
             Positioned(
-              top: height / 2,
+              top: height * 0.75,
               child: Container(
                 width: 200,
                 height: 70,
@@ -53,10 +73,18 @@ class ScanScreenState extends State<ScanScreen> {
                         child: InkWell(
                           onTap: _scan,
                           child: Card(
-                            color: Colors.cyan[300],
+                            color: Colors.redAccent,
                             child: Container(
-                                alignment: Alignment.center,
-                                child: Text("Scan")),
+                              alignment: Alignment.center,
+                              child: Text("Scan",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'MotoGP',
+                                  fontSize: 20,
+                                )
+                              )
+                            ),
                           ),
                         ),
                       ),
@@ -150,8 +178,7 @@ class ScanScreenState extends State<ScanScreen> {
     if (filePicker == null) return;
     final File file = File(filePicker.path);
     Uint8List bytes = file.readAsBytesSync();
-    String barcode = await scanner.scanBytes(bytes);
-
+    String qrCode = await scanner.scanBytes(bytes);
   }
 
   Future _generateQRCode(String inputCode) async {
@@ -163,10 +190,11 @@ class ScanScreenState extends State<ScanScreen> {
     if(qrData == "") {
       return null;
     } else {
+      //TODO save scanned code in user's profile
       return QrImage(
         data: qrData!,
         version: QrVersions.auto,
-        size: width * 0.8,
+        size: width * 0.9,
         gapless: false,
         semanticsLabel: "DevotionSim QR",
         embeddedImage: new AssetImage('assets/devlogo.png'),

@@ -13,7 +13,7 @@ class StatisticsScreenState extends State<StatisticsScreen> {
 
   Future<void> loadList() async {
 
-    _statsList = StatsList(await jsonStats('assets/stats.json'), "idQRCode");
+    _statsList = StatsList(await jsonStats('assets/stats.json'), "idQRCode", "mugelo");
     _time = [];
     _gas = [];
     _speed = [];
@@ -22,14 +22,14 @@ class StatisticsScreenState extends State<StatisticsScreen> {
     _fBrake = [];
     _rBrake = [];
 
-    for(int i = 0; i < _statsList.statsList!.length; i++) {
-      _time.add(_statsList.statsList![i].time);
-      _gas.add(_statsList.statsList![i].gas);
-      _speed.add(_statsList.statsList![i].speed);
-      _gear.add(_statsList.statsList![i].gear);
-      _lean.add(_statsList.statsList![i].lean);
-      _fBrake.add(_statsList.statsList![i].frontBrake);
-      _rBrake.add(_statsList.statsList![i].rearBrake);
+    for(int i = 0; i < _statsList.getStatsList()!.length; i++) {
+      _time.add(_statsList.getStatsList()![i].time);
+      _gas.add(_statsList.getStatsList()![i].gas);
+      _speed.add(_statsList.getStatsList()![i].speed);
+      _gear.add(_statsList.getStatsList()![i].gear);
+      _lean.add(_statsList.getStatsList()![i].lean);
+      _fBrake.add(_statsList.getStatsList()![i].frontBrake);
+      _rBrake.add(_statsList.getStatsList()![i].rearBrake);
     }
   }
 
@@ -46,15 +46,22 @@ class StatisticsScreenState extends State<StatisticsScreen> {
       body: Column(
         children: [
           Container(
+            margin: EdgeInsets.only(top: 50, bottom: 30),
             alignment: Alignment.center,
-            height: 160,
-            child: Text(
-              'Racing History',
+            child: Text('Racing Telemetry',
+              textAlign: TextAlign.center,
               style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'MotoGP',
-                  fontSize: 40),
-            ),
+                color: Colors.redAccent,
+                fontFamily: 'MotoGP',
+                fontSize: 46,
+                shadows: [
+                  Shadow(
+                    // bottomLeft
+                      offset: Offset(-2, -2),
+                      color: Colors.black),
+                ],
+              )
+            )
           ),
           FutureBuilder(
             future: _jsonCall,

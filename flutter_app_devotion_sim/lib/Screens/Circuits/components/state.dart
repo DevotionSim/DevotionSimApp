@@ -32,59 +32,101 @@ class CircuitScreenState extends State<CircuitsScreen> {
 
     images = [
       Container(
-          color: Colors.red,
+          decoration: BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_0.png')
       ),
       Container(
-          color: Colors.yellow,
+          decoration: BoxDecoration(
+              color: Colors.yellow,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_1.png')
       ),
       Container(
-          color: Colors.cyan[200],
+          decoration: BoxDecoration(
+              color: Colors.cyan[200],
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_2.png')
       ),
       Container(
-          color: Colors.deepPurpleAccent,
+          decoration: BoxDecoration(
+              color: Colors.deepPurpleAccent,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_3.png')
       ),
       Container(
-          color: Colors.orange,
+          decoration: BoxDecoration(
+              color: Colors.orange,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_4.png')
       ),
       Container(
-          color: Colors.purpleAccent,
+          decoration: BoxDecoration(
+              color: Colors.purpleAccent,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_5.png')
       ),
       Container(
-          color: Colors.cyan,
+          decoration: BoxDecoration(
+              color: Colors.cyan,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_6.png')
       ),
       Container(
-          color: Colors.grey,
+          decoration: BoxDecoration(
+              color: Colors.grey,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_7.png')
       ),
       Container(
-          color: Colors.pink,
+          decoration: BoxDecoration(
+              color: Colors.pink,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_8.png')
       ),
       Container(
-          color: Colors.amberAccent,
+          decoration: BoxDecoration(
+              color: Colors.amberAccent,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_9.png')
       ),
       Container(
-          color: Colors.deepOrange,
+          decoration: BoxDecoration(
+              color: Colors.deepOrange,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_10.png')
       ),
       Container(
-          color: Colors.indigo,
+          decoration: BoxDecoration(
+              color: Colors.indigo,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_11.png')
       ),
       Container(
-          color: Colors.blue,
+          decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_12.png')
       ),
       Container(
-          color: Colors.grey[300],
+          decoration: BoxDecoration(
+              color: Colors.grey[300],
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
           child: Image.asset('assets/images/circuits/circuit_13.png')
       ),
     ];
@@ -94,35 +136,57 @@ class CircuitScreenState extends State<CircuitsScreen> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                child: VerticalCardPager(
-                  textStyle: TextStyle(
-                    fontFamily:'MotoGP',
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
-                  ),
-                  titles: titles,
-                  images: images,
-                  onPageChanged: (page) {},
-                  align: ALIGN.CENTER,
-                  onSelectedItem: (index) {
-                    Navigator.push(
-                        context, MaterialPageRoute(
-                        builder: (context) {
-                          return RacingHistoryScreen();
-                        })
-                    );
-                  },
+      body: Column(
+        children: <Widget>[
+          Container(
+              margin: const EdgeInsets.only(top: 32),
+              width: double.infinity,
+              child: Text('CIRCUITS',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.redAccent,
+                    fontFamily: 'MotoGP',
+                    fontSize: 60,
+                    shadows: [
+                      Shadow(
+                        // bottomLeft
+                          offset: Offset(-2, -2),
+                          color: Colors.white),
+                    ],
+                  )
+              )
+          ),
+          Expanded(
+            child: Container(
+              child: VerticalCardPager(
+                textStyle: TextStyle(
+                  fontFamily:'MotoGP',
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  shadows: [
+                    Shadow(
+                      // bottomLeft
+                        offset: Offset(-2, -2),
+                        color: Colors.black),
+                  ],
                 ),
+                titles: titles,
+                images: images,
+                onPageChanged: (page) {},
+                align: ALIGN.CENTER,
+                onSelectedItem: (index) {
+                  Navigator.push(
+                    context, MaterialPageRoute(
+                    builder: (context) {
+                      return RacingHistoryScreen();
+                    })
+                  );
+                },
               ),
             ),
-          ],
-        ),
-      ),
+          ),
+        ],
+      )
     );
   }
 }

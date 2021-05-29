@@ -23,14 +23,21 @@ class RacingHistoryScreenState extends State<RacingHistoryScreen> {
     return Scaffold(
         body: Column(children:[
           Container(
-            height: 100,
+            margin: EdgeInsets.only(top: 40),
             child: Center(
-              child: Text(
-                'Racing History',
+              child: Text('Racing History',
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'MotoGP',
-                    fontSize: 20),
+                  color: Colors.redAccent,
+                  fontFamily: 'MotoGP',
+                  fontSize: 50,
+                  shadows: [
+                    Shadow(
+                      // bottomLeft
+                        offset: Offset(-2, -2),
+                        color: Colors.white),
+                  ],
+                )
               )
             ),
           ),

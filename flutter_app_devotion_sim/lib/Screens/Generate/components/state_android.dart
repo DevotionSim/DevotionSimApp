@@ -78,10 +78,27 @@ class GenerateState extends State<Generate> {
               alignment: Alignment.center,
               children: [
                 Positioned(
-                  top: 60,
-                  left: (width - 340) / 2,
-                  width: 340,
-                  height: 320,
+                    top: 30,
+                    child: Container(
+                        margin: const EdgeInsets.only(top: 20),
+                        child: Text('QR GENERATOR',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.redAccent,
+                              fontFamily: 'MotoGP',
+                              fontSize: 55,
+                              shadows: [
+                                Shadow(
+                                  // bottomLeft
+                                    offset: Offset(-2, -2),
+                                    color: Colors.black),
+                              ],
+                            )
+                        )
+                    )
+                ),
+                Positioned(
+                  top: height * 0.17,
                   child: RepaintBoundary(
                     // Assigns the key to identify QR Widget
                     key: _globalKey,
@@ -90,7 +107,7 @@ class GenerateState extends State<Generate> {
                       child: QrImage(
                         data: qrData,
                         version: QrVersions.auto,
-                        size: width * 0.8,
+                        size: width * 0.9,
                         gapless: false,
                         semanticsLabel: "DevotionSim QR",
                         embeddedImage: new AssetImage('assets/devlogo.png'),
@@ -102,8 +119,7 @@ class GenerateState extends State<Generate> {
                   ),
                 ),
                 Positioned(
-                    top: 386,
-                    left: (width - 290) / 2 - 16,
+                    top: height * 0.62,
                     width: 310,
                     child: Column(
                       children: [
@@ -366,7 +382,7 @@ class GenerateState extends State<Generate> {
                       ],
                     )),
                 Positioned(
-                  bottom: 12,
+                  top: height * 0.9,
                   child: _buildTextButton(),
                 )
               ],
@@ -405,8 +421,19 @@ class GenerateState extends State<Generate> {
   // Constructor TextButton
   Widget _buildTextButton() {
     return new TextButton(
-        child: Text("GENERATE QR"),
-        onPressed: _isButtonDisabled ? null : _generateQR);
+      style: TextButton.styleFrom(
+        primary: Colors.white,
+        backgroundColor: Colors.redAccent,
+        onSurface: Colors.black
+      ),
+      child: Text("GENERATE QR",
+        style: TextStyle(
+          fontFamily: 'MotoGP',
+          fontSize: 20,
+        ),
+        textAlign: TextAlign.center,
+      ),
+      onPressed: _isButtonDisabled ? null : _generateQR);
   }
 
   // Método generador de QR's
