@@ -1,14 +1,11 @@
 import 'package:flutter_app_devotion_sim/classes/costumer_interface.dart';
 import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
-import 'package:flutter_app_devotion_sim/classes/stats_list.dart';
 import 'package:flutter_app_devotion_sim/classes/user.dart';
 
 class Costumer extends User implements CostumerInterface{
   QRList? _qrList;
-  StatsList? _statsList;
 
-  Costumer(int id, String nickname, String email, QRList qrList, StatsList statsList) : super(id, nickname, email) {
-    this._statsList = statsList;
+  Costumer(int id, String nickname, String email, QRList qrList) : super(id, nickname, email) {
     this._qrList = qrList;
   }
 
@@ -18,14 +15,6 @@ class Costumer extends User implements CostumerInterface{
 
   QRList? getQRList() {
     return this._qrList;
-  }
-
-  setStatsList(StatsList list) {
-    this._statsList = list;
-  }
-
-  StatsList? getStatsList() {
-    return this._statsList;
   }
 
   @override

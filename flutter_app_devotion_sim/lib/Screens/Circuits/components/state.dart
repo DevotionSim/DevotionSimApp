@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_app_devotion_sim/Screens/RacingHistory/racing_history_screen.dart';
+import 'package:flutter_app_devotion_sim/classes/qr_code.dart';
+import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 import '../circuits_screen.dart';
 
 class CircuitScreenState extends State<CircuitsScreen> {
 
-  late List<String> titles;
-  late List<Widget> images;
+  late List<String> _titles;
+  late List<Widget> _images;
+  late Map<String, Widget> _costumerCircuits;
+  QRList _qrList;
+
+  CircuitScreenState(this._qrList);
 
   @override
   void initState() {
     super.initState();
 
-    titles = [
+    _titles = [
       "Mugello",
       "Catalunya",
       "Sachsenring",
@@ -30,7 +36,7 @@ class CircuitScreenState extends State<CircuitsScreen> {
       "Ricardo Tormo"
     ];
 
-    images = [
+    _images = [
       Container(
           decoration: BoxDecoration(
               color: Colors.red,
@@ -130,6 +136,23 @@ class CircuitScreenState extends State<CircuitsScreen> {
           child: Image.asset('assets/images/circuits/circuit_13.png')
       ),
     ];
+
+    _costumerCircuits = Map<String, Widget>();
+    Map<int, QRCode> mapQR = _qrList.getQRList();
+
+    for(int i = 0; i < mapQR.length; i++) {
+
+      if(mapQR.values.elementAt(i).getStatsList().getTrack() != null) {
+        String track = mapQR.values.elementAt(i).getStatsList().getTrack()!.toLowerCase();
+
+        for(int j = 0; j < _titles.length; j++) {
+
+          if(track == _titles[j].toLowerCase() && !_costumerCircuits.keys.contains(track)) {
+            _costumerCircuits[track] = _images[j];
+          }
+        }
+      }
+    }
   }
 
   @override
@@ -139,22 +162,22 @@ class CircuitScreenState extends State<CircuitsScreen> {
       body: Column(
         children: <Widget>[
           Container(
-              margin: const EdgeInsets.only(top: 32),
-              width: double.infinity,
-              child: Text('CIRCUITS',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.redAccent,
-                    fontFamily: 'MotoGP',
-                    fontSize: 60,
-                    shadows: [
-                      Shadow(
-                        // bottomLeft
-                          offset: Offset(-2, -2),
-                          color: Colors.white),
-                    ],
-                  )
+            margin: const EdgeInsets.only(top: 32),
+            width: double.infinity,
+            child: Text('CIRCUITS',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.redAccent,
+                fontFamily: 'MotoGP',
+                fontSize: 60,
+                shadows: [
+                  Shadow(
+                    // bottomLeft
+                      offset: Offset(-2, -2),
+                      color: Colors.white),
+                ],
               )
+            )
           ),
           Expanded(
             child: Container(
@@ -170,16 +193,16 @@ class CircuitScreenState extends State<CircuitsScreen> {
                         color: Colors.black),
                   ],
                 ),
-                titles: titles,
-                images: images,
-                onPageChanged: (page) {},
+                titles: _costumerCircuits.keys.toList(),
+                images: _costumerCircuits.values.toList(),
                 align: ALIGN.CENTER,
                 onSelectedItem: (index) {
                   Navigator.push(
                     context, MaterialPageRoute(
-                    builder: (context) {
-                      return RacingHistoryScreen();
-                    })
+                      builder: (context) {
+                        return goRacingHistory(_qrList.getQRList(), _costumerCircuits, index);
+                      }
+                    )
                   );
                 },
               ),
@@ -188,5 +211,13 @@ class CircuitScreenState extends State<CircuitsScreen> {
         ],
       )
     );
+  }
+
+  Widget goRacingHistory(Map<int, QRCode> mapOrig, Map<String, Widget> mapWidget, int circuit) {
+    String track = mapWidget.keys.elementAt(circuit);
+    QRList qrListCircuit = QRList();
+    qrListCircuit.getQRList().addEntries(mapOrig.entries.where((element) =>
+      element.value.getStatsList().getTrack() == track));
+    return RacingHistoryScreen(qrListCircuit);
   }
 }

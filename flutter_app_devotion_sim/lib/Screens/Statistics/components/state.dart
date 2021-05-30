@@ -11,6 +11,8 @@ class StatisticsScreenState extends State<StatisticsScreen> {
   late List<String?> _time;
   late List<int?> _gas, _speed, _gear, _lean, _fBrake, _rBrake;
 
+  StatisticsScreenState(this._statsList);
+
   Future<void> loadList() async {
 
     _statsList = StatsList(await jsonStats('assets/stats.json'), "idQRCode", "mugelo");

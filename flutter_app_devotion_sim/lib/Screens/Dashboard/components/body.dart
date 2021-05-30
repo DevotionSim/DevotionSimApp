@@ -7,9 +7,23 @@ import 'package:flutter_app_devotion_sim/Screens/Gallery/gallery_chooser_screen.
 import 'package:flutter_app_devotion_sim/Screens/Generate/components/generate.dart';
 import 'dart:ui';
 import 'package:flutter_app_devotion_sim/Screens/Scan/scan_screen.dart';
+import 'package:flutter_app_devotion_sim/classes/costumer.dart';
 import '../dashboard_screen.dart';
 
 class Body extends State<DashboardScreen> with SingleTickerProviderStateMixin {
+
+  Costumer _costumer;
+
+  setCostumer(Costumer costumer) {
+    this._costumer = costumer;
+  }
+
+  Costumer getCostumer() {
+    return _costumer;
+  }
+
+  Body(this._costumer);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +76,7 @@ class Body extends State<DashboardScreen> with SingleTickerProviderStateMixin {
                   ),
                 ),
                 subtitle: Text(
-                  'Nombre Usuario',
+                  _costumer.getNickname()!,
                   style: TextStyle(color: Colors.black, fontFamily: 'MotoGP'),
                 ),
                 trailing: CircleAvatar(),
@@ -153,7 +167,7 @@ class Body extends State<DashboardScreen> with SingleTickerProviderStateMixin {
                           onTap: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return CircuitsScreen();
+                              return CircuitsScreen(_costumer.getQRList()!);
                             }));
                           },
                           child: Card(

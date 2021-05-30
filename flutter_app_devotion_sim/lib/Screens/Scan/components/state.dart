@@ -79,7 +79,7 @@ class ScanScreenState extends State<ScanScreen> {
                               child: Text("Scan",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontFamily: 'MotoGP',
                                   fontSize: 20,
                                 )

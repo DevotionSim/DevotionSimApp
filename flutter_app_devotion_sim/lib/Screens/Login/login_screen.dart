@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_devotion_sim/Screens/Login/components/body.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
+
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Body(),
-    );
+  State<StatefulWidget> createState() {
+    return Body();
   }
 }

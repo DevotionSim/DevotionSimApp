@@ -2,10 +2,12 @@ import 'package:flutter_app_devotion_sim/classes/stats.dart';
 
 class StatsList {
   List<Stats>? _statsList;
-  String _codeId;
-  String _track;
+  String? _codeId;
+  String? _track;
 
   StatsList(this._statsList, this._codeId, this._track);
+
+  StatsList.onlyTrack(this._track);
 
   setStatsList(List<Stats> statsList) {
     this._statsList = statsList;
@@ -19,7 +21,7 @@ class StatsList {
     this._codeId = id;
   }
 
-  String getCodeId() {
+  String? getCodeId() {
     return this._codeId;
   }
 
@@ -27,7 +29,7 @@ class StatsList {
     this._track = track;
   }
 
-  String getTrack() {
+  String? getTrack() {
     return _track;
   }
 }

@@ -34,10 +34,7 @@ class ConfigurationScreenState extends State<ConfigurationScreen>
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return ScanScreen();
-                            }));
+                            //Unimplemented
                           },
                           child: Card(
                             color: Color.fromARGB(210, 255, 255, 255),
@@ -105,10 +102,7 @@ class ConfigurationScreenState extends State<ConfigurationScreen>
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return CircuitsScreen();
-                            }));
+                            //Unimplemented
                           },
                           child: Card(
                             color: Color.fromARGB(210, 255, 255, 255),
