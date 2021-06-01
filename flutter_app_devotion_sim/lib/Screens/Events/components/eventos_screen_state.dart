@@ -14,6 +14,15 @@ class EventosScreenState extends State<EventosScreen> {
     'assets/events/1_6.png',
   ];
 
+  List imgList2 = [
+    'assets/events/2_1.png',
+    'assets/events/2_2.png',
+    'assets/events/2_3.png',
+    'assets/events/2_4.png',
+    'assets/events/2_5.png',
+    'assets/events/2_6.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     disable();
@@ -21,12 +30,12 @@ class EventosScreenState extends State<EventosScreen> {
         backgroundColor: Color.fromARGB(255, 33, 33, 33),
         body: Container(
             child: Stack(
-              children: <Widget>[
-                ListView(
-                    padding: const EdgeInsets.only(top: 10),
-                    children: <Widget>[_titulo(), miCard(), miCard()]),
-              ],
-            )));
+          children: <Widget>[
+            ListView(
+                padding: const EdgeInsets.only(top: 10),
+                children: <Widget>[_titulo(), miCard(), miCard2()]),
+          ],
+        )));
   }
 
   Card miCard() {
@@ -78,11 +87,60 @@ class EventosScreenState extends State<EventosScreen> {
       ),
     );
   }
+
+  Card miCard2() {
+    return Card(
+      color: Color.fromARGB(200, 255, 255, 255),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      margin: EdgeInsets.all(30),
+      elevation: 10,
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            contentPadding: EdgeInsets.fromLTRB(15, 10, 25, 0),
+            title: Text('Dolomitis Yamaha 2019 - ( 2019/06/28 )'),
+            subtitle: Text('Campitello di Fassa, Italy'),
+            leading: Image.asset('assets/events/iconoYamaha.png'),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+          ),
+          CarouselSlider.builder(
+            itemCount: imgList2.length,
+            options: CarouselOptions(
+              height: 250.0,
+              initialPage: 0,
+              enlargeCenterPage: true,
+              autoPlay: true,
+              reverse: false,
+              enableInfiniteScroll: true,
+              autoPlayInterval: Duration(seconds: 2),
+              autoPlayAnimationDuration: Duration(milliseconds: 2000),
+              scrollDirection: Axis.horizontal,
+              pauseAutoPlayOnTouch: true,
+              onPageChanged: (index, reason) {
+                setState(() {});
+              },
+            ),
+            itemBuilder: (context, index, realIdx) {
+              return Container(
+                margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: Image.asset(imgList2[index], fit: BoxFit.fill),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 Widget _titulo() {
   return Container(
-    margin: const EdgeInsets.only(top: 30),
+      margin: const EdgeInsets.only(top: 30),
       width: double.infinity,
       child: Text('EVENTS',
           textAlign: TextAlign.center,
@@ -92,7 +150,7 @@ Widget _titulo() {
             fontSize: 70,
             shadows: [
               Shadow(
-                // bottomLeft
+                  // bottomLeft
                   offset: Offset(-2, -2),
                   color: Colors.white),
             ],

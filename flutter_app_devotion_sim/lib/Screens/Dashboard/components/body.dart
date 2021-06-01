@@ -4,7 +4,6 @@ import 'package:flutter_app_devotion_sim/Screens/Circuits/circuits_screen.dart';
 import 'package:flutter_app_devotion_sim/Screens/Configuration/configuration_screen.dart';
 import 'package:flutter_app_devotion_sim/Screens/Events/eventos_screen.dart';
 import 'package:flutter_app_devotion_sim/Screens/Gallery/gallery_chooser_screen.dart';
-import 'package:flutter_app_devotion_sim/Screens/Generate/components/generate.dart';
 import 'dart:ui';
 import 'package:flutter_app_devotion_sim/Screens/Scan/scan_screen.dart';
 import 'package:flutter_app_devotion_sim/classes/costumer.dart';
@@ -13,14 +12,6 @@ import '../dashboard_screen.dart';
 class Body extends State<DashboardScreen> with SingleTickerProviderStateMixin {
 
   Costumer _costumer;
-
-  setCostumer(Costumer costumer) {
-    this._costumer = costumer;
-  }
-
-  Costumer getCostumer() {
-    return _costumer;
-  }
 
   Body(this._costumer);
 
@@ -239,10 +230,7 @@ class Body extends State<DashboardScreen> with SingleTickerProviderStateMixin {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                                  return Generate.instance!;
-                                }));
+                            // TODO Unimplemented feature
                           },
                           child: Card(
                             color: Color.fromARGB(220, 255, 255, 255),

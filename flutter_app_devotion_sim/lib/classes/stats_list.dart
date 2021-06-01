@@ -1,35 +1,26 @@
 import 'package:flutter_app_devotion_sim/classes/stats.dart';
 
 class StatsList {
-  List<Stats>? _statsList;
-  String? _codeId;
-  String? _track;
+  final String? codeId;
+  final String? track;
+  final String? lapTime;
+  final List<Stats>? statsList;
 
-  StatsList(this._statsList, this._codeId, this._track);
+  StatsList({
+      required this.codeId,
+      required this.track,
+      required this.lapTime,
+      required this.statsList});
 
-  StatsList.onlyTrack(this._track);
+  StatsList.empty(this.codeId, this.track, this.lapTime, this.statsList);
 
-  setStatsList(List<Stats> statsList) {
-    this._statsList = statsList;
-  }
-
-  List<Stats>? getStatsList() {
-    return _statsList;
-  }
-
-  setCodeId(String id) {
-    this._codeId = id;
-  }
-
-  String? getCodeId() {
-    return this._codeId;
-  }
-
-  setTrack(String track) {
-    this._track = track;
-  }
-
-  String? getTrack() {
-    return _track;
+  factory StatsList.fromJson(dynamic json) {
+    var list = json['statsList'] as List;
+    List<Stats> statsList = list.map((e) => Stats.fromJson(e)).toList();
+    return StatsList(
+        codeId: json['codeId'],
+        track: json['track'],
+        lapTime: json['lapTime'],
+        statsList: statsList);
   }
 }

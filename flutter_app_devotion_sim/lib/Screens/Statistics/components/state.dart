@@ -7,15 +7,14 @@ import '../statistics_screen.dart';
 
 class StatisticsScreenState extends State<StatisticsScreen> {
   late Future<void> _jsonCall;
-  late StatsList _statsList;
+  late StatsList? _statsList;
   late List<String?> _time;
   late List<int?> _gas, _speed, _gear, _lean, _fBrake, _rBrake;
 
   StatisticsScreenState(this._statsList);
 
   Future<void> loadList() async {
-
-    _statsList = StatsList(await jsonStats('assets/stats.json'), "idQRCode", "mugelo");
+    _statsList = await jsonStatsList('assets/statsList.json');
     _time = [];
     _gas = [];
     _speed = [];
@@ -24,14 +23,14 @@ class StatisticsScreenState extends State<StatisticsScreen> {
     _fBrake = [];
     _rBrake = [];
 
-    for(int i = 0; i < _statsList.getStatsList()!.length; i++) {
-      _time.add(_statsList.getStatsList()![i].time);
-      _gas.add(_statsList.getStatsList()![i].gas);
-      _speed.add(_statsList.getStatsList()![i].speed);
-      _gear.add(_statsList.getStatsList()![i].gear);
-      _lean.add(_statsList.getStatsList()![i].lean);
-      _fBrake.add(_statsList.getStatsList()![i].frontBrake);
-      _rBrake.add(_statsList.getStatsList()![i].rearBrake);
+    for (int i = 0; i < _statsList!.statsList!.length; i++) {
+      _time.add(_statsList!.statsList![i].time);
+      _gas.add(_statsList!.statsList![i].gas);
+      _speed.add(_statsList!.statsList![i].speed);
+      _gear.add(_statsList!.statsList![i].gear);
+      _lean.add(_statsList!.statsList![i].lean);
+      _fBrake.add(_statsList!.statsList![i].frontBrake);
+      _rBrake.add(_statsList!.statsList![i].rearBrake);
     }
   }
 
@@ -48,23 +47,21 @@ class StatisticsScreenState extends State<StatisticsScreen> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 50, bottom: 30),
-            alignment: Alignment.center,
-            child: Text('Racing Telemetry',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.redAccent,
-                fontFamily: 'MotoGP',
-                fontSize: 46,
-                shadows: [
-                  Shadow(
-                    // bottomLeft
-                      offset: Offset(-2, -2),
-                      color: Colors.black),
-                ],
-              )
-            )
-          ),
+              margin: EdgeInsets.only(top: 50, bottom: 30),
+              alignment: Alignment.center,
+              child: Text('Racing Telemetry',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.redAccent,
+                    fontFamily: 'MotoGP',
+                    fontSize: 46,
+                    shadows: [
+                      Shadow(
+                          // bottomLeft
+                          offset: Offset(-2, -2),
+                          color: Colors.black),
+                    ],
+                  ))),
           FutureBuilder(
             future: _jsonCall,
             builder: (context, snapshot) {
@@ -189,18 +186,14 @@ class StatisticsScreenState extends State<StatisticsScreen> {
             }
         ]
       }
-    '''
-      ,
+    ''',
     );
   }
 
   Widget _buildProgressIndicator() {
     return Center(
       child: Container(
-        width: 300,
-        height: 300,
-        child: CircularProgressIndicator()
-      ),
+          width: 300, height: 300, child: CircularProgressIndicator()),
     );
   }
 
@@ -223,10 +216,9 @@ class StatisticsScreenState extends State<StatisticsScreen> {
   Widget _buildError() {
     return Center(
       child: Container(
-        width: 300,
-        height: 100,
-        child: Text("Error while loading Web Services")
-      ),
+          width: 300,
+          height: 100,
+          child: Text("Error while loading Web Services")),
     );
   }
 }

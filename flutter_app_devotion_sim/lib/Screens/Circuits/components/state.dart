@@ -142,8 +142,8 @@ class CircuitScreenState extends State<CircuitsScreen> {
 
     for(int i = 0; i < mapQR.length; i++) {
 
-      if(mapQR.values.elementAt(i).getStatsList().getTrack() != null) {
-        String track = mapQR.values.elementAt(i).getStatsList().getTrack()!.toLowerCase();
+      if(mapQR.values.elementAt(i).getStatsList().track != null) {
+        String track = mapQR.values.elementAt(i).getStatsList().track!.toLowerCase();
 
         for(int j = 0; j < _titles.length; j++) {
 
@@ -217,7 +217,7 @@ class CircuitScreenState extends State<CircuitsScreen> {
     String track = mapWidget.keys.elementAt(circuit);
     QRList qrListCircuit = QRList();
     qrListCircuit.getQRList().addEntries(mapOrig.entries.where((element) =>
-      element.value.getStatsList().getTrack() == track));
+      element.value.getStatsList().track == track));
     return RacingHistoryScreen(qrListCircuit);
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter_app_devotion_sim/classes/costumer.dart';
 
 class DashboardScreen extends StatefulWidget {
   final Costumer _costumer;
+  static const routeName = '/dashboard';
 
   DashboardScreen(this._costumer);
 
