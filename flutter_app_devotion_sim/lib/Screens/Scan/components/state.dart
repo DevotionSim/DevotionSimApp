@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_devotion_sim/classes/costumer.dart';
+import 'package:flutter_app_devotion_sim/database/database.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:image_picker/image_picker.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -8,12 +10,15 @@ import 'package:permission_handler/permission_handler.dart';
 import '../scan_screen.dart';
 
 class ScanScreenState extends State<ScanScreen> {
+  Costumer _costumer;
   Uint8List? bytes;
   late var screenSize;
   var width;
   var height;
 
   String? qrData;
+
+  ScanScreenState(this._costumer);
 
   @override
   void initState() {
@@ -190,7 +195,7 @@ class ScanScreenState extends State<ScanScreen> {
     if(qrData == "") {
       return null;
     } else {
-      //TODO save scanned code in user's profile
+      insertQr(_costumer.getUserId(), qrData!.substring(1, qrData!.length - 1), false);
       return QrImage(
         data: qrData!,
         version: QrVersions.auto,

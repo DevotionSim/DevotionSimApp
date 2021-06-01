@@ -8,10 +8,8 @@ import 'package:flutter_app_devotion_sim/classes/costumer.dart';
 import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
 import 'package:flutter_app_devotion_sim/classes/seller.dart';
 import 'package:flutter_app_devotion_sim/database/database.dart';
-
 import 'constants.dart';
 import 'custom_route.dart';
-
 import 'users.dart';
 
 bool isUser = false;
@@ -100,12 +98,12 @@ class LoginScreen extends StatelessWidget {
       onSubmitAnimationCompleted: () {
         if (!isAdmin) {
           Navigator.of(context).pushReplacement(FadePageRoute(
-            builder: (context) => DashboardScreen(new Costumer(0, 'costumer', 'costumer@costumer.net', QRList())),
+            builder: (context) => DashboardScreen(Costumer(id_user, usernameUser, emailUser, QRList())),
           ));
         }
         else {
          Navigator.of(context).pushReplacement(FadePageRoute(
-            builder: (context) => DashboardScreenSeller(new Seller(0, 'seller', 'seller@seller.net', QRList())),
+            builder: (context) => DashboardScreenSeller(Seller(id_user, usernameUser, emailUser, QRList())),
           ));
         }
       },

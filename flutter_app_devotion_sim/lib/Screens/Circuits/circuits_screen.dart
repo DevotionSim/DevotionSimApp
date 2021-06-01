@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_devotion_sim/Screens/Circuits/components/state.dart';
-import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
+import 'package:flutter_app_devotion_sim/classes/costumer.dart';
 
 class CircuitsScreen extends StatefulWidget {
+  final Costumer _costumer;
 
-  final QRList _qrList;
-
-  CircuitsScreen(this._qrList);
+  CircuitsScreen(this._costumer);
 
   @override
-  CircuitScreenState createState() => CircuitScreenState(_qrList);
+  CircuitScreenState createState() => CircuitScreenState(_costumer);
 }

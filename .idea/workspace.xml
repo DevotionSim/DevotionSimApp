@@ -16,103 +16,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.8.3&#10;&#10;Changelog:&#10;- Communication between screens working fine.&#10;- Now CircuitsScreen only shows circuits that contains some playing statistics.&#10;- Now RacingScreen only shows information related to the circuit chosen in CircuitScreen.">
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/configuration/logout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/events/2_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/events/2_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/events/2_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/events/2_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/events/2_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/events/2_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/events/iconoYamaha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/icons/icon_black_rounded.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/statsList.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Configuration/change_gmail_screen .dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Configuration/change_username_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Configuration/components/change_gmail_screen_state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Configuration/components/change_username_screen_state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/components/body_seller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/dashboard_screen_seller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/constants.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/custom_route.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/plantilla/fade_animation.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/plantilla/flutter_login.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/plantilla/theme.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/plantilla/widgets.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/color_helper.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/constants.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/dart_helper.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/math_helper.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/matrix.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/models/login_data.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/models/login_user_type.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/paddings.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/providers/auth.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/providers/login_messages.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/providers/login_theme.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/regex.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widget_helper.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/animated_button.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/animated_icon.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/animated_numeric_text.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/animated_text.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/animated_text_form_field.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/auth_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/custom_page_transformer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/expandable_container.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/fade_in copy.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/fade_in.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/gradient_box.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/hero_text.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/null_widget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/ring.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/round_button.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/src/widgets/shadow_button.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/transition_route_observer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/users.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/database/changeUserEmail.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/database/database.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.9&#10;&#10;Changelog:&#10;- MySQL database added.&#10;- Login and SingIn interfaces implemented.&#10;- JSON file uploaded to database.&#10;- Statistics working with JSON from database.&#10;- Events added.&#10;- SignOut added.&#10;- Dashboard for Costumers and Sellers now is different.&#10;- Login animations improved.&#10;- Minor bugs fixed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/login_bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/main_bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/main_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/scroll-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/signup_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login2/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login2/clock.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login/clock.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login2/copa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login/copa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login2/light-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login/light-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login2/light-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login/light-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login2/medalla.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login/medalla.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login2/originals/medalla.png" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/login/originals/medalla.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Circuits/circuits_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Circuits/circuits_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Circuits/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Circuits/components/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Configuration/components/configuration_screen_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Configuration/components/configuration_screen_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Configuration/configuration_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Configuration/configuration_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/dashboard_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Dashboard/dashboard_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Events/components/eventos_screen_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Events/components/eventos_screen_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Events/eventos_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Events/eventos_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Gallery/videos/utils/mock_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Gallery/videos/utils/mock_data.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/components/background.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/components/body.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/custom_route.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/custom_route.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Login/login_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/background.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/body.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/or_divider.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/components/social_icon.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Signup/signup_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Statistics/components/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Welcome/components/background.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Welcome/components/body.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Welcome/scroll_page.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Welcome/welcome_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats_list.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/utils/utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/utils/utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Scan/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Scan/components/state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Scan/scan_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Scan/scan_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/qr_code.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/qr_code.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/database/database.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/database/database.dart" afterDir="false" />
     </list>
     <list id="2705cba2-e451-4152-8e5e-f78228bb3324" name="Vers.Intial 1.1" comment="Vers.Intial 1.1&#10;&#10;(cherry picked from commit 845d7f432b5f7228515b21049df46b1254058b13)">
       <changelist_data name="aldosantamaria" email="asantama@jaumebalmes.net" date="1620066319000" />
@@ -144,6 +58,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ApkExportedModule" value="2020-21-DAM2-M13-Devotion-SIM" />
     <property name="DEBUGGABLE_DEVICE" value="Pixel_2_API_30 [emulator-5554]" />
     <property name="DEBUGGABLE_PROCESS" value="com.example.flutter_app_devotion_sim" />
     <property name="DEBUGGER_ID" value="Java" />
@@ -320,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622378482501</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Version 1.9&#10;&#10;Changelog:&#10;- MySQL database added.&#10;- Login and SingIn interfaces implemented.&#10;- JSON file uploaded to database.&#10;- Statistics working with JSON from database.&#10;- Events added.&#10;- SignOut added.&#10;- Dashboard for Costumers and Sellers now is different.&#10;- Login animations improved.&#10;- Minor bugs fixed.">
+      <created>1622510575530</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1622510575530</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -433,7 +355,9 @@
     <MESSAGE value="Version 1.8&#10;&#10;Changelog:&#10;- Bugs fixed: Gallery images assets and Events images assets don't load correctly." />
     <MESSAGE value="Version 1.8.2&#10;&#10;Changelog:&#10;- Design improved.&#10;- Private StatsList variables." />
     <MESSAGE value="Version 1.8.3&#10;&#10;Changelog:&#10;- Communication between screens working fine.&#10;- Now CircuitsScreen only shows circuits that contains some playing statistics.&#10;- Now RacingScreen only shows information related to the circuit chosen in CircuitScreen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.8.3&#10;&#10;Changelog:&#10;- Communication between screens working fine.&#10;- Now CircuitsScreen only shows circuits that contains some playing statistics.&#10;- Now RacingScreen only shows information related to the circuit chosen in CircuitScreen." />
+    <MESSAGE value="Version 1.9&#10;&#10;Changelog:&#10;- MySQL database added.&#10;- Login and SingIn interfaces implemented.&#10;- JSON file uploaded to database.&#10;- Statistics working with JSON from database.&#10;- Events added.&#10;- SignOut added.&#10;- Dashboard for Costumers and Sellers now is different.&#10;- Login animations improved." />
+    <MESSAGE value="Version 1.9&#10;&#10;Changelog:&#10;- MySQL database added.&#10;- Login and SingIn interfaces implemented.&#10;- JSON file uploaded to database.&#10;- Statistics working with JSON from database.&#10;- Events added.&#10;- SignOut added.&#10;- Dashboard for Costumers and Sellers now is different.&#10;- Login animations improved.&#10;- Minor bugs fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9&#10;&#10;Changelog:&#10;- MySQL database added.&#10;- Login and SingIn interfaces implemented.&#10;- JSON file uploaded to database.&#10;- Statistics working with JSON from database.&#10;- Events added.&#10;- SignOut added.&#10;- Dashboard for Costumers and Sellers now is different.&#10;- Login animations improved.&#10;- Minor bugs fixed." />
   </component>
   <component name="WindowStateProjectService">
     <state x="566" y="314" key="#Dart" timestamp="1621281019048">
@@ -494,26 +418,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1621455754568" />
-    <state width="1557" height="374" key="GridCell.Tab.0.bottom" timestamp="1622509737096">
+    <state width="1557" height="294" key="GridCell.Tab.0.bottom" timestamp="1622555963203">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1493" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621968705577" />
-    <state width="1557" height="374" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1622509737096" />
-    <state width="1557" height="374" key="GridCell.Tab.0.center" timestamp="1622509737096">
+    <state width="1557" height="294" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1622555963203" />
+    <state width="1557" height="294" key="GridCell.Tab.0.center" timestamp="1622555963202">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1493" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1621968705577" />
-    <state width="1557" height="374" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1622509737096" />
-    <state width="1557" height="374" key="GridCell.Tab.0.left" timestamp="1622509737096">
+    <state width="1557" height="294" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1622555963202" />
+    <state width="1557" height="294" key="GridCell.Tab.0.left" timestamp="1622555963202">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1493" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1621968705577" />
-    <state width="1557" height="374" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1622509737096" />
-    <state width="1557" height="374" key="GridCell.Tab.0.right" timestamp="1622509737096">
+    <state width="1557" height="294" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1622555963202" />
+    <state width="1557" height="294" key="GridCell.Tab.0.right" timestamp="1622555963203">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1493" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1621968705577" />
-    <state width="1557" height="374" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1622509737096" />
+    <state width="1557" height="294" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1622555963203" />
     <state x="349" y="155" key="IDE.errors.dialog" timestamp="1621609716993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -534,16 +458,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog/0.0.1536.824@0.0.1536.824" timestamp="1621289323305" />
-    <state width="519" height="561" key="SwitcherDM" timestamp="1622395540790">
+    <state width="519" height="561" key="SwitcherDM" timestamp="1622533734944">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="498" height="537" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1621843125319" />
-    <state width="519" height="561" key="SwitcherDM/0.0.1600.860@0.0.1600.860" timestamp="1622395540790" />
-    <state x="376" y="151" key="Vcs.Push.Dialog.v2" timestamp="1622378484685">
+    <state width="519" height="561" key="SwitcherDM/0.0.1600.860@0.0.1600.860" timestamp="1622533734944" />
+    <state x="376" y="151" key="Vcs.Push.Dialog.v2" timestamp="1622510579963">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621955989138" />
-    <state x="376" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1622378484685" />
+    <state x="376" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1622510579963" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1621464138931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -564,20 +488,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="11" y="60" width="1075" height="739" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1621594039666" />
-    <state x="356" y="196" width="757" height="558" key="find.popup" timestamp="1622509684558">
+    <state x="356" y="196" width="757" height="558" key="find.popup" timestamp="1622532593918">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="70" y="133" width="640" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1621952300472" />
-    <state x="356" y="196" width="757" height="558" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1622509684558" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1621503510509">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="356" y="196" width="757" height="558" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1622532593918" />
+    <state x="443" y="195" key="run.anything.popup" timestamp="1622541040381">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1621503510509" />
-    <state x="449" y="151" width="700" height="708" key="search.everywhere.popup" timestamp="1622481958714">
+    <state x="443" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1622541040381" />
+    <state x="449" y="151" width="700" height="708" key="search.everywhere.popup" timestamp="1622545751324">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1621591952560" />
-    <state x="449" y="151" width="700" height="708" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1622481958714" />
+    <state x="449" y="151" width="700" height="708" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1622545751324" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

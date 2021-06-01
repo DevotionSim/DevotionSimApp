@@ -85,7 +85,7 @@ class Body extends State<DashboardScreen> with SingleTickerProviderStateMixin {
                           onTap: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return ScanScreen();
+                              return ScanScreen(_costumer);
                             }));
                           },
                           child: Card(
@@ -158,7 +158,7 @@ class Body extends State<DashboardScreen> with SingleTickerProviderStateMixin {
                           onTap: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return CircuitsScreen(_costumer.getQRList()!);
+                              return CircuitsScreen(_costumer);
                             }));
                           },
                           child: Card(

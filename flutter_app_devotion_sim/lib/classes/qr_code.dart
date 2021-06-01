@@ -5,7 +5,7 @@ class QRCode {
   String _qrCode = "";
   bool _disabled = false;
   static int _codeCount = 0;
-  late StatsList _statsList;
+  late StatsList? _statsList;
 
   setQRId(int id) {
     this._qrId = id;
@@ -44,7 +44,7 @@ class QRCode {
   }
 
   StatsList getStatsList() {
-    return this._statsList;
+    return this._statsList!;
   }
 
   QRCode(String code) {
@@ -53,7 +53,7 @@ class QRCode {
     _codeCount++;
   }
 
-  QRCode.withStats(String code, StatsList statsList) {
+  QRCode.withStats(String code, StatsList? statsList) {
     this._qrCode = code;
     this._statsList = statsList;
     _codeCount++;

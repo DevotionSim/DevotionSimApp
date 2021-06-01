@@ -1,6 +1,12 @@
 import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter_app_devotion_sim/Screens/Login/login_screen.dart';
+import 'package:flutter_app_devotion_sim/classes/qr_code.dart';
+import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
+import 'package:flutter_app_devotion_sim/classes/stats_list.dart';
+import 'package:flutter_app_devotion_sim/utils/utils.dart';
 import 'package:mysql1/mysql1.dart';
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -107,10 +113,15 @@ Future insertQr(id_user, code, disabled) async {
       db: 'ZHBWs3xccc',
       password: 'ZKvuWiFbjy'));
 
-  // Create qr in BD
-  var createUser = await conn.query(
-      'insert into qr (id_user, code, disabled) values (?, ?, ?)',
-      [id_user, code, disabled]);
+  // Checks if qr exists
+  var results = await conn.query('select * from qr where code = (?)', [code]);
+
+  if (results.isEmpty) {
+    // Create qr in BD
+    var createQR = await conn.query(
+        'insert into qr (id_user, code, disabled, json_stats) values (?, ?, ?, ?)',
+        [id_user, code, disabled ? 1 : 0, null]);
+  }
 
   // Finally, close the connection
   await conn.close();
@@ -143,6 +154,56 @@ Future selectQr(id_qr, id_user) async {
   }
   // Finally, close the connection
   await conn.close();
+}
+
+Future<QRList> selectQrList(id_user) async {
+  // Open a connection (testdb should already exist)
+  final conn = await MySqlConnection.connect(ConnectionSettings(
+      host: 'remotemysql.com',
+      port: 3306,
+      user: 'ZHBWs3xccc',
+      db: 'ZHBWs3xccc',
+      password: 'ZKvuWiFbjy'));
+
+
+  var resultsCodes = await conn.query(
+      'select code from qr where id_user = (?)',
+      [id_user]);
+
+  var resultsStats = await conn.query(
+      'select json_stats from qr where id_user = (?) and json_stats IS NOT NULL',
+      [id_user]);
+
+  QRList qrList = QRList();
+
+  List<String> codes = <String>[];
+
+  for(int i = 0; i < resultsCodes.length; i++) {
+    codes.add(resultsCodes.elementAt(i)['code']);
+  }
+
+  if (resultsStats.length > 1) {
+    for (int i = 0; i < resultsStats.length; i++) {
+      var json = jsonDecode(resultsStats
+          .elementAt(i)
+          .values
+          .toString()
+          .substring(1, resultsStats.elementAt(i).values.toString().length - 1));
+      StatsList list = StatsList.fromJson(json);
+      qrList.addQR(QRCode.withStats(list.codeId!, list));
+    }
+  } else if (resultsStats.isNotEmpty) {
+    for (var row in resultsStats) {
+      var json = jsonDecode(
+          row.toString().substring(21, resultsStats.toString().length - 3));
+      StatsList list = StatsList.fromJson(json);
+      qrList.addQR(QRCode.withStats(list.codeId!, list));
+    }
+  }
+  // Finally, close the connection
+  await conn.close();
+
+  return qrList;
 }
 
 // INSERT STATS
