@@ -117,10 +117,16 @@ Future insertQr(id_user, code, disabled) async {
   var results = await conn.query('select * from qr where code = (?)', [code]);
 
   if (results.isEmpty) {
-    // Create qr in BD
-    var createQR = await conn.query(
+    // Create QR in BD
+    await conn.query(
         'insert into qr (id_user, code, disabled, json_stats) values (?, ?, ?, ?)',
-        [id_user, code, disabled ? 1 : 0, null]);
+        [id_user, code, 0, null]);
+  }
+  else {
+    // Update QR in BD
+    var code = results.elementAt(0)['code'];
+    await conn.query('update qr set id_user = (?) where qr.code = (?) and qr.id_user is null',
+        [id_user, code]);
   }
 
   // Finally, close the connection
@@ -152,6 +158,7 @@ Future selectQr(id_qr, id_user) async {
     code = row[2];
     disabled = row[3];
   }
+
   // Finally, close the connection
   await conn.close();
 }
@@ -164,7 +171,6 @@ Future<QRList> selectQrList(id_user) async {
       user: 'ZHBWs3xccc',
       db: 'ZHBWs3xccc',
       password: 'ZKvuWiFbjy'));
-
 
   var resultsCodes = await conn.query(
       'select code from qr where id_user = (?)',
@@ -200,6 +206,7 @@ Future<QRList> selectQrList(id_user) async {
       qrList.addQR(QRCode.withStats(list.codeId!, list));
     }
   }
+
   // Finally, close the connection
   await conn.close();
 

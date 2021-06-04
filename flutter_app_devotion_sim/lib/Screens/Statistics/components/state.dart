@@ -1,20 +1,24 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_devotion_sim/classes/stats_list.dart';
-import 'package:flutter_app_devotion_sim/utils/utils.dart';
+import 'package:flutter_app_devotion_sim/classes/qr_code.dart';
 import 'package:flutter_echarts/flutter_echarts.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 import '../statistics_screen.dart';
 
 class StatisticsScreenState extends State<StatisticsScreen> {
   late Future<void> _jsonCall;
-  late StatsList? _statsList;
+  QRCode _qrCode;
   late List<String?> _time;
   late List<int?> _gas, _speed, _gear, _lean, _fBrake, _rBrake;
 
-  StatisticsScreenState(this._statsList);
+  StatisticsScreenState(this._qrCode);
 
   Future<void> loadList() async {
-    _statsList = await jsonStatsList('assets/statsList.json');
+
+  }
+
+  @override
+  void initState() {
     _time = [];
     _gas = [];
     _speed = [];
@@ -23,19 +27,16 @@ class StatisticsScreenState extends State<StatisticsScreen> {
     _fBrake = [];
     _rBrake = [];
 
-    for (int i = 0; i < _statsList!.statsList!.length; i++) {
-      _time.add(_statsList!.statsList![i].time);
-      _gas.add(_statsList!.statsList![i].gas);
-      _speed.add(_statsList!.statsList![i].speed);
-      _gear.add(_statsList!.statsList![i].gear);
-      _lean.add(_statsList!.statsList![i].lean);
-      _fBrake.add(_statsList!.statsList![i].frontBrake);
-      _rBrake.add(_statsList!.statsList![i].rearBrake);
+    for (int i = 0; i < _qrCode.getStatsList().statsList!.length; i++) {
+      _time.add(_qrCode.getStatsList().statsList![i].time);
+      _gas.add(_qrCode.getStatsList().statsList![i].gas);
+      _speed.add(_qrCode.getStatsList().statsList![i].speed);
+      _gear.add(_qrCode.getStatsList().statsList![i].gear);
+      _lean.add(_qrCode.getStatsList().statsList![i].lean);
+      _fBrake.add(_qrCode.getStatsList().statsList![i].frontBrake);
+      _rBrake.add(_qrCode.getStatsList().statsList![i].rearBrake);
     }
-  }
 
-  @override
-  void initState() {
     _jsonCall = _callJsonStats();
     super.initState();
   }
@@ -207,6 +208,18 @@ class StatisticsScreenState extends State<StatisticsScreen> {
             height: 500,
             width: 420,
             child: echarts(),
+          ),
+          Divider(
+            height: 30,
+          ),
+          Card(
+            child: QrImage(
+              data: _qrCode.getQRCode(),
+              version: QrVersions.auto,
+              size: 120,
+              gapless: false,
+              semanticsLabel: "DevotionSim QR",
+            ),
           )
         ],
       ),

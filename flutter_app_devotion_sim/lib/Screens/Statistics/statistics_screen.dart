@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_devotion_sim/Screens/Statistics/components/state.dart';
-import 'package:flutter_app_devotion_sim/classes/stats_list.dart';
+import 'package:flutter_app_devotion_sim/classes/qr_code.dart';
 
 class StatisticsScreen extends StatefulWidget {
-  final StatsList _statsList;
+  final QRCode _qrCode;
 
-  StatisticsScreen(this._statsList);
+  StatisticsScreen(this._qrCode);
 
   @override
-  StatisticsScreenState createState() => StatisticsScreenState(_statsList);
+  StatisticsScreenState createState() => StatisticsScreenState(_qrCode);
 }

@@ -37,190 +37,190 @@ class ConfigurationScreenState extends State<ConfigurationScreen>
                   color: Color.fromARGB(255, 61, 61, 61),
                   padding: EdgeInsets.only(left: 16, right: 16, top: 130),
                   child: GridView.count(
-                      crossAxisSpacing: 16,
-                      mainAxisSpacing: 16,
-                      crossAxisCount: 2,
-                      childAspectRatio: 0.9,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return changeUsernameScreen();
-                            }));
-                          },
-                          child: Card(
-                            color: Color.fromARGB(210, 255, 255, 255),
-                            elevation: 2,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Center(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Image.asset(
-                                      'assets/configuration/username.png'),
-                                  Text(
-                                    'CHANGE USERNAME',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontFamily: 'MotoGP',
-                                      fontSize: 20,
-                                      shadows: [
-                                        Shadow(
-                                            // bottomLeft
-                                            offset: Offset(-1, -1),
-                                            color: Colors.grey),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.9,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return changeUsernameScreen();
+                          }));
+                        },
+                        child: Card(
+                          color: Color.fromARGB(210, 255, 255, 255),
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Center(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Image.asset(
+                                    'assets/configuration/username.png'),
+                                Text(
+                                  'CHANGE USERNAME',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'MotoGP',
+                                    fontSize: 20,
+                                    shadows: [
+                                      Shadow(
+                                          // bottomLeft
+                                          offset: Offset(-1, -1),
+                                          color: Colors.grey),
+                                    ],
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            //Unimplemented
-                          },
-                          child: Card(
-                            color: Color.fromARGB(210, 255, 255, 255),
-                            elevation: 2,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Center(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Image.asset(
-                                      'assets/configuration/userimage.png'),
-                                  Text(
-                                    'CHANGE USER IMAGE',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontFamily: 'MotoGP',
-                                      fontSize: 20,
-                                      shadows: [
-                                        Shadow(
-                                            // bottomLeft
-                                            offset: Offset(-1, -1),
-                                            color: Colors.grey),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          //Unimplemented
+                        },
+                        child: Card(
+                          color: Color.fromARGB(210, 255, 255, 255),
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Center(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Image.asset(
+                                    'assets/configuration/userimage.png'),
+                                Text(
+                                  'CHANGE USER IMAGE',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'MotoGP',
+                                    fontSize: 20,
+                                    shadows: [
+                                      Shadow(
+                                          // bottomLeft
+                                          offset: Offset(-1, -1),
+                                          color: Colors.grey),
+                                    ],
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return changeEmailScreen();
-                            }));
-                          },
-                          child: Card(
-                            color: Color.fromARGB(210, 255, 255, 255),
-                            elevation: 2,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Center(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Image.asset(
-                                      'assets/configuration/emailuser.png'),
-                                  Text(
-                                    'CHANGE E-MAIL',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontFamily: 'MotoGP',
-                                      fontSize: 20,
-                                      shadows: [
-                                        Shadow(
-                                            // bottomLeft
-                                            offset: Offset(-1, -1),
-                                            color: Colors.grey),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return changeEmailScreen();
+                          }));
+                        },
+                        child: Card(
+                          color: Color.fromARGB(210, 255, 255, 255),
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Center(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Image.asset(
+                                    'assets/configuration/emailuser.png'),
+                                Text(
+                                  'CHANGE E-MAIL',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'MotoGP',
+                                    fontSize: 20,
+                                    shadows: [
+                                      Shadow(
+                                          // bottomLeft
+                                          offset: Offset(-1, -1),
+                                          color: Colors.grey),
+                                    ],
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            //Unimplemented
-                          },
-                          child: Card(
-                            color: Color.fromARGB(210, 255, 255, 255),
-                            elevation: 2,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Center(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Image.asset('assets/configuration/lang.png'),
-                                  Text(
-                                    'CHANGE LANGUAGE',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontFamily: 'MotoGP',
-                                      fontSize: 20,
-                                      shadows: [
-                                        Shadow(
-                                            // bottomLeft
-                                            offset: Offset(-1, -1),
-                                            color: Colors.grey),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          //Unimplemented
+                        },
+                        child: Card(
+                          color: Color.fromARGB(210, 255, 255, 255),
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Center(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Image.asset('assets/configuration/lang.png'),
+                                Text(
+                                  'CHANGE LANGUAGE',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'MotoGP',
+                                    fontSize: 20,
+                                    shadows: [
+                                      Shadow(
+                                          // bottomLeft
+                                          offset: Offset(-1, -1),
+                                          color: Colors.grey),
+                                    ],
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return LoginScreen();
-                            }));
-                          },
-                          child: Card(
-                            color: Color.fromARGB(210, 255, 255, 255),
-                            elevation: 2,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Center(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Image.asset(
-                                      'assets/configuration/logout.png'),
-                                  Text(
-                                    'LOG OUT',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontFamily: 'MotoGP',
-                                      fontSize: 20,
-                                      shadows: [
-                                        Shadow(
-                                            // bottomLeft
-                                            offset: Offset(-1, -1),
-                                            color: Colors.grey),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return LoginScreen();
+                          }));
+                        },
+                        child: Card(
+                          color: Color.fromARGB(210, 255, 255, 255),
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Center(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Image.asset(
+                                    'assets/configuration/logout.png'),
+                                Text(
+                                  'LOG OUT',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'MotoGP',
+                                    fontSize: 20,
+                                    shadows: [
+                                      Shadow(
+                                          // bottomLeft
+                                          offset: Offset(-1, -1),
+                                          color: Colors.grey),
+                                    ],
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ),
-                      ]),
+                      ),
+                    ]),
                 ),
               ),
             ],

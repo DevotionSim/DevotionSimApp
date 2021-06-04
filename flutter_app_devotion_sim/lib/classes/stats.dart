@@ -24,8 +24,8 @@ class Stats {
         speed: json['Speed'] as int?,
         gear: json['Gear'] as int?,
         lean: json['Lean'] as int?,
-        frontBrake: json['Front Brake'] as int?,
-        rearBrake: json['Rear Brake'] as int?
+        frontBrake: json['FrontBrake'] as int?,
+        rearBrake: json['RearBrake'] as int?
     );
   }
 }

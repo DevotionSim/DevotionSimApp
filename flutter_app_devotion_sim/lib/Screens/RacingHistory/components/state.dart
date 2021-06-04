@@ -7,68 +7,172 @@ import '../racing_history_screen.dart';
 
 class RacingHistoryScreenState extends State<RacingHistoryScreen> {
 
-  QRList qrList;
+  QRList _qrList;
+  late var screenSize;
+  var width;
+  var height;
 
-  RacingHistoryScreenState(this.qrList);
+  RacingHistoryScreenState(this._qrList);
 
   @override
   Widget build(BuildContext context) {
+    // Variables para controlar el tamaño de la pantalla
+    screenSize = MediaQuery.of(context).size;
+    width = screenSize.width;
+    height = screenSize.height;
+
     return Scaffold(
-        body: Column(children:[
-          Container(
-            margin: EdgeInsets.only(top: 40),
-            child: Center(
-              child: Text('Racing History',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.redAccent,
-                  fontFamily: 'MotoGP',
-                  fontSize: 50,
-                  shadows: [
-                    Shadow(
-                      // bottomLeft
-                        offset: Offset(-2, -2),
-                        color: Colors.white),
-                  ],
-                )
+      backgroundColor: Colors.white,
+      body: Column(children:[
+        Container(
+          margin: EdgeInsets.only(top: 40),
+          child: Center(
+            child: Text('Racing History',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.redAccent,
+                fontFamily: 'MotoGP',
+                fontSize: 50,
+                shadows: [
+                  Shadow(
+                    // bottomLeft
+                    offset: Offset(-2, -2),
+                    color: Colors.black
+                  ),
+                ],
               )
-            ),
+            )
           ),
-          Expanded(
-            child: _contentGridView(),
+        ),
+        Container(
+          width: width * 0.7,
+          child: Divider(
+            color: Colors.orange,
           ),
-        ])
+        ),
+        Container(
+          child: Divider(
+            height: 30,
+            color: Colors.transparent,
+          ),
+        ),
+        _body()
+      ])
     );
   }
 
-  Widget _contentGridView() {
-    return GridView.builder(
-        padding: const EdgeInsets.all(20),
-        itemCount: qrList.getQRList().length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3),
-        itemBuilder: (context, index) => Container(
-          child: Card(
-            child:
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(
-                    builder: (context) {
-                      return StatisticsScreen(qrList.getQR(index).getStatsList());
-                    })
-                );
-              },
-              child: QrImage(
-                data: qrList.getQR(index).getQRCode(),
-                version: QrVersions.auto,
-                size: 110,
-                gapless: false,
-                semanticsLabel: "DevotionSim QR",
+  Widget _body() {
+    return Container(
+      height: height * 0.8,
+      child: Stack(
+        children: [
+          Positioned(
+            child: Container(
+              width: width * 0.8,
+              height: 80 + _qrList.getQRList().length * 64,
+              decoration: BoxDecoration(
+                color: Colors.redAccent,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.elliptical(120, 80),
+                  topRight: Radius.elliptical(120, 80),
+                  bottomLeft: Radius.elliptical(100, 16),
+                  bottomRight: Radius.elliptical(100, 16)
+                )
+              ),
+            )
+          ),
+          Positioned(
+            top: 6,
+            child: Container(
+              width: width * 0.8,
+              height: 80,
+              child: Text(_qrList.getQR(0).getStatsList().track!,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'MotoGP',
+                  fontSize: 38,
+                  shadows: [
+                    Shadow(
+                      // bottomLeft
+                      offset: Offset(-2, -2),
+                      color: Colors.black
+                    ),
+                  ],
+                )
+              ),
+            )
+          ),
+          Positioned(
+            top: 68,
+            child: Container(
+              width: width * 0.8,
+              height: _qrList.getQRList().length * 64,
+              decoration: BoxDecoration(
+                color: Colors.redAccent,
+                borderRadius: BorderRadius.all(Radius.circular(10))
+              ),
+              child: Container(
+                child: ListView.builder(
+                  padding: const EdgeInsets.only(right: 8, left: 8),
+                  itemCount: _qrList.getQRList().length,
+                  itemBuilder: (context, index) => GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(
+                        builder: (context) {
+                          return StatisticsScreen(_qrList.getQR(index));
+                        })
+                      );
+                    },
+                    child: Column(
+                      children: [
+                        Container(
+                          color: Colors.black87,
+                          child: Row(
+                            children: [
+                              Card(
+                                child: QrImage(
+                                  data: _qrList.getQR(index).getQRCode(),
+                                  version: QrVersions.auto,
+                                  size: 54,
+                                  gapless: false,
+                                  semanticsLabel: "DevotionSim QR",
+                                ),
+                              ),
+                              Expanded(
+                                child: Text(_qrList.getQR(index).getStatsList().date! + "\n" +
+                                  _qrList.getQR(index).getStatsList().lapTime.toString(),
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'MotoGP',
+                                    fontSize: 18,
+                                    shadows: [
+                                      Shadow(
+                                        // bottomLeft
+                                        offset: Offset(1, 1),
+                                        color: Colors.grey
+                                      ),
+                                    ],
+                                  )
+                                )
+                              )
+                            ]
+                          ),
+                        ),
+                        Divider(
+                          height: 2,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
-        )
+        ],
+      ),
     );
   }
 }

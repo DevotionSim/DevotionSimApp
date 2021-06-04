@@ -27,11 +27,11 @@ class CircuitScreenState extends State<CircuitsScreen> {
     for(int i = 0; i < _mapQR.length; i++) {
 
       if(_mapQR.values.elementAt(i).getStatsList().track != null) {
-        String track = _mapQR.values.elementAt(i).getStatsList().track!.toLowerCase();
+        String track = _mapQR.values.elementAt(i).getStatsList().track!;
 
         for(int j = 0; j < _titles.length; j++) {
 
-          if(track == _titles[j].toLowerCase() && !_costumerCircuits.keys.contains(track)) {
+          if(track == _titles[j] && !_costumerCircuits.keys.contains(track)) {
             _costumerCircuits[track] = _images[j];
           }
         }
@@ -218,7 +218,7 @@ class CircuitScreenState extends State<CircuitsScreen> {
     String track = mapWidget.keys.elementAt(circuit);
     QRList qrListCircuit = QRList();
     qrListCircuit.getQRList().addEntries(mapOrig.entries.where((element) =>
-      element.value.getStatsList().track!.toLowerCase() == track));
+      element.value.getStatsList().track! == track));
     return RacingHistoryScreen(qrListCircuit);
   }
 
@@ -256,11 +256,10 @@ class CircuitScreenState extends State<CircuitsScreen> {
       align: ALIGN.CENTER,
       onSelectedItem: (index) {
         Navigator.push(
-            context, MaterialPageRoute(
-            builder: (context) {
-              return goRacingHistory(_qrList.getQRList(), _costumerCircuits, index);
-            }
-        )
+          context, MaterialPageRoute(
+          builder: (context) {
+            return goRacingHistory(_qrList.getQRList(), _costumerCircuits, index);
+          })
         );
       },
     );

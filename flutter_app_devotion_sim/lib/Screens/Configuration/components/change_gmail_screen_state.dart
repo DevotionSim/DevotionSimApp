@@ -9,46 +9,44 @@ class changeEmailScreenState extends State<changeEmailScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: Container(
-        color: Color.fromARGB(255, 33, 33, 33),
-        child: Column(children: <Widget>[
-          _titulo(),
-          Container(
-              margin: EdgeInsets.only(top: 100),
-              child: TextField(
-                controller: nameController,
-                cursorColor: Colors.red,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  hintText: 'New email',
-                  border: OutlineInputBorder(),
-                  focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(3),
-                      borderSide: BorderSide(color: Colors.red, width: 2)),
-                  labelStyle: TextStyle(
-                    color: Colors.red,
-                  ),
+    return Scaffold(
+        body: Center(
+            child: Container(
+      color: Color.fromARGB(255, 33, 33, 33),
+      child: Column(children: <Widget>[
+        _titulo(),
+        Container(
+            margin: EdgeInsets.only(top: 100),
+            child: TextField(
+              controller: nameController,
+              cursorColor: Colors.red,
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
+                hintText: 'New email',
+                border: OutlineInputBorder(),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(3),
+                    borderSide: BorderSide(color: Colors.red, width: 2)),
+                labelStyle: TextStyle(
+                  color: Colors.red,
                 ),
-                onChanged: (text) {
-                  setState(() {
-                    NewEmail = text;
-                    //you can access nameController in its scope to get
-                    // the value of text entered as shown below
-                    //UserName = nameController.text;
-                  });
-                },
-              )),
-          Container(
-            margin: EdgeInsets.all(20),
-          ),
-          _button(context)
-        ]),
-      ))),
-    );
+              ),
+              onChanged: (text) {
+                setState(() {
+                  NewEmail = text;
+                  //you can access nameController in its scope to get
+                  // the value of text entered as shown below
+                  //UserName = nameController.text;
+                });
+              },
+            )),
+        Container(
+          margin: EdgeInsets.all(20),
+        ),
+        _button(context)
+      ]),
+    )));
   }
 }
 

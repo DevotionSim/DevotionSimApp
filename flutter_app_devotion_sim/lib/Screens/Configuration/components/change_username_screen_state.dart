@@ -9,8 +9,7 @@ class changeUsernameScreenState extends State<changeUsernameScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
           body: Center(
               child: Container(
         color: Color.fromARGB(255, 33, 33, 33),
@@ -47,7 +46,7 @@ class changeUsernameScreenState extends State<changeUsernameScreen> {
           ),
           _button(context)
         ]),
-      ))),
+      ))
     );
   }
 }
