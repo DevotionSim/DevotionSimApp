@@ -1,12 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
-
 import 'package:flutter_app_devotion_sim/Screens/Login/login_screen.dart';
 import 'package:flutter_app_devotion_sim/classes/qr_code.dart';
 import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
 import 'package:flutter_app_devotion_sim/classes/stats_list.dart';
-import 'package:flutter_app_devotion_sim/utils/utils.dart';
 import 'package:mysql1/mysql1.dart';
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -121,11 +118,11 @@ Future insertQr(id_user, code, disabled) async {
     await conn.query(
         'insert into qr (id_user, code, disabled, json_stats) values (?, ?, ?, ?)',
         [id_user, code, 0, null]);
-  }
-  else {
+  } else {
     // Update QR in BD
     var code = results.elementAt(0)['code'];
-    await conn.query('update qr set id_user = (?) where qr.code = (?) and qr.id_user is null',
+    await conn.query(
+        'update qr set id_user = (?) where qr.code = (?) and qr.id_user is null',
         [id_user, code]);
   }
 
@@ -172,9 +169,8 @@ Future<QRList> selectQrList(id_user) async {
       db: 'ZHBWs3xccc',
       password: 'ZKvuWiFbjy'));
 
-  var resultsCodes = await conn.query(
-      'select code from qr where id_user = (?)',
-      [id_user]);
+  var resultsCodes =
+      await conn.query('select code from qr where id_user = (?)', [id_user]);
 
   var resultsStats = await conn.query(
       'select json_stats from qr where id_user = (?) and json_stats IS NOT NULL',
@@ -184,7 +180,7 @@ Future<QRList> selectQrList(id_user) async {
 
   List<String> codes = <String>[];
 
-  for(int i = 0; i < resultsCodes.length; i++) {
+  for (int i = 0; i < resultsCodes.length; i++) {
     codes.add(resultsCodes.elementAt(i)['code']);
   }
 
@@ -194,7 +190,8 @@ Future<QRList> selectQrList(id_user) async {
           .elementAt(i)
           .values
           .toString()
-          .substring(1, resultsStats.elementAt(i).values.toString().length - 1));
+          .substring(
+              1, resultsStats.elementAt(i).values.toString().length - 1));
       StatsList list = StatsList.fromJson(json);
       qrList.addQR(QRCode.withStats(list.codeId!, list));
     }

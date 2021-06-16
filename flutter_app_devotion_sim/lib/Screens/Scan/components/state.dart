@@ -192,9 +192,10 @@ class ScanScreenState extends State<ScanScreen> {
   }
 
   Widget? _buildQRStructure() {
-    if(qrData == "") {
+    if(qrData == "" || qrData!.length < 71) {
       return null;
-    } else {
+    }
+    else {
       insertQr(_costumer.getUserId(), qrData!.substring(1, qrData!.length - 1), false);
       return QrImage(
         data: qrData!,

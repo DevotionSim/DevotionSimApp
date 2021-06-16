@@ -10,7 +10,7 @@ import '../circuits_screen.dart';
 
 class CircuitScreenState extends State<CircuitsScreen> {
   late Future<void> _qrListCall;
-  late List<String> _titles;
+  late Map<String, String> _mapAllTitles;
   late List<Widget> _images;
   late Map<String, Widget> _costumerCircuits;
   late QRList _qrList = QRList();
@@ -29,10 +29,12 @@ class CircuitScreenState extends State<CircuitsScreen> {
       if(_mapQR.values.elementAt(i).getStatsList().track != null) {
         String track = _mapQR.values.elementAt(i).getStatsList().track!;
 
-        for(int j = 0; j < _titles.length; j++) {
+        for(int j = 0; j < _mapAllTitles.length; j++) {
 
-          if(track == _titles[j] && !_costumerCircuits.keys.contains(track)) {
-            _costumerCircuits[track] = _images[j];
+          String fullTrack = _mapAllTitles.values.elementAt(j);
+
+          if(track == _mapAllTitles.keys.elementAt(j) && !_costumerCircuits.keys.contains(fullTrack)) {
+            _costumerCircuits[fullTrack] = _images[j];
           }
         }
       }
@@ -47,22 +49,29 @@ class CircuitScreenState extends State<CircuitsScreen> {
     _qrListCall = _callQRList();
     super.initState();
 
-    _titles = [
-      "Mugello",
-      "Catalunya",
-      "Sachsenring",
-      "Assen",
-      "KymiRing",
-      "Red Bull Ring",
-      "Silverstone",
-      "Motorland",
-      "Misano",
-      "Motegi",
-      "Chang",
-      "Phillip Island",
-      "Sepang",
-      "Ricardo Tormo"
-    ];
+    _mapAllTitles = Map<String, String>();
+    _mapAllTitles = {
+      "Mugello":"Mugello",
+      "Catalun":"Catalunya",
+      "Sachsen":"Sachsenring",
+      "Assen":"Assen",
+      "KymiRin":"KymiRing",
+      "Redbull":"Redbull Ring",
+      "Silvers":"Silverstone",
+      "Aragon":"MotorLand",
+      "Misano":"Misano",
+      "Motegi":"Motegi",
+      "Chang":"Chang",
+      "Phillip":"Phillip Island",
+      "Sepang":"Sepang",
+      "Valenci":"Ricardo Tormo",
+      "Losail":"Losail",
+      "Texas":"Las Americas",
+      "Argenti":"Termas",
+      "Jerez":"Jerez",
+      "LeMans":"Le Mans",
+      "Brno":"Brno"
+    };
 
     _images = [
       Container(
@@ -163,6 +172,48 @@ class CircuitScreenState extends State<CircuitsScreen> {
           ),
           child: Image.asset('assets/images/circuits/circuit_13.png')
       ),
+      Container(
+          decoration: BoxDecoration(
+              color: Colors.pink,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
+          child: Image.asset('assets/images/circuits/circuit_14.png')
+      ),
+      Container(
+          decoration: BoxDecoration(
+              color: Colors.limeAccent,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
+          child: Image.asset('assets/images/circuits/circuit_15.png')
+      ),
+      Container(
+          decoration: BoxDecoration(
+              color: Colors.tealAccent,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
+          child: Image.asset('assets/images/circuits/circuit_16.png')
+      ),
+      Container(
+          decoration: BoxDecoration(
+              color: Colors.purple,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
+          child: Image.asset('assets/images/circuits/circuit_17.png')
+      ),
+      Container(
+          decoration: BoxDecoration(
+              color: Colors.amber,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
+          child: Image.asset('assets/images/circuits/circuit_18.png')
+      ),
+      Container(
+          decoration: BoxDecoration(
+              color: Colors.redAccent,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+          ),
+          child: Image.asset('assets/images/circuits/circuit_19.png')
+      ),
     ];
   }
 
@@ -214,12 +265,13 @@ class CircuitScreenState extends State<CircuitsScreen> {
     );
   }
 
-  Widget goRacingHistory(Map<int, QRCode> mapOrig, Map<String, Widget> mapWidget, int circuit) {
-    String track = mapWidget.keys.elementAt(circuit);
+  Widget goRacingHistory(Map<int, QRCode> mapOrig, Map<String, Widget> mapWidget, int circuit, Map<String, String> mapTitles) {
+    String key = mapWidget.keys.elementAt(circuit);
+    String trackName = mapTitles.keys.firstWhere((e) => mapTitles[e] == key);
     QRList qrListCircuit = QRList();
     qrListCircuit.getQRList().addEntries(mapOrig.entries.where((element) =>
-      element.value.getStatsList().track! == track));
-    return RacingHistoryScreen(qrListCircuit);
+      element.value.getStatsList().track! == trackName));
+    return RacingHistoryScreen(qrListCircuit, key);
   }
 
   Widget _buildProgressIndicator() {
@@ -258,7 +310,7 @@ class CircuitScreenState extends State<CircuitsScreen> {
         Navigator.push(
           context, MaterialPageRoute(
           builder: (context) {
-            return goRacingHistory(_qrList.getQRList(), _costumerCircuits, index);
+            return goRacingHistory(_qrList.getQRList(), _costumerCircuits, index, _mapAllTitles);
           })
         );
       },

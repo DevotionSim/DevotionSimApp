@@ -8,11 +8,12 @@ import '../racing_history_screen.dart';
 class RacingHistoryScreenState extends State<RacingHistoryScreen> {
 
   QRList _qrList;
+  String _trackKey;
   late var screenSize;
   var width;
   var height;
 
-  RacingHistoryScreenState(this._qrList);
+  RacingHistoryScreenState(this._qrList, this._trackKey);
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +62,16 @@ class RacingHistoryScreenState extends State<RacingHistoryScreen> {
     );
   }
 
+  double resizeList() {
+    double deviceHeight = height * 0.698;
+    if(_qrList.getQRList().length * 64 < deviceHeight) {
+      return _qrList.getQRList().length * 64;
+    }
+    else {
+      return deviceHeight;
+    }
+  }
+
   Widget _body() {
     return Container(
       height: height * 0.8,
@@ -86,7 +97,7 @@ class RacingHistoryScreenState extends State<RacingHistoryScreen> {
             child: Container(
               width: width * 0.8,
               height: 80,
-              child: Text(_qrList.getQR(0).getStatsList().track!,
+              child: Text(_trackKey,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
@@ -107,13 +118,14 @@ class RacingHistoryScreenState extends State<RacingHistoryScreen> {
             top: 68,
             child: Container(
               width: width * 0.8,
-              height: _qrList.getQRList().length * 64,
+              height: resizeList(),
               decoration: BoxDecoration(
                 color: Colors.redAccent,
                 borderRadius: BorderRadius.all(Radius.circular(10))
               ),
               child: Container(
                 child: ListView.builder(
+                  itemExtent: 64,
                   padding: const EdgeInsets.only(right: 8, left: 8),
                   itemCount: _qrList.getQRList().length,
                   itemBuilder: (context, index) => GestureDetector(
@@ -160,9 +172,6 @@ class RacingHistoryScreenState extends State<RacingHistoryScreen> {
                               )
                             ]
                           ),
-                        ),
-                        Divider(
-                          height: 2,
                         )
                       ],
                     ),

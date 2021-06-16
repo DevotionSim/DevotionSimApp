@@ -4,9 +4,10 @@ import 'package:flutter_app_devotion_sim/classes/qr_list.dart';
 
 class RacingHistoryScreen extends StatefulWidget {
   final QRList _qrList;
+  final String _trackKey;
 
-  RacingHistoryScreen(this._qrList);
+  RacingHistoryScreen(this._qrList, this._trackKey);
 
   @override
-  RacingHistoryScreenState createState() => RacingHistoryScreenState(_qrList);
+  RacingHistoryScreenState createState() => RacingHistoryScreenState(_qrList, _trackKey);
 }
