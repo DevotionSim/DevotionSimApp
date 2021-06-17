@@ -153,7 +153,7 @@ class RacingHistoryScreenState extends State<RacingHistoryScreen> {
                                 ),
                               ),
                               Expanded(
-                                child: Text(_qrList.getQR(index).getStatsList().date! + "\n" +
+                                child: Text(_qrList.getQR(index).getStatsList().dateTime! + "\n" +
                                   _qrList.getQR(index).getStatsList().lapTime.toString(),
                                   textAlign: TextAlign.center,
                                   style: TextStyle(

@@ -16,20 +16,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.9.3&#10;&#10;Changelog:&#10;- Racing History updated to ListView&#10;- QRCode linked with JSON correctly.&#10;- JSON linked with user correctly.">
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/circuits/circuit_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/circuits/circuit_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/circuits/circuit_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/circuits/circuit_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/circuits/circuit_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/assets/images/circuits/circuit_19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/2020-21-DAM2-M13-Devotion-SIM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2020-21-DAM2-M13-Devotion-SIM.iml" afterDir="false" />
+    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.9.4&#10;&#10;Changelog:&#10;- New circuits added.&#10;- Track names replaced to original.&#10;- QR Scanner don't show results if the length is different.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Circuits/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Circuits/components/state.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/RacingHistory/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/RacingHistory/components/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/RacingHistory/racing_history_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/RacingHistory/racing_history_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Scan/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/Scan/components/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/database/database.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/database/database.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats_list.dart" afterDir="false" />
     </list>
     <list id="2705cba2-e451-4152-8e5e-f78228bb3324" name="Vers.Intial 1.1" comment="Vers.Intial 1.1&#10;&#10;(cherry picked from commit 845d7f432b5f7228515b21049df46b1254058b13)">
       <changelist_data name="aldosantamaria" email="asantama@jaumebalmes.net" date="1620066319000" />
@@ -39,7 +29,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@2b488a97]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\matut\.android\avd\Nexus_6_API_30.avd]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -82,19 +72,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\utils" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Dashboard" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib" />
-      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets\images\circuits" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Gallery\videos\utils" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Events\components" />
       <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Events" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\assets" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\utils" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens\Dashboard" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib" />
+      <recent name="C:\Users\matut\ProjectDevotion\2020-21-DAM2-M13-Devotion-SIM\flutter_app_devotion_sim\lib\Screens" />
     </key>
   </component>
   <component name="RunManager">
@@ -262,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622799585106</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Version 1.9.4&#10;&#10;Changelog:&#10;- New circuits added.&#10;- Track names replaced to original.&#10;- QR Scanner don't show results if the length is different.">
+      <created>1623854599673</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1623854599673</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,7 +376,8 @@
     <MESSAGE value="Version 1.9&#10;&#10;Changelog:&#10;- MySQL database added.&#10;- Login and SingIn interfaces implemented.&#10;- JSON file uploaded to database.&#10;- Statistics working with JSON from database.&#10;- Events added.&#10;- SignOut added.&#10;- Dashboard for Costumers and Sellers now is different.&#10;- Login animations improved.&#10;- Minor bugs fixed." />
     <MESSAGE value="Version 1.9.2&#10;&#10;Changelog:&#10;- Final version&#10;- Stats loaded from JSON by query to MySQL database" />
     <MESSAGE value="Version 1.9.3&#10;&#10;Changelog:&#10;- Racing History updated to ListView&#10;- QRCode linked with JSON correctly.&#10;- JSON linked with user correctly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9.3&#10;&#10;Changelog:&#10;- Racing History updated to ListView&#10;- QRCode linked with JSON correctly.&#10;- JSON linked with user correctly." />
+    <MESSAGE value="Version 1.9.4&#10;&#10;Changelog:&#10;- New circuits added.&#10;- Track names replaced to original.&#10;- QR Scanner don't show results if the length is different." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9.4&#10;&#10;Changelog:&#10;- New circuits added.&#10;- Track names replaced to original.&#10;- QR Scanner don't show results if the length is different." />
   </component>
   <component name="WindowStateProjectService">
     <state x="566" y="314" key="#Dart" timestamp="1621281019048">
@@ -451,26 +449,26 @@
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1621455754568" />
     <state x="572" y="174" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1622559496073" />
-    <state width="1557" height="345" key="GridCell.Tab.0.bottom" timestamp="1623852895589">
+    <state width="1557" height="304" key="GridCell.Tab.0.bottom" timestamp="1623932556157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1493" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621968705577" />
-    <state width="1557" height="345" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623852895589" />
-    <state width="1557" height="345" key="GridCell.Tab.0.center" timestamp="1623852895589">
+    <state width="1557" height="304" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623932556157" />
+    <state width="1557" height="304" key="GridCell.Tab.0.center" timestamp="1623932556157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1493" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1621968705577" />
-    <state width="1557" height="345" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1623852895589" />
-    <state width="1557" height="345" key="GridCell.Tab.0.left" timestamp="1623852895589">
+    <state width="1557" height="304" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1623932556157" />
+    <state width="1557" height="304" key="GridCell.Tab.0.left" timestamp="1623932556157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1493" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1621968705577" />
-    <state width="1557" height="345" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1623852895589" />
-    <state width="1557" height="345" key="GridCell.Tab.0.right" timestamp="1623852895589">
+    <state width="1557" height="304" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1623932556157" />
+    <state width="1557" height="304" key="GridCell.Tab.0.right" timestamp="1623932556157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1493" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1621968705577" />
-    <state width="1557" height="345" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1623852895589" />
+    <state width="1557" height="304" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1623932556157" />
     <state x="364" y="162" key="IDE.errors.dialog" timestamp="1623854135840">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -497,11 +495,11 @@
     </state>
     <state width="498" height="537" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1621843125319" />
     <state width="519" height="561" key="SwitcherDM/0.0.1600.860@0.0.1600.860" timestamp="1622533734944" />
-    <state x="376" y="151" key="Vcs.Push.Dialog.v2" timestamp="1622799588818">
+    <state x="376" y="151" key="Vcs.Push.Dialog.v2" timestamp="1623854602686">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621955989138" />
-    <state x="376" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1622799588818" />
+    <state x="376" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1623854602686" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1621464138931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
