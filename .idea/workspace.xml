@@ -16,10 +16,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.9.4&#10;&#10;Changelog:&#10;- New circuits added.&#10;- Track names replaced to original.&#10;- QR Scanner don't show results if the length is different.">
+    <list default="true" id="061730c2-67e5-4370-a754-20b45420228a" name="Default Changelist" comment="Version 1.9.5&#10;&#10;Changelog:&#10;- StatsList now has a dateTime value that contains a string with the generation date of the stats.&#10;- RacingHistory now shows generation date of stats and not QR generation date.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/RacingHistory/components/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/Screens/RacingHistory/components/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app_devotion_sim/lib/classes/stats_list.dart" afterDir="false" />
     </list>
     <list id="2705cba2-e451-4152-8e5e-f78228bb3324" name="Vers.Intial 1.1" comment="Vers.Intial 1.1&#10;&#10;(cherry picked from commit 845d7f432b5f7228515b21049df46b1254058b13)">
       <changelist_data name="aldosantamaria" email="asantama@jaumebalmes.net" date="1620066319000" />
@@ -259,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623854599673</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Version 1.9.5&#10;&#10;Changelog:&#10;- StatsList now has a dateTime value that contains a string with the generation date of the stats.&#10;- RacingHistory now shows generation date of stats and not QR generation date.">
+      <created>1623936476859</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1623936476859</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -377,7 +382,8 @@
     <MESSAGE value="Version 1.9.2&#10;&#10;Changelog:&#10;- Final version&#10;- Stats loaded from JSON by query to MySQL database" />
     <MESSAGE value="Version 1.9.3&#10;&#10;Changelog:&#10;- Racing History updated to ListView&#10;- QRCode linked with JSON correctly.&#10;- JSON linked with user correctly." />
     <MESSAGE value="Version 1.9.4&#10;&#10;Changelog:&#10;- New circuits added.&#10;- Track names replaced to original.&#10;- QR Scanner don't show results if the length is different." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9.4&#10;&#10;Changelog:&#10;- New circuits added.&#10;- Track names replaced to original.&#10;- QR Scanner don't show results if the length is different." />
+    <MESSAGE value="Version 1.9.5&#10;&#10;Changelog:&#10;- StatsList now has a dateTime value that contains a string with the generation date of the stats.&#10;- RacingHistory now shows generation date of stats and not QR generation date." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9.5&#10;&#10;Changelog:&#10;- StatsList now has a dateTime value that contains a string with the generation date of the stats.&#10;- RacingHistory now shows generation date of stats and not QR generation date." />
   </component>
   <component name="WindowStateProjectService">
     <state x="566" y="314" key="#Dart" timestamp="1621281019048">
@@ -495,11 +501,11 @@
     </state>
     <state width="498" height="537" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1621843125319" />
     <state width="519" height="561" key="SwitcherDM/0.0.1600.860@0.0.1600.860" timestamp="1622533734944" />
-    <state x="376" y="151" key="Vcs.Push.Dialog.v2" timestamp="1623854602686">
+    <state x="376" y="151" key="Vcs.Push.Dialog.v2" timestamp="1623936478618">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621955989138" />
-    <state x="376" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1623854602686" />
+    <state x="376" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1623936478618" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1621464138931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -526,6 +532,10 @@
     </state>
     <state x="70" y="133" width="640" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1621952300472" />
     <state x="356" y="196" width="757" height="558" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1622532593918" />
+    <state x="507" y="331" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1624376478491">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="507" y="331" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1600.860@0.0.1600.860" timestamp="1624376478491" />
     <state x="443" y="195" key="run.anything.popup" timestamp="1622541040381">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
